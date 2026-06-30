@@ -1,0 +1,50 @@
+I was born in New York City and lived there for seven years, moved to Cali, Colombia for around half a decade (where my father's family resides), then to Boston, and am now back in NYC studying Philosophy, Economics, and Science, Technology & Society (STS) at Columbia. I am fluent in Spanish and English, and can read and write [Classical Latin](https://en.wikipedia.org/wiki/Classical_Latin), albeit slowly.
+
+My favorite food group is soup (everything from Miso and Sancocho to French Onion and Tom Kha Gai), and I recently learned that [every culture on earth has some tradition of broth-making](https://www.bbc.com/travel/article/20260304-why-every-culture-has-a-healing-broth), which is a much appreciated validation of my own adoration.
+
+My favorite music genre is ambient/experimental electronic, and if that's of interest, please reach out so that I can share the best playlist I've ever curated. My favorite TV show of all time is *Lost*, and my favorite comic series is *The Adventures of Tintin* (the latter is, as with a lot of older media, complicated. Some early books have very colonial stereotypes. I tend to prefer the later ones, where the politics are at least a bit more self-aware).
+
+![Tintin on the Moon](https://substackcdn.com/image/fetch/$s_!0pan!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc1ab1046-0ea6-4de6-b7b2-9f5fc2fd841d_1036x1024.png)
+
+*Tintin says "For the first time certainly in the history of mankind, there is an explorer on the Moon!" Who would have guessed, reading the story in 1954, the words of Neil Armstrong 15 years later: "That's one small step for (a) man, one giant leap for mankind."?*
+
+Lastly, my favorite childhood pastime was building Legos, and, well, the link between that and the work and projects I occupy myself with now is hardly coincidental.
+
+### Philosophy major?
+
+Yes. First, some context.
+
+The spinning golden record in the top-left corner of this site is the [Voyager Golden Record](https://goldenrecord.org/#universum) — NASA's attempt to compress humanity into a single artifact and send it into interstellar space. I adore that project. It encompasses what I think is the most interesting editorial problem there is: what do you choose to show when you're trying to explain yourself to something that has never met anything like you?
+
+I enjoy these kinds of meaning-making problems deeply, which is part of why I ended up in philosophy. I think that, if you had asked me a few years ago why I loved philosophy, I would have said that it was because I saw it as the practice of making strong arguments and arriving at logically sound conclusions. That still feels true, but I no longer think it is what is distinctive about philosophy, because every discipline makes arguments about the world it studies.
+
+What I have grown to enjoy most about philosophy is the kind of space/environment that it aims to throw you into. The best philosophers are, in my view, the ones who can pull you so far into confusion and disorientation that you are forced to rebuild your assumptions from the ground up, starting again from first principles and seeing which beliefs survive the reconstruction. That experience of being temporarily unmoored, and then being forced to rebuild a stronger, better worldview (how else would we survive?), is what I love.
+
+My interests in this field are all over the place, but the two areas that have stuck with me most are [German Idealism](https://plato.stanford.edu/entries/idealism/#GermIdea), and late-20th century political and social philosophy, particularly [post-structuralism](https://en.wikipedia.org/wiki/Post-structuralism). The latter sounds more intimidating than it is. [Bernard Harcourt](https://en.wikipedia.org/wiki/Bernard_Harcourt) (who certainly played a subliminal role in my decision to attend Columbia) would [describe](https://scholarship.law.columbia.edu/cgi/viewcontent.cgi?article=2467&context=faculty_scholarship) it simply as "a style of critical reasoning that focuses on the moment of ambiguity in our systems of meaning," which is about right. At its core, it is the intuition that meaning is always unstable, that no center holds, that the frameworks we build to make sense of the world are never fixed.
+
+That understanding certainly held when the field was being developed in the 60s and 70s, and it holds today, but the "rate of collapse" (my made-up term) of these frameworks feels like it's accelerating at an unprecedented speed. The political upheaval of this decade alone should be evidence enough of that. A lot of this instability, I think, has to do with the pace of technological innovation (AI specifically) which is dissolving the structures that were supposed to ground our social + political life faster than we can name them, let alone mourn them. That's unsettling, yes, but also kind of thrilling, and I think it's one of the more compelling epistemic and moral problems of our time, particularly as it relates to the preservation of [open societies](https://en.wikipedia.org/wiki/Open_society).
+
+### More about my beliefs
+
+I think that the most interesting thing about a person is the convictions that they are willing to defend, or better put, whatever stake they put in the ground that required effort to arrive at. The qualities I care most about in people are:
+
+1. A charitable understanding of others (which more simply might be called "empathy").
+2. Curiosity about the world around us and the ways in which it functions or could be better. And, arguably more importantly, the willingness to actually act on that curiosity. If something strikes you as interesting or confusing, chase it down, fully.
+3. The humility to recognize that the more seriously you try to know something, the less certain you become (and how exciting that is, as opposed to, say, nihilism-inducing).
+4. Being scrappy, which, in my view is an instinct to keep building even (especially) when a pre-built plan stops cooperating. This is a kind of unconventional resilience that I adore and aim to cultivate in myself.
+
+I am, above all, a (cautious) optimist. This conviction stems from my belief that progress, and, more specifically, the evolution of technology, is contingent, as it requires decisions, resources, and collaboration to be realized. I've come to understand technology not as something that evolves independent of us, but as something inextricably human throughout its entire value chain, from its conception to the ways it is built, maintained, and eventually repurposed by people. That framing matters a lot, I think, because if technology is a human project rather than an autonomous upward slope, then questions about "what it might do" are more so questions about what we choose to build and take responsibility for.
+
+At the same time, technological change is fundamentally a cumulative endeavor. Each new system is built (and dependent) on layers of prior invention, infrastructure, and social adaptation. Airplanes, laptops, and agentic software are not standalone breakthroughs so much as they are inheritances of decades of prior research. The agricultural revolution enabled surplus and, eventually, the specialization of labor; the mass adoption of automobiles made the existence suburbs viable and reorganized daily life around mobility. Innovation compounds across centuries, which both expands the frontier of what is possible and, at the same time, deepens the responsibility embedded in each decision. Recognizing that "building something" is never starting from scratch, but instead intervening in a long, accelerating chain of human choices, is another aspect of innovation that I find deeply compelling.
+
+Back to why I am an optimist — the world has gotten better over time (objectively) because real people worked (mostly on better technologies) to make it so, and I find that fact incredibly motivating. The longer version of that reasoning is [here](https://veronicaagudelo.substack.com/p/my-why-venture-a-philosophy-of-progress).
+
+Venture turned out to be a place where that motivation/optimism has somewhere useful to go, which I didn't fully expect, and neither did I expect how philosophically saturated this world would be. The most recurrent conversations are drawn from a fairly specific canon ([EA](https://en.wikipedia.org/wiki/Effective_altruism), [longtermism](https://en.wikipedia.org/wiki/Longtermism), [rationalism](https://en.wikipedia.org/wiki/Rationalism), [techno-optimism](https://a16z.com/the-techno-optimist-manifesto/)). I don't agree with a lot of the conclusions being put forth, and frankly, a lot of it is just bad philosophy, but the fact that these conversations exist at all, that people in this industry argue seriously about ideas and their consequences, is exciting.
+
+### Other things
+
+Lastly, and perhaps one of the most guiding principles I've developed over the last few years, is the belief that **everyone can be a technologist**. This era of innovation has given you and me an unprecedented opportunity to create, and I think that comes with a responsibility. I would not go as far as to say that it is a moral failure to step away from technology, but I do think there is a real duty, especially for those of us who care about the future, to participate in shaping the kind of world we want to inhabit. To me, that means you cannot ignore the technological innovations of our time, as they deeply entangled with the kind of future we will live in.
+
+### The natural world
+
+Beyond the realms of philosophy and technology, I am absolutely enamored with the natural world. Part of this, I suppose, stems from my belief that there are forms of argument/persistence that occur within it and emerged entirely independent of our own existence (both in age and scale). Think of, for example, strata of rock, old growth forests, glacial valleys, or my personal favorite, mountains (see pictures I have taken below).

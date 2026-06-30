@@ -1,0 +1,62 @@
+---
+title: "A Philosophy of Progress / the Early-Stage Question"
+subtitle: "Technological possibility is always an act of moral imagination. Why?"
+date: "2026-02-17"
+category: "philosophy"
+excerpt: "Why certain nascent technologies deserve to exist at scale, and how early-stage investing is a disciplined form of moral imagination."
+substackUrl: "https://veronicaagudelo.substack.com/p/my-why-venture-a-philosophy-of-progress"
+---
+
+Early-stage investing is, above all, a discipline that requires deep curiosity about the world we live in and the various ways in which it functions. This is both what drew me to the work in the first place and what continues to hold me in it. The (brief time) I have spent in venture has been, above all, an education in the many ways in our society works, and I have had the privilege of being presented with various arguments for how we can make it better (after all, what is a pitch deck if not an argument for a founder's vision of what ought to exist?).
+
+For all the questions, big and small that I have been lucky enough to have answered, one remains a bothersome constant that refuses to leave me. Why do certain new things (nascent technologies, fragile ideas, the barely-formed) deserve to exist at scale? For context, by "deserve," I mean both that we are warranted in believing their promises at an uncertain frontier (an epistemic inquiry), and that we are justified in directing real resources toward making them widely available (a moral inquiry).
+
+I should be candid about the shape of my conviction. I take it as a working premise (which I will support, in brief) that technological advancement has functioned, repeatedly and decisively, as the principal agent of change in human history (a net good, though never an uncomplicated one). Early-stage investing, on this view, is the practice of placing serious, philosophically considered bets on that change, in service of a more resilient future.
+
+This is not a particularly novel premise (techno-optimism has existed for years now), but I want to complicate it by arguing that progress is not inevitable, and is instead contingent on judgment, on capital, on conditions, and on luck. That contingency is precisely what makes the early-stage endeavor worth taking seriously as an intellectual undertaking, as opposed to simply a financial one.
+
+Our contemporary imagination tends to flatten the word technology into software, screens, or some version code. But, of course, technology did not begin with the microchip. Fire, and our learned ability to domesticate it, harness it, etc, was a technology. So were the plow, the printing press, and the camera lens. Each was, in its moment, no less radical than the internet has been in ours. Moreover, every major technological rupture has reorganized the field of what possible for people to achieve, and each has been attended by measurable expansions in human capacity and human flourishing.
+
+I am partial to data. What follows are several graphs illustrating the relationship between technological advancement and the conditions of human life.
+
+[https://ourworldindata.org/technology-long-run](https://ourworldindata.org/technology-long-run)
+
+A couple of interesting conclusions can be derived from the chart above. The most notable is perhaps how recent most of our technological breakthroughs actually are. For thousands of years, technological change was so slow it was nearly imperceptible. Then, beginning around the Industrial Revolution, the curve bends sharply upward. Enter the printing press, the steam engine, electricity, antibiotics, semiconductors, the internet. The compression of innovation into the last two centuries is stark in its acceleration. Now place that acceleration beside human outcomes.
+
+![](https://substackcdn.com/image/fetch/$s_!aQae!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1df1ffe2-c326-4670-8392-773f87e91d59_1112x1070.png)
+
+For much of recorded history, global life expectancy hovered around thirty years. Then, in the last two centuries, which remember, is precisely when technological innovation accelerated, it doubles, then nearly triples. Vaccines, sanitation systems, antibiotics, public health infrastructure. The pattern holds across domains.
+
+![](https://substackcdn.com/image/fetch/$s_!2aJD!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe71857ab-3819-40e1-812c-2da253b57c62_1312x912.png)
+
+Education tells a similar story. In 1820, global literacy rates barely exceeded ten percent as a result of formal schooling being a privilege of the few. Over the course of the 20th century, alongside industrialization, electrification, communication networks, and mass production, enrollment rates climbed dramatically across regions. Literacy followed, rising from roughly one in ten people worldwide to over eighty percent today.
+
+I hope I have begun to persuade you that when technological capacity expands, the principal determinants of human flourishing tend to expand with it — directionally, and with a stubborn persistence. The Agricultural Revolution made organized civilization possible. The Industrial Revolution made sustained and measurable progress possible. The modern technological era has accelerated both to a degree that would have been, for most of human history, simply unthinkable.
+
+A necessary interruption. I am not so credulous as to claim that every wave of what we call "innovation" has carried us toward the good, or that progress has traveled exclusively through benevolent channels. It has not. The same architecture of global trade and industrial coordination that produced compounding gains in productivity also made possible some of the most grotesque undertakings in the human record, take for example the transatlantic slave trade, or the British opium regime that, across the nineteenth century, hollowed out the social fabric of China. Or for a more recent example, think of the cobalt economy that today consumes lives in the mines of the eastern Congo (for more on that, I suggest [this](https://www.penguinrandomhouse.com/books/709025/the-elements-of-power-by-nicolas-niarchos/) book).
+
+*This is also, I should note, where I part ways with the more triumphalist versions of techno-optimism, which tend to treat the techno‑capital machine as broadly self‑correcting, and the costs of progress as tolerable collateral. My view is similar, yes, but slightly less heroic. The history of technology (which we have seen over and over again) suggests that whoever pays the price for progress is itself a central moral question, or at least should be.*
+
+Anyway, my point is not to pretend we can consume our way into purity, but to state clearly that "technological progress" is morally underdetermined, because the problem of who bears costs versus who captures upside are political & ethical questions before they are engineering problems. At a minimum, investors who underwrite these systems inherit a responsibility to understand the supply chains they're compounding, to interrogate the labor and extraction regimes behind whatever "growth" they're so eager to fund, and to reconsider what counts as a successful outcome. That's a different essay (I will get to it) but it can't not be mentioned in any honest discussion of this sorts.
+
+Returning to my central point — we may grant that progress has been, on balance, a net good, but it does not follow from this conclusion that its impact was automatic or guaranteed.
+
+Take vaccines for example. Their transformational impact and benefits emerged not simply as a result of the science that initially allowed for their creation, but was dependent on their ability to be widely manufactured, distributed, and made affordable. Electricity was not just invented, but was wired into homes, priced accessibly, and regulated into infrastructure. Computing power was not something that was engineered and then remained static; it was miniaturized, commoditized, and placed into billions of our pockets. Technology's capacity for change is not automatic, and it is both amplified and democratized when it scales. Perhaps most importantly, this scaling is not a natural process. It requires decisions, resources, and at times, someone, at an early and uncertain moment, to decide that a given possibility deserves the chance to become real.
+
+*Quick aside: Beyond private capital and entrepreneurial will, many of the technologies we now treat as category defining only became so because governments helped them scale safely and broadly through regulation and infrastructure. From vaccines and public health systems to electrification and the early internet, public-sector partnership has repeatedly been the mechanism that turns technical possibility into durable, widely shared capability.*
+
+*I am especially interested in what this looks like in younger and more fragile states, where partnering with responsible, democratic governments can determine whether a powerful technology entrenches inequality or instead deepens resilience and access. However, this is really a GovTech and state-capacity conversation and it sits adjacent to, rather than inside, what I am trying to do here, so I will bracket it for now. For those curious about funding GovTech, I suggest you check out [Commonweal Ventures](https://www.commonwealventures.com/).*
+
+Back to what I was saying before. To invest in a nascent technology, then, is as epistemological of an act as it is financial, because you as the investor choose to believe someone's claim about what is knowable at the frontier of the unknown. And it is, I would argue, it is also a moral act (stay with me here). Capital is not and has never been neutral. Anyone that argues such is either stupid or being purposely ignorant. Where money flows shapes what gets built, who gets access to it, and what version of the future becomes available to whom. The decision to allocate resources toward a technology is, implicitly or explicitly, a judgment about what matters.
+
+I am aware this can sound grandiose. I want to be careful here. Venture Capitalists are not the protagonists of progress. Founders are the ones who build. Scientists are the ones who discover. Engineers are the ones who design. Early-stage investing, therefore, can be better understood as the enabling force that allows promising technologies to move from idea or prototype toward adoption — through the structured allocation of capital and, when done well, through intellectual engagement with the problem a startup is trying to solve.
+
+But the enabling force is not nothing!! And moreover, the discipline required to do it well, to make a conviction-driven judgment under radical uncertainty, to resist the noise of consensus and think clearly about what is new, is, I think, its own kind of intellectual practice. And that is the practice I want to participate in.
+
+What draws me to the early-stage question specifically is that it requires holding two seemingly contradictory orientations at once: deep epistemic humility (you cannot know whether this will work) and genuine conviction (you must decide as if you do).
+
+Most of history's inflection points looked, at the time, like improbable bets. The telephone was dismissed by Western Union as a novelty with no commercial value. The airplane was declared physically impossible by credentialed scientists mere years before Kitty Hawk. The personal computer was considered a product with no discernible market.
+
+In each case, someone decided an idea deserved the chance to become real. The technologies that have reconfigured human life were once just ideas in someone's hands — fragile and easy to dismiss. The judgment that they deserved to exist at scale was an act of imagination.
+
+That is, I think, what early-stage investing is at its best — a disciplined and rigorous form of moral imagination. Not prophecy or heroism, but a serious, well-reasoned wager that capital directed toward the right new instrument can make our world more resilient, more capable, and more humane. And the reason I keep returning to this "early-stage question" is that new technologies reopen it at every turn. By that I mean, every genuinely novel possibility merits the question "does this deserve to exist?" and the practice of early‑stage investing is, in large part, the work of answering that question under uncertainty.
