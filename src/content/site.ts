@@ -82,7 +82,7 @@ export const writingTeaser = {
 // ---- EXPERIENCE -----------------------------------------------------------
 // Intro shown at the top of the Experience page. EDIT freely.
 export const experienceIntro =
-  "For the past few years, my goal has been to explore and dip my toes into as many things as I can while trying to figure out what kind of work I enjoy the most and find fulfilling. I believe deeply in being a generalist, especially in an AI-driven era, and I have tried to build up as much range as I can to understand what is happening in the world around me and where I can best contribute. Most recently, that has meant working in venture capital and private investing, though I do see myself returning to startups eventually.";
+  "For the past few years, my goal has been to explore as much as I can while trying to figure out what kind of work I enjoy the most and find fulfilling/purposeful. I believe deeply in being a generalist, especially in an AI-driven era, and I have tried to build up as much range as I can to understand what is happening in the world around me and where I can best contribute. Most recently, that has meant working in venture capital and private investing, though I do see myself returning to startups eventually.";
 
 export const experience = [
   {
