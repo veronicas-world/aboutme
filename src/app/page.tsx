@@ -24,6 +24,7 @@ export default function Home() {
 
       <div className="tcenter" style={{ maxWidth: 720, margin: "0 auto" }}>
         <h1
+          className="home-name"
           style={{
             fontWeight: 300,
             fontSize: "clamp(30px,4.6vw,52px)",

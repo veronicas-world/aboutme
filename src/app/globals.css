@@ -21,7 +21,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   color: var(--ink);
@@ -30,6 +30,11 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+/* kill the default mobile-Safari/Chrome blue tap-highlight flash on links & buttons */
+a, button, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
 ::selection { background: var(--ink); color: var(--bg); }
 a { color: inherit; text-decoration: none; }
@@ -155,7 +160,7 @@ a { color: inherit; text-decoration: none; }
   .bg-sketch.bg-float, .bg-sketch.bg-draw { animation: none !important; clip-path: none; }
 }
 @media (max-width: 700px) {
-  .bg-sketch { opacity: 0.16; }
+  .bg-sketch { opacity: 0.18; max-width: 46vw; }
 }
 
 /* faint sketches scattered in the page side margins */
@@ -331,6 +336,15 @@ a { color: inherit; text-decoration: none; }
 .about .article img,
 .readings .article img { height: 425px; width: auto; max-width: 100%; margin: 1.6em auto; display: block; }
 .readings .article img:first-of-type { height: 283px; }
+@media (max-width: 640px) {
+  /* fixed pixel heights + width:auto can overflow/squish on narrow phones —
+     switch to auto-both with a max-height so aspect ratio stays correct */
+  .about .article img,
+  .readings .article img,
+  .readings .article img:first-of-type {
+    height: auto; width: auto; max-width: 100%; max-height: 260px;
+  }
+}
 .article strong { font-weight: 600; color: var(--ink); }
 .article ul, .article ol { margin: 0 0 1.35em; padding-left: 1.4em; }
 .article li { margin: 0 0 0.5em; }
@@ -344,6 +358,16 @@ a { color: inherit; text-decoration: none; }
   margin: 2em auto; border-radius: 3px;
 }
 .article hr { border: 0; border-top: 1px solid var(--line); margin: 2.4em 0; }
+
+/* ---- mountain photo row (About page) ---- */
+.mtn-row { display: flex; align-items: flex-start; gap: 10px; margin: 24px 0 8px; width: 100%; }
+.mtn-img { flex-grow: var(--ar); flex-basis: 0; min-width: 0; height: auto; display: block; border-radius: 3px; }
+@media (max-width: 640px) {
+  /* 4 images squeezed into one row get crushed to slivers on phones —
+     wrap into a 2-up grid instead, each photo keeping its own aspect ratio */
+  .mtn-row { flex-wrap: wrap; gap: 8px; }
+  .mtn-img { flex: 1 1 calc(50% - 4px); max-width: calc(50% - 4px); height: auto; }
+}
 
 /* ============================================================
    RESPONSIVE
@@ -367,6 +391,12 @@ a { color: inherit; text-decoration: none; }
   .body-l { font-size: 18px; }
   .article { font-size: 18px; }
   .footer { flex-direction: column; gap: 14px; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  /* the home name is kept on one line by design; floor the size so it
+     never forces horizontal scroll on small phones */
+  .home-name { font-size: clamp(22px, 7.2vw, 52px) !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

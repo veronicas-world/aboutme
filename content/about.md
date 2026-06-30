@@ -14,7 +14,7 @@ Lastly, my favorite childhood pastime was building Legos, and, well, the link be
 
 Yes. First, some context.
 
-The spinning golden record in the top-left corner of this site is the [Voyager Golden Record](https://goldenrecord.org/#universum) — NASA's attempt to compress humanity into a single artifact and send it into interstellar space. I adore that project. It encompasses what I think is the most interesting editorial problem there is: what do you choose to show when you're trying to explain yourself to something that has never met anything like you?
+The spinning golden record in the top-left corner of this site is the [Voyager Golden Record](https://goldenrecord.org/#universum) — NASA's attempt to compress humanity into a single artifact and send it into space. I adore that project. It encompasses what I think is the most interesting editorial problem there is: what do you choose to show when you're trying to explain yourself to something that has never met anything like you?
 
 I enjoy these kinds of meaning-making problems deeply, which is part of why I ended up in philosophy. I think that, if you had asked me a few years ago why I loved philosophy, I would have said that it was because I saw it as the practice of making strong arguments and arriving at logically sound conclusions. That still feels true, but I no longer think it is what is distinctive about philosophy, because every discipline makes arguments about the world it studies.
 
