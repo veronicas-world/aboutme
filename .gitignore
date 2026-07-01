@@ -29,3 +29,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# stray original photos dropped in the project root (site uses the /public copies)
+/*.jpg
+/*.jpeg
+/*.heic
+/Screenshot*.png

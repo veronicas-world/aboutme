@@ -18,7 +18,7 @@ export default function Home() {
         position: "relative",
       }}
     >
-      <BgSketch name="interests" draw style={{ bottom: "3%", left: "-5%", width: 300, opacity: 0.55 }} />
+      <BgSketch name="interests" draw style={{ bottom: "3%", left: "-9%", width: 300, opacity: 0.55 }} />
       <BgSketch name="trajectory" draw style={{ bottom: "12%", right: "-1%", width: 210, opacity: 0.55 }} />
 
       <div className="tcenter" style={{ maxWidth: 720, margin: "0 auto" }}>
