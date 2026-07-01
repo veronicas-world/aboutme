@@ -1,5 +1,6 @@
 import BgSketch from "@/components/BgSketch";
 import TypeName from "@/components/TypeName";
+import HomeImage from "@/components/HomeImage";
 import { site } from "@/content/site";
 
 export default function Home() {
@@ -11,18 +12,17 @@ export default function Home() {
         minHeight: "82vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        paddingTop: 70,
+        justifyContent: "flex-start",
+        paddingTop: 48,
         paddingBottom: 60,
         position: "relative",
       }}
     >
-      <BgSketch name="hero" draw style={{ top: "5%", right: "-6%", width: 540, opacity: 0.31 }} />
-      <BgSketch name="interests" draw style={{ bottom: "3%", left: "-5%", width: 300, opacity: 0.31 }} />
-      <BgSketch name="about" draw style={{ top: "3%", left: "30%", width: 105, opacity: 0.31 }} />
-      <BgSketch name="trajectory" draw style={{ bottom: "0%", right: "-1%", width: 155, opacity: 0.31 }} />
+      <BgSketch name="interests" draw style={{ bottom: "3%", left: "-5%", width: 300, opacity: 0.55 }} />
+      <BgSketch name="trajectory" draw style={{ bottom: "12%", right: "-1%", width: 210, opacity: 0.55 }} />
 
       <div className="tcenter" style={{ maxWidth: 720, margin: "0 auto" }}>
+        <HomeImage />
         <h1
           className="home-name"
           style={{
@@ -31,7 +31,7 @@ export default function Home() {
             lineHeight: 1.05,
             letterSpacing: "-0.02em",
             whiteSpace: "nowrap",
-            margin: "0 0 30px",
+            margin: "0 0 38px",
           }}
         >
           <TypeName text="Veronica Agudelo" />
