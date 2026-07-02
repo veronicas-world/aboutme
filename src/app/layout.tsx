@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Nav />
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
