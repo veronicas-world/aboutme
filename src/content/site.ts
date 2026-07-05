@@ -87,45 +87,77 @@ export const experienceIntro =
 export const experience = [
   {
     year: "May 2026 to Aug 2026",
-    role: "Summer Analyst",
+    role: "Incoming Fall Analyst",
     org: "New Enterprise Associates (NEA)",
-    note: "One of two fellows promoted into NEA's first-ever summer analyst class. I assess early-stage companies through market sizing, customer research, and investment memos, and build sector theses and market maps to find where technology markets are about to inflect.",
+    location: "New York, NY",
+    note: "One of two students in the first Summer/Fall Analyst class in NEA's ~fifty–year history, continuing the work I started during my fellowship.",
   },
   {
     year: "May 2026 to Aug 2026",
     role: "Investment Fellow",
     org: "Dorm Room Fund",
-    note: "A cohort program for students in venture, built around a weekly speaker series with leading founders and investors, one-on-one mentorship, and a community of student investors.",
+    note: "Dorm Room Fund is a student‑run pre‑seed venture capital fund backed by First Round Capital, with 400+ investments, 140+ exits, and a portfolio of 300+ student‑led companies that have raised $6B+ in follow‑on capital.\n\nI am a fellow in their Blueprint track, an intensive program for underrepresented investors and founders, combining deal evaluation, founder support, and curriculum to help fellows build an investing toolkit and venture track record.",
   },
   {
     year: "May 2026 to Aug 2026",
     role: "Sophomore Summer Analyst, Asset & Wealth Management",
     org: "J.P. Morgan",
-    note: "Advising and onboarding clients on portfolio construction, liquidity, and post-exit strategies across public markets and alternatives.",
+    location: "New York, NY",
+    note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI work primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team, with an emphasis on how these strategies slot into multi‑asset portfolios for clients.",
   },
   {
     year: "January 2026 to June 2026",
     role: "Investment Fellow",
     org: "New Enterprise Associates (NEA)",
-    note: "Where my time at NEA began.",
+    location: "New York, NY",
+    note: "New Enterprise Associates (NEA) is a venture capital firm with ~$30B+ in assets under management, nearly 1,000 investments, 270+ IPOs and 450+ M&A exits across technology and healthcare companies from seed through IPO (fun fact, NEA is one of the largest suppliers of companies to the public market!).\n\nDuring my time as a [fellow](https://neafellowship.com/), I assessed prospective investments via market sizing, competitive and customer analysis, and investment memos, while building sector theses and market maps that identified key technical, commercial, and operational inflection points to inform NEA's sourcing and diligence. My work contributed directly to two firmwide investments.",
   },
   {
     year: "Sept 2025 to Dec 2025",
     role: "Fall Analyst",
     org: "Burnt Island Ventures",
-    note: "Running fund communications across LP and founder-facing materials, and partnering with portfolio companies on go-to-market and digital strategy.",
+    location: "New York, NY",
+    note: "Burnt Island Ventures is an early‑to-growth stage venture capital firm focused exclusively on water technology, backing founders who build critical infrastructure, analytics, and climate‑resilient solutions in the $1.6T global water market.\n\nI ran fund communications during my time there (including during the launch of their $50 million Fund II in October of 2025), leading LP and founder‑facing materials and digital strategy across LinkedIn, web, YouTube, and X. Additionally, I partnered with portfolio companies on go‑to‑market and operational initiatives, using performance analytics to improve reach and engagement outcomes.",
   },
   {
     year: "May 2025 to Aug 2025",
     role: "Summer Analyst",
     org: "Draper Richards Kaplan Foundation",
-    note: "Synthesizing financial and impact data from over 200 portfolio companies for the annual report, working across teams to validate growth metrics across climate tech, healthcare, and social enterprise investments.",
+    location: "Boston, MA & Menlo Park, CA",
+    note: "The Draper Richards Kaplan Foundation (DRK) is a global venture‑philanthropy firm that supports early‑stage (mostly Series A), high‑impact social enterprises tackling urgent social and environmental problems. They have funded 277+ early‑stage social enterprises whose portfolio has collectively impacted over 610 million lives across sectors including healthcare, education, climate resilience, and food access.\n\nDuring my time there, I worked on financial and impact data from their 200+ portfolio companies to create the annual report, validating growth metrics and investment communications across stakeholders.",
   },
   {
     year: "May 2023 to Aug 2024",
     role: "Analyst",
     org: "Thinker",
-    note: "An edtech company spun out of Harvard's Philosophy Department. I led product, content, and growth, built 25+ argument-mapping assets used by 120+ institutions, and edited Harvard course content.",
+    location: "Cambridge, MA",
+    note: "Thinker is an edtech startup spun out of Harvard's Philosophy Department that builds argument‑mapping tools and curriculum to teach critical thinking and argumentative reasoning, used by over 120+ schools and universities.\n\nDuring my time there, I led product, content, and growth initiatives, creating 25+ argument maps and 75+ pages of HarvardX course content. Additionally, I helped redesign their website for accessibility compliance (WCAG standards).",
+  },
+];
+
+export const educationTimeline = [
+  {
+    year: "New York, USA",
+    role: "City and Country School",
+  },
+  {
+    year: "Cali, Colombia",
+    role: "Colegio Bolívar",
+  },
+  {
+    year: "Boston, USA",
+    role: "The Winsor School",
+  },
+  {
+    year: "New York, USA",
+    role: "Columbia University",
+    bullets: [
+      "3.96 / 4.00 GPA",
+      "Student Advisory Board — Eric H. Holder Initiative for Civil and Political Rights",
+      "Board Member — Latino Professional Network",
+      "Interviewer — Gadfly Magazine",
+      "Member — Girls Into VC, Sustainable Finance Group, and Girls Who Invest",
+    ],
   },
 ];
 

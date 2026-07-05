@@ -1,15 +1,28 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import BgSketch from "@/components/BgSketch";
-import { experience, experienceIntro } from "@/content/site";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import { experience, experienceIntro, educationTimeline } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Experience · Veronica Agudelo",
   description: "Where Veronica Agudelo has spent her time.",
 };
 
+const sectionLabel: CSSProperties = {
+  fontSize: 12,
+  letterSpacing: "0.2em",
+  textTransform: "uppercase",
+  color: "var(--sepia)",
+  marginBottom: 30,
+};
+
 export default function ExperiencePage() {
   return (
-    <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
+    <main
+      className="wrap page-serif"
+      style={{ paddingTop: 70, paddingBottom: 90, position: "relative" }}
+    >
       <BgSketch name="trajectory" style={{ top: "14%", right: "-4%", width: 320 }} />
       <BgSketch name="hero" style={{ bottom: "6%", left: "-6%", width: 380 }} />
       <header className="col tcenter" style={{ margin: "0 auto 40px" }}>
@@ -27,10 +40,10 @@ export default function ExperiencePage() {
         </div>
         <h1
           style={{
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: "clamp(32px,4.5vw,52px)",
             lineHeight: 1.0,
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.01em",
             margin: 0,
           }}
         >
@@ -41,7 +54,7 @@ export default function ExperiencePage() {
       <div className="col">
         <p
           style={{
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: 17,
             lineHeight: 1.62,
             color: "var(--ink-2)",
@@ -52,43 +65,24 @@ export default function ExperiencePage() {
           {experienceIntro}
         </p>
 
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <div style={{ borderLeft: "1px solid rgba(21,17,13,.2)", paddingLeft: 34 }}>
-            {experience.map((e, i) => (
-              <div key={i} style={{ position: "relative", padding: "0 0 38px" }}>
-                <span
-                  style={{
-                    position: "absolute",
-                    left: -40,
-                    top: 9,
-                    width: 7,
-                    height: 7,
-                    borderRadius: "50%",
-                    background: "var(--ink)",
-                  }}
-                />
-                <div
-                  className="mono"
-                  style={{ fontSize: 11, letterSpacing: "0.12em", color: "var(--sepia-2)" }}
-                >
-                  {e.year}
-                </div>
-                <div style={{ fontSize: 22, lineHeight: 1.3, marginTop: 4 }}>{e.role}</div>
-                <div
-                  className="mono"
-                  style={{
-                    fontSize: 11.5,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: "var(--sepia)",
-                    marginTop: 4,
-                  }}
-                >
-                  {e.org}
-                </div>
-              </div>
-            ))}
+        {/* Education (static) */}
+        <div className="mono tcenter" style={sectionLabel}>
+          Education
+        </div>
+        <ExperienceTimeline items={educationTimeline} animate={false} />
+
+        {/* Professional experience (rotating) */}
+        <div
+          style={{
+            borderTop: "1px solid var(--line-soft)",
+            marginTop: 56,
+            paddingTop: 56,
+          }}
+        >
+          <div className="mono tcenter" style={sectionLabel}>
+            Professional Experience
           </div>
+          <ExperienceTimeline items={[...experience].reverse()} />
         </div>
       </div>
     </main>
