@@ -333,6 +333,8 @@ a { color: inherit; text-decoration: none; }
   animation: xp-scroll 52s linear infinite;
 }
 .xp-marquee:hover .xp-track { animation-play-state: paused; }
+/* freeze the scroll while a card is open (needed on touch, where there's no hover) */
+.xp.paused .xp-track { animation-play-state: paused; }
 @keyframes xp-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -414,6 +416,12 @@ a { color: inherit; text-decoration: none; }
   color: var(--sepia-3);
   margin-top: 5px;
 }
+.xp-loc {
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: var(--sepia-2);
+  margin-top: 6px;
+}
 /* the card that pops out for the hovered role */
 .xp-detail {
   position: relative;
@@ -491,7 +499,23 @@ a { color: inherit; text-decoration: none; }
   .xp-marquee { overflow-x: auto; }
 }
 @media (max-width: 640px) {
-  .xp { --xp-chip: 170px; }
+  .xp { --xp-chip: 170px; display: flex; flex-direction: column; }
+  .xp-marquee { order: 1; }
+  .xp-detail { order: 2; height: auto; }
+  /* on phones the cards flow in-line below the row (rather than as an absolute
+     overlay) so they can never spill past the top/bottom of the screen */
+  .xp-card,
+  .xp-detail-above .xp-card {
+    position: static;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: none;
+    margin: 16px 0 0;
+  }
+  /* education row: left-aligned + momentum scroll when it overflows */
+  .xp-track.xp-static { margin: 0; }
+  .xp-marquee.xp-static { -webkit-overflow-scrolling: touch; }
 }
 
 /* ---- footer ---- */

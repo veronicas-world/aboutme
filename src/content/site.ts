@@ -137,20 +137,9 @@ export const experience = [
 
 export const educationTimeline = [
   {
-    year: "New York, USA",
-    role: "City and Country School",
-  },
-  {
-    year: "Cali, Colombia",
-    role: "Colegio Bolívar",
-  },
-  {
-    year: "Boston, USA",
-    role: "The Winsor School",
-  },
-  {
-    year: "New York, USA",
+    year: "Aug 2024 to May 2028 (expected)",
     role: "Columbia University",
+    location: "New York, NY",
     bullets: [
       "3.96 / 4.00 GPA",
       "Student Advisory Board — Eric H. Holder Initiative for Civil and Political Rights",
