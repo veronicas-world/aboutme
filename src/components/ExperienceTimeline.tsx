@@ -7,6 +7,8 @@ export type XP = {
   role: string;
   org?: string;
   location?: string;
+  logo?: string;
+  logoTile?: boolean;
   note?: string;
   bullets?: string[];
 };
@@ -62,6 +64,14 @@ export default function ExperienceTimeline({
     >
       {hasContent && current && (
         <div key={active} className="xp-card">
+          {current.logo && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={`xp-card-logo${current.logoTile ? " xp-card-logo-tile" : ""}`}
+              src={current.logo}
+              alt={current.org ?? current.role}
+            />
+          )}
           <div className="xp-card-head mono">
             {current.role}
             {current.org ? ` · ${current.org}` : ""}
