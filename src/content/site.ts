@@ -94,7 +94,7 @@ export const experience = [
   },
   {
     year: "May 2026 to Aug 2026",
-    role: "Investment Fellow",
+    role: "Blueprint Fellow",
     org: "Dorm Room Fund",
     note: "Dorm Room Fund is a student‑run pre‑seed venture capital fund backed by First Round Capital, with 400+ investments, 140+ exits, and a portfolio of 300+ student‑led companies that have raised $6B+ in follow‑on capital.\n\nI am a fellow in their Blueprint track, an intensive program for underrepresented investors and founders, combining deal evaluation, founder support, and curriculum to help fellows build an investing toolkit and venture track record.",
   },
@@ -107,7 +107,7 @@ export const experience = [
   },
   {
     year: "January 2026 to June 2026",
-    role: "Investment Fellow",
+    role: "Fellow",
     org: "New Enterprise Associates (NEA)",
     location: "New York, NY",
     note: "New Enterprise Associates (NEA) is a venture capital firm with ~$30B+ in assets under management, nearly 1,000 investments, 270+ IPOs and 450+ M&A exits across technology and healthcare companies from seed through IPO (fun fact, NEA is one of the largest suppliers of companies to the public market!).\n\nDuring my time as a [fellow](https://neafellowship.com/), I assessed prospective investments via market sizing, competitive and customer analysis, and investment memos, while building sector theses and market maps that identified key technical, commercial, and operational inflection points to inform NEA's sourcing and diligence. My work contributed directly to two firmwide investments.",
