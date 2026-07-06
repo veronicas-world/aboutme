@@ -52,18 +52,22 @@ export default function ExperiencePage() {
       </header>
 
       <div className="col">
-        <p
-          style={{
-            fontWeight: 400,
-            fontSize: 17,
-            lineHeight: 1.62,
-            color: "var(--ink-2)",
-            maxWidth: 720,
-            margin: "0 auto 56px",
-          }}
-        >
-          {experienceIntro}
-        </p>
+        <div style={{ maxWidth: 720, margin: "0 auto 56px" }}>
+          {experienceIntro.split("\n\n").map((para, i) => (
+            <p
+              key={i}
+              style={{
+                fontWeight: 400,
+                fontSize: 17,
+                lineHeight: 1.62,
+                color: "var(--ink-2)",
+                margin: i === 0 ? "0 0 18px" : 0,
+              }}
+            >
+              {para}
+            </p>
+          ))}
+        </div>
 
         {/* Education (static) */}
         <div className="mono tcenter" style={sectionLabel}>
