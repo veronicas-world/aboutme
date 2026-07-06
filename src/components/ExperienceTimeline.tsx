@@ -55,13 +55,9 @@ export default function ExperienceTimeline({
   // Duplicate the list only when animating, so the marquee can loop seamlessly.
   const loop = animate ? [...items, ...items] : items;
 
-  // The animated (professional experience) timeline reveals its card ABOVE the
-  // row; the static (education) timeline reveals its card BELOW.
+  // Both timelines reveal the card ABOVE the row.
   const detail = (
-    <div
-      className={`xp-detail${animate ? " xp-detail-above" : ""}`}
-      aria-live="polite"
-    >
+    <div className="xp-detail xp-detail-above" aria-live="polite">
       {hasContent && current && (
         <div key={active} className="xp-card">
           {current.logo && (
@@ -101,7 +97,7 @@ export default function ExperienceTimeline({
       className={`xp${active !== null ? " paused" : ""}`}
       onMouseLeave={() => setActive(null)}
     >
-      {animate && detail}
+      {detail}
       <div className={`xp-marquee${animate ? "" : " xp-static"}`}>
         <div className={`xp-track${animate ? "" : " xp-static"}`}>
           {loop.map((e, i) => {
@@ -125,7 +121,6 @@ export default function ExperienceTimeline({
           })}
         </div>
       </div>
-      {!animate && detail}
     </div>
   );
 }
