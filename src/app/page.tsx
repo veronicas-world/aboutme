@@ -36,18 +36,22 @@ export default function Home() {
         >
           <TypeName text="Veronica Agudelo" />
         </h1>
-        <p
-          style={{
-            fontWeight: 300,
-            fontSize: 17,
-            lineHeight: 1.62,
-            color: "var(--ink-2)",
-            textAlign: "left",
-            margin: 0,
-          }}
-        >
-          {site.heroLead}
-        </p>
+        <div style={{ textAlign: "left" }}>
+          {site.heroLead.split("\n\n").map((para, i) => (
+            <p
+              key={i}
+              style={{
+                fontWeight: 300,
+                fontSize: 17,
+                lineHeight: 1.62,
+                color: "var(--ink-2)",
+                margin: i === 0 ? "0 0 16px" : 0,
+              }}
+            >
+              {para}
+            </p>
+          ))}
+        </div>
       </div>
     </main>
   );

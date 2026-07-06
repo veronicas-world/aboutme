@@ -13,7 +13,7 @@ export const site = {
   eyebrow: "Investor · Writer · Student of complex systems",
   // The one big sentence under your name (EDIT — make it sound like you):
   heroLead:
-    "I am a junior at Columbia interested in early-stage investing, philosophy, entrepreneurship, and emerging/disruptive technologies. I got my start working at an early-stage edtech company, and that experience has shaped how I think about supporting and investing in founders today. One of my core beliefs is that technological innovation has functioned, again and again, as the catalyst of human progress, and that through the thoughtful allocation of capital, we can support those building a more resilient world. Outside of work, you can find me trying new restaurants in NYC, watching professional soccer, cooking, reading, and hiking.",
+    "I am a junior at Columbia interested in early-stage investing, philosophy, entrepreneurship, and emerging/disruptive technologies. I got my start working at an early-stage edtech company, and that experience has shaped how I think about supporting and investing in founders today. One of my core beliefs is that technological innovation has functioned, again and again, as the catalyst of human progress, and that through the thoughtful allocation of capital, we can support those building a more resilient world.\n\nOutside of work, you can find me trying new restaurants in NYC, watching professional soccer, cooking, reading, and hiking.",
   // Affiliations shown small under the hero line:
   heroAffiliations: [
     "Columbia",
