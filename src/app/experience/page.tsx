@@ -14,7 +14,7 @@ const sectionLabel: CSSProperties = {
   letterSpacing: "0.2em",
   textTransform: "uppercase",
   color: "var(--sepia)",
-  marginBottom: 30,
+  marginBottom: 8,
 };
 
 export default function ExperiencePage() {
@@ -69,6 +69,7 @@ export default function ExperiencePage() {
         <div className="mono tcenter" style={sectionLabel}>
           Education
         </div>
+        <p className="xp-hint">Hover or tap to read more</p>
         <ExperienceTimeline items={educationTimeline} animate={false} />
 
         {/* Professional experience (rotating) */}
@@ -82,6 +83,7 @@ export default function ExperiencePage() {
           <div className="mono tcenter" style={sectionLabel}>
             Professional Experience
           </div>
+          <p className="xp-hint">Hover or tap to read more</p>
           <ExperienceTimeline items={[...experience].reverse()} />
         </div>
       </div>

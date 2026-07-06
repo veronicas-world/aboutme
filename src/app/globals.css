@@ -305,6 +305,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---- ever-scrolling experience timeline ---- */
+.xp-hint {
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: var(--sepia-2);
+  margin: 0 auto 26px;
+}
 .xp { --xp-chip: 210px; width: 100%; margin: 0 auto; }
 .xp-marquee {
   position: relative;
