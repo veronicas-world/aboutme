@@ -161,8 +161,8 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 700px) {
   .bg-sketch { opacity: 0.18; max-width: 46vw; }
-  /* home sketches (bg-draw is home-only) a bit lighter on mobile */
-  .bg-sketch.bg-draw { opacity: 0.34 !important; }
+  /* home sketches (the only static, non-floating ones) a bit lighter on mobile */
+  .bg-sketch:not(.bg-float) { opacity: 0.34 !important; }
 }
 
 /* faint sketches scattered in the page side margins */
