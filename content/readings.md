@@ -10,9 +10,9 @@
 ### BOOKS
 
 1. Gabriel García Márquez's *One Hundred Years of Solitude*
-   - My favorite book of all time. Full stop. I have read it in both English and Spanish — the Spanish is better, of course, but the English version is remarkably good for a translation. Not directly tech-related in the way that others on this list are, but Márquez's magical realism stretches the boundaries of reality far beyond what Sora has been able to do ;)
+   - My favorite book of all time. Full stop. I have read it in both English and Spanish — the Spanish is better, of course, but the English version is remarkably good for a translation. Not directly tech-related in the way that others on this list are, but Márquez's magical realism stretches the boundaries of reality far beyond what Sora has been able to do.
 2. Bertrand Russell's *The Impact of Science on Society*
-   - One of the most brilliant philosophers of the 20th century (but my personal favorite is Rawls!).
+   - One of the most brilliant philosophers of the 20th century.
 3. Marshall McLuhan's *Understanding Media: The Extensions of Man*
    - I first read this in during my junior year of high school, when I undertook an overly ambitious thesis. Anyway, I was reminded of this book (but mostly the first chapter where the infamous "the medium is the message" statement lies) when I read a16z's "[What is New Media?](https://a16z.com/what-is-new-media/)" blog post. While a16z takes a much more operational and opportunistic stance on the current state of media, the conceptual overlap around legitimacy/narrative/attention felt hard to ignore. I, curious as to whether they were influenced by the writings of McLuhan, Debord, or Baudrillard, reached out and asked (see below, anonymity preserved).
 
@@ -28,7 +28,7 @@ I adore music and feel so lucky to have been born in a century where I can liste
 
 ![](https://substackcdn.com/image/fetch/$s_!i8XY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f0a3699-44c3-4f88-a4c5-e90d2073a0c1_1292x960.png)
 
-"I'm On Fire" is a far-ahead first. As for the others… a mix of classics, moody ambient/electronic, and idk…. R&B and rock?
+"I'm On Fire" is a far-ahead first. And the others are… a mix of classics, moody ambient/electronic, and…. R&B and rock?
 
 As for albums I am enjoying currently:
 
@@ -66,12 +66,8 @@ As for albums I am enjoying currently:
 ### ETC
 
 1. SpaceX's Falcon 9 First Stage Landing – ORBCOMM-2 (Dec 21, 2015)
-   - My father pulled our whole family to his laptop screen to watch it live, and even though I quite young, it cemented a life-long love for outlandish ideas.
 2. Anthony Bourdain: *Parts Unknown*
-   - I grew up watching this while cooking with my father (first in NYC, then Colombia, and most recently, Boston). Bourdain is a masterful storyteller.
 3. [Hot Side](https://maxbaroni.substack.com/)
-   - A creative, humorous, and clever collection of recipes by Max Baroni, former chef at The Four Horsemen (iykyk).
 4. [Opening notes, Founders Fund's Annual Meeting](https://x.com/foundersfund/status/1313151184287477767) (2020)
-   - I believe our future depends powerfully on how well we understand this cosmos in which we float, like a mote of dust in the morning sky…
 5. *Lost*
-   - The best tv series of all time. I will die on this hill.
+   - Indisputably the best tv series of all time.

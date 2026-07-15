@@ -8,7 +8,7 @@ My favorite music genre is ambient/experimental electronic, and if that's of int
 
 *Tintin says "For the first time certainly in the history of mankind, there is an explorer on the Moon!" Who would have guessed, reading the story in 1954, the words of Neil Armstrong 15 years later: "That's one small step for (a) man, one giant leap for mankind."?*
 
-Lastly, my favorite childhood pastime was building Legos, and, well, the link between that and the work and projects I occupy myself with now is hardly coincidental.
+Lastly, my favorite childhood pastime was building Legos.
 
 ### Philosophy major?
 
