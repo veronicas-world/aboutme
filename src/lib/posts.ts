@@ -14,6 +14,7 @@ export type PostMeta = {
   substackUrl?: string;
   cover?: string;
   truncated?: boolean;
+  archived?: boolean;
 };
 
 export type Post = PostMeta & { content: string };
@@ -38,6 +39,7 @@ function readPost(file: string): Post {
     substackUrl: data.substackUrl || undefined,
     cover: data.cover || firstImage(content),
     truncated: data.truncated || false,
+    archived: data.archived || false,
     content,
   };
 }
@@ -48,6 +50,7 @@ export function getAllPosts(): Post[] {
     .readdirSync(POSTS_DIR)
     .filter((f) => f.endsWith(".md"))
     .map(readPost)
+    .filter((p) => !p.archived)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
