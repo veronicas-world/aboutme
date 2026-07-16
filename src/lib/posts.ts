@@ -15,6 +15,7 @@ export type PostMeta = {
   cover?: string;
   truncated?: boolean;
   archived?: boolean;
+  full?: boolean;
 };
 
 export type Post = PostMeta & { content: string };
@@ -40,6 +41,7 @@ function readPost(file: string): Post {
     cover: data.cover || firstImage(content),
     truncated: data.truncated || false,
     archived: data.archived || false,
+    full: data.full || false,
     content,
   };
 }

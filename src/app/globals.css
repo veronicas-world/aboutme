@@ -576,7 +576,8 @@ a { color: inherit; text-decoration: none; }
 .article em, .article i { font-style: normal; }
 /* italics allowed on the Readings and About pages (titles, captions) */
 .readings .article em, .readings .article i,
-.about .article em, .about .article i { font-style: italic; }
+.about .article em, .about .article i,
+.post-full .article em, .post-full .article i { font-style: italic; }
 /* the Tintin image on the About page is a small centered figure */
 .about .article img,
 .readings .article img { height: 425px; width: auto; max-width: 100%; margin: 1.6em auto; display: block; }

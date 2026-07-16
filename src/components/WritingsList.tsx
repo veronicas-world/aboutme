@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { PostMeta } from "@/lib/posts";
 import { categories } from "@/content/site";
 
@@ -48,60 +49,72 @@ export default function WritingsList({
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-        {filtered.map((p) => (
-          <a
-            key={p.slug}
-            href={p.substackUrl || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="post-card"
-          >
-            {p.cover && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img className="post-card-thumb" src={p.cover} alt="" loading="lazy" />
-            )}
-            <div className="post-card-body">
-              <div
-                className="mono"
-                style={{
-                  fontSize: 10.5,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--sepia-3)",
-                  marginBottom: 9,
-                }}
-              >
-                {labelFor(p.category)} · {fmt(p.date)}
-              </div>
-              <div style={{ fontSize: 22, lineHeight: 1.25, marginBottom: 8 }}>
-                {p.title}
-              </div>
-              {p.excerpt && (
-                <p
+        {filtered.map((p) => {
+          const inner = (
+            <>
+              {p.cover && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img className="post-card-thumb" src={p.cover} alt="" loading="lazy" />
+              )}
+              <div className="post-card-body">
+                <div
+                  className="mono"
                   style={{
-                    fontSize: 17,
-                    lineHeight: 1.5,
-                    color: "var(--ink-3)",
-                    margin: "0 0 12px",
+                    fontSize: 10.5,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "var(--sepia-3)",
+                    marginBottom: 9,
                   }}
                 >
-                  {p.excerpt}
-                </p>
-              )}
-              <span
-                className="mono post-card-cta"
-                style={{
-                  fontSize: 11,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: "var(--sepia)",
-                }}
-              >
-                Read on Substack ↗
-              </span>
-            </div>
-          </a>
-        ))}
+                  {labelFor(p.category)} · {fmt(p.date)}
+                </div>
+                <div style={{ fontSize: 22, lineHeight: 1.25, marginBottom: 8 }}>
+                  {p.title}
+                </div>
+                {p.excerpt && (
+                  <p
+                    style={{
+                      fontSize: 17,
+                      lineHeight: 1.5,
+                      color: "var(--ink-3)",
+                      margin: "0 0 12px",
+                    }}
+                  >
+                    {p.excerpt}
+                  </p>
+                )}
+                <span
+                  className="mono post-card-cta"
+                  style={{
+                    fontSize: 11,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "var(--sepia)",
+                  }}
+                >
+                  {p.full ? "Read the essay →" : "Read on Substack ↗"}
+                </span>
+              </div>
+            </>
+          );
+
+          return p.full ? (
+            <Link key={p.slug} href={`/writings/${p.slug}`} className="post-card">
+              {inner}
+            </Link>
+          ) : (
+            <a
+              key={p.slug}
+              href={p.substackUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="post-card"
+            >
+              {inner}
+            </a>
+          );
+        })}
         {filtered.length === 0 && (
           <p style={{ color: "var(--sepia)", fontSize: 19 }}>
             Nothing here yet — more soon.
