@@ -22,6 +22,9 @@ So, the answer is yes, and of course I asked to see what he wrote — here it is
 
 [a16z, Laws of (New) Media — Andrew McLuhan](https://www.a16z.news/p/laws-of-new-media)
 
+4. Friedrich Nietzsche's *On the Genealogy of Morals*
+5. Alexis de Tocqueville's *Democracy in America* (Part I, Chapters 3 and 4)
+
 ### MUSIC
 
 I adore music and feel so lucky to have been born in a century where I can listen on demand. For an overview of my taste (it's all over), please see below my most listened to songs of all time:
