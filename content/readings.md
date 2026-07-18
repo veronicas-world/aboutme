@@ -14,7 +14,7 @@
 2. Bertrand Russell's *The Impact of Science on Society*
    - One of the most brilliant philosophers of the 20th century.
 3. Marshall McLuhan's *Understanding Media: The Extensions of Man*
-   - I first read this in during my junior year of high school, when I undertook an overly ambitious thesis. Anyway, I was reminded of this book (but mostly the first chapter where the infamous "the medium is the message" statement lies) when I read a16z's "[What is New Media?](https://a16z.com/what-is-new-media/)" blog post. While a16z takes a much more operational and opportunistic stance on the current state of media, the conceptual overlap around legitimacy/narrative/attention felt hard to ignore. I, curious as to whether they were influenced by the writings of McLuhan, Debord, or Baudrillard, reached out and asked (see below, anonymity preserved).
+   - I first read this in during my junior year of high school, when I undertook an overly ambitious thesis. Anyway, I was reminded of this book (but mostly the first chapter where the infamous "the medium is the message" statement lies) when I read a16z's "[What is New Media?](https://a16z.com/what-is-new-media/)" blog post. a16z takes a much more operational and opportunistic stance on the current state of media, but conceptual overlap was clear. I, curious as to whether they were influenced by the writings of McLuhan, Debord, or Baudrillard, reached out and asked (see below, anonymity preserved).
 
 ![](https://substackcdn.com/image/fetch/$s_!EZGb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbb998d92-6669-495b-93e8-8336806f9aab_1154x584.png)
 
