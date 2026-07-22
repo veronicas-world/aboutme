@@ -1,9 +1,18 @@
+import Link from "next/link";
 import BgSketch from "@/components/BgSketch";
 import TypeName from "@/components/TypeName";
 import HomeImage from "@/components/HomeImage";
 import { site } from "@/content/site";
 
 export default function Home() {
+  const heroParas = site.heroLead.split("\n\n");
+  const heroParaStyle = {
+    fontWeight: 300,
+    fontSize: 17,
+    lineHeight: 1.62,
+    color: "var(--ink-2)",
+  } as const;
+
   return (
     <main
       id="top"
@@ -37,15 +46,20 @@ export default function Home() {
           <TypeName text="Veronica Agudelo" />
         </h1>
         <div style={{ textAlign: "left" }}>
-          {site.heroLead.split("\n\n").map((para, i) => (
+          <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>{heroParas[0]}</p>
+          <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>
+            {site.heroInterests.before}
+            <Link href={site.heroInterests.href} className="hero-inline-link">
+              {site.heroInterests.linkText}
+            </Link>
+            {site.heroInterests.after}
+          </p>
+          {heroParas.slice(1).map((para, i, arr) => (
             <p
               key={i}
               style={{
-                fontWeight: 300,
-                fontSize: 17,
-                lineHeight: 1.62,
-                color: "var(--ink-2)",
-                margin: i === 0 ? "0 0 16px" : 0,
+                ...heroParaStyle,
+                margin: i === arr.length - 1 ? 0 : "0 0 16px",
               }}
             >
               {para}
