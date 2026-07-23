@@ -72,7 +72,7 @@ My conviction here hasn’t changed: compute will eventually stop being the bott
 
 ## Theme 3: Frontier Drug Development and Thin Evidence Bases
 
-On the note about scare data – after my own brain tumor surgery, I got a very visceral education in how thin the evidence base still is behind even routine medical decisions. This is part of why I started Whel, and part of why the Boston Tech Week events that I attended were overwhelmingly biotech focused (of course, it was also Boston so what do you expect).
+On the note about scarce data – after my own brain tumor surgery, I got a very visceral education in how thin the evidence base still is behind even routine medical decisions. This is part of why I started Whel, and part of why the Boston Tech Week events that I attended were overwhelmingly biotech focused (of course, it was also Boston so what do you expect).
 
 Isomorphic Labs, Alphabet’s drug-design spinout, [announced a $2.1 billion Series B in May](https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round), led by Thrive Capital with Alphabet, GV, and new investors MGX, Temasek, CapitalG, and the UK Sovereign AI Fund all participating. Its Drug Design Engine, IsoDDE, is reported to outperform AlphaFold3 on structure prediction, binding affinity, and novel candidate generation across small molecules, biologics, and antibodies, and the company has partnerships with Novartis, Lilly, and J&J. What to make of this all? I tend to agree with those who take this [raise as proof that capital is still available for AI drug discovery](https://www.fiercebiotech.com/biotech/alphabets-ai-biotech-isomorphic-labs-bags-21b-series-b-fuel-next-gen-drug-design-mode) even as biotech funding broadly has tightened.
 
@@ -126,4 +126,4 @@ Nolan’s Odyssey, a Lord of the Rings rewatch and reread (still the best book t
 
 ![](https://substackcdn.com/image/fetch/$s_!27rj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd386db9a-0ebf-4861-9b59-ccaf2ad7947b_870x1186.png)
 
-Thanks as always, and happy Hump day.
+Thanks as always.

@@ -575,6 +575,46 @@ a { color: inherit; text-decoration: none; }
 .article h4 { font-size: 21px; font-weight: 500; margin: 1.4em 0 0.4em; }
 .article a { border-bottom: 1px solid rgba(21,17,13,0.4); transition: border-color 0.2s; }
 .article a:hover { border-color: var(--ink); }
+
+/* ---- on-page table of contents (wide screens only) ---- */
+.post-full .article h2 { scroll-margin-top: 90px; }
+.post-toc { display: none; }
+@media (min-width: 1280px) {
+  .post-toc {
+    display: block;
+    position: fixed;
+    top: 150px;
+    left: calc(50% - 600px);
+    width: 208px;
+    max-height: 72vh;
+    overflow-y: auto;
+    z-index: 20;
+  }
+}
+.post-toc-title {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sepia-3);
+  margin: 0 0 15px;
+}
+.post-toc ul { list-style: none; margin: 0; padding: 0; }
+.post-toc li { margin: 0 0 11px; }
+.post-toc a {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13.5px;
+  line-height: 1.35;
+  color: var(--sepia);
+  border-left: 2px solid transparent;
+  padding-left: 13px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.post-toc a:hover { color: var(--ink); }
+.post-toc a.active { color: var(--ink); border-left-color: var(--ink); }
 .article em, .article i { font-style: normal; }
 /* italics allowed on the Readings and About pages (titles, captions) */
 .readings .article em, .readings .article i,

@@ -2,7 +2,8 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Article from "@/components/Article";
-import { getPost, formatDate } from "@/lib/posts";
+import TableOfContents from "@/components/TableOfContents";
+import { getPost, formatDate, extractToc } from "@/lib/posts";
 import { categories } from "@/content/site";
 
 // Posts flagged `full: true` are hosted on-site; everything else links out to
@@ -40,8 +41,11 @@ export default async function PostPage({
     redirect("/writings");
   }
 
+  const toc = extractToc(post.content);
+
   return (
     <main className="wrap" style={{ paddingTop: 46, paddingBottom: 48 }}>
+      <TableOfContents items={toc} />
       <Link
         href="/writings"
         className="mono"

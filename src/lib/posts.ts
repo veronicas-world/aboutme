@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { slugify } from "./slug";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -73,6 +74,22 @@ export function getPostSlugs(): string[] {
     .readdirSync(POSTS_DIR)
     .filter((f) => f.endsWith(".md"))
     .map((f) => f.replace(/\.md$/, ""));
+}
+
+export type TocItem = { id: string; text: string };
+
+// Pull the `## ` (h2) section headings out of a markdown body for the on-page
+// table of contents. Ids are the same slugs Article assigns to each <h2>, so
+// the sidebar links line up with the rendered headings.
+export function extractToc(markdown: string): TocItem[] {
+  const items: TocItem[] = [];
+  for (const line of markdown.split("\n")) {
+    const m = /^##\s+(.+?)\s*$/.exec(line);
+    if (!m) continue;
+    const text = m[1].trim();
+    items.push({ id: slugify(text), text });
+  }
+  return items;
 }
 
 export function formatDate(iso: string): string {
