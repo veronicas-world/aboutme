@@ -1,6 +1,6 @@
 ---
 title: "Veronica's 2026 Mid-Year Outlook"
-subtitle: "Title is very intuitive"
+subtitle: "Title is intuitive enough :)"
 date: "2026-07-22"
 category: "emerging-tech"
 full: true
