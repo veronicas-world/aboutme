@@ -82,7 +82,7 @@ What I find most telling, though, is the timeline at play here – internal onco
 
 This is what much of my work at NEA this past spring was focused on. It might be helpful for you to think of this theme as two, tightly connected threads – a 24/7 agentic workforce, where agents handle finance, HR, and IT operations so human teams can focus on higher-leverage work, and, more broadly, a shift in SaaS from static systems of record (SoRs) to intelligent systems of action (SoAs).
 
-While at NEA, I did a lot due diligence on companies in this space, contributing to two investments — [Centralize](https://www.ycombinator.com/companies/centralize/jobs/2CS9Z3k-software-engineer-infrastructure), an AI-driven sales relationship-intelligence platform (used by Brex, Intercom, Highspot, and Sendoso) at its Series A, and [Sol](https://www.meetsol.com/), an agentic core HR system built to replace a traditional HRIS outright, at pre-seed (it had just come out of stealth).
+While at NEA, I did a lot due diligence on companies in this space, contributing to two investments — Unannounced, an AI-driven sales relationship-intelligence platform at its Series A, and [Sol](https://www.meetsol.com/), an agentic core HR system built to replace a traditional HRIS outright, at pre-seed (it had just come out of stealth).
 
 I remain incredibly excited about this sector, and I think the thesis I developed – that incumbents like Salesforce, Workday, and NetSuite will hold the data and compliance moat as systems of record, while new agentic spinups fight for the action layer that determines who owns the customer relationship and the budget – is the right one.
 
