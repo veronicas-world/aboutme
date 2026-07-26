@@ -17,7 +17,7 @@ export const site = {
   // Standalone middle paragraph in the hero bio, with an inline link:
   heroInterests: {
     before:
-      "My interests within tech are many and they shift as I learn more. The most current account of what I'm paying attention to can be found ",
+      "My interests within tech are many and they shift as I learn more. The most current account of what I'm particularly interested in can be found ",
     linkText: "here",
     href: "/writings/veronicas-2026-mid-year-outlook",
     after: ".",

@@ -1,6 +1,5 @@
 ---
 title: "Veronica's 2026 Mid-Year Outlook"
-subtitle: "Title is intuitive enough :)"
 date: "2026-07-22"
 category: "emerging-tech"
 full: true
@@ -16,7 +15,7 @@ To state the obvious, it is **not** the middle of the year. I guess the more apt
 
 *Oh my, we are soooooo early in this AI buildout. And oh my, there is sooooo much I think we are doing wrong, and, more optimistically, there is oh so much opportunity!*
 
-To those closest to my age bracket, AI maybe does not feel very early (we had ChatGPT since our junior year of high school), but it is! That makes the world of technology that you and I exist in exciting for many reasons, but the one most relevant to what I write below is the fact that the categories built on top of these innovations are nowhere close to being won. Many of the people who agree with me on the latter point will bring up MySpace or Netscape as examples of what many deemed category-winners at their peak – but look where we are now (I had to look up what MySpace was and still could not tell you what Netscape did). There are endless examples of early-leaders in waves of new technology who are now nothing but a HBS case study about what went wrong. And we know that technology today is moving faster than it ever did. Welcome to the precipice.
+To those closest to my age bracket, AI maybe does not feel very early (we had ChatGPT since our junior year of high school), but it is! That makes the world of technology that you and I exist in exciting for many reasons, but the one most relevant to what I write below is the fact that the categories built on top of these innovations are nowhere close to being won. Many of the people who agree with me on the latter point will bring up MySpace or Netscape as examples of what many deemed category-winners at their peak – but look where we (and those companies) are now. There are endless examples of early-leaders in waves of new technology who are now nothing but a HBS case study about what went wrong. And we know that technology today is moving faster than it ever did. Welcome to the precipice.
 
 ## First, a note on private markets
 
