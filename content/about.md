@@ -47,4 +47,6 @@ Lastly, perhaps the two most guiding principles I've developed over the last few
 
 ### The natural world
 
-Beyond the realms of philosophy and technology, I am absolutely enamored with the natural world. Part of this, I suppose, stems from my belief that there are forms of argument/persistence that occur within it and emerged entirely independent of our own existence (both in age and scale). Think of, for example, strata of rock, old growth forests, glacial valleys, or my personal favorite, mountains (see pictures I have taken below).
+Beyond the realms of philosophy and technology, I love the natural world. The historian David Nye argues that the feeling of awe and wonder (and sometimes terror) that people once reserved for nature, like mountains, canyons, and waterfalls, gradually migrated toward technology and the things we build, from canals and railroads to skyscrapers, power plants, atomic tests, and spaceflight (he calls this the technological sublime). In his telling, the technological sublime overtook the natural one as the thing that amazed many modern Americans.
+
+In large part I think he was right. And as it pertains to me, yes, I am wowed by technology and did choose to study it. But I promise you that I am just as wowed by the natural world, and it is a goal of mine to visit as many natural wonders as I can. Currently, my favorite landforms are mountains (see pictures I have taken below).
