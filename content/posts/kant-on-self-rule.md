@@ -1,5 +1,6 @@
 ---
 title: "Kant on Self-Rule and Self-Incurred Tutelage"
+archived: true
 date: "2026-06-29"
 category: "philosophy"
 substackUrl: "https://veronicaagudelo.substack.com/p/kant-on-self-rule-and-self-incurred"
