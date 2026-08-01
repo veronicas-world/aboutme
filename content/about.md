@@ -1,3 +1,5 @@
+*tldr: I want the future to be bright, and I will work very hard to do my part in ensuring it is. I love this world and what it has allowed to exist. What a life. What a life.*
+
 I was born in New York City and lived there for seven years, moved to Cali, Colombia for around half a decade (where my father's family resides), then to Boston, and am now back in NYC studying Philosophy, Economics, and Science, Technology & Society (STS) at Columbia. I am fluent in Spanish and English, and can read and write [Classical Latin](https://en.wikipedia.org/wiki/Classical_Latin), albeit slowly.
 
 My favorite food group is soup (everything from Miso and Sancocho to French Onion and Tom Kha Gai), and I recently learned that [every culture on earth has some tradition of broth-making](https://www.bbc.com/travel/article/20260304-why-every-culture-has-a-healing-broth), which is a much appreciated validation of my own adoration.
