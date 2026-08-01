@@ -72,7 +72,7 @@ export default function WritingsList({
                 <div style={{ fontSize: 22, lineHeight: 1.25, marginBottom: 8 }}>
                   {p.title}
                 </div>
-                {p.excerpt && (
+                {p.subtitle && (
                   <p
                     style={{
                       fontSize: 17,
@@ -81,7 +81,7 @@ export default function WritingsList({
                       margin: "0 0 12px",
                     }}
                   >
-                    {p.excerpt}
+                    {p.subtitle}
                   </p>
                 )}
                 <span
