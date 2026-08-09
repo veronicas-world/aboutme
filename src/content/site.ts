@@ -103,18 +103,18 @@ export const experience = [
   },
   {
     year: "May 2026 to Aug 2026",
-    role: "Blueprint Fellow",
-    org: "Dorm Room Fund",
-    logo: "/logos/dorm-room-fund.jpg",
-    note: "Dorm Room Fund is a student‑run pre‑seed venture capital fund backed by First Round Capital, with 400+ investments, 140+ exits, and a portfolio of 300+ student‑led companies that have raised $6B+ in follow‑on capital.\n\nI was a fellow in their Blueprint track, an intensive program for underrepresented investors and founders, combining deal evaluation, founder support, and curriculum to help fellows build an investing toolkit and venture track record.",
-  },
-  {
-    year: "May 2026 to Aug 2026",
     role: "Sophomore Summer Analyst, Asset & Wealth Management",
     org: "J.P. Morgan",
     location: "New York, NY",
     logo: "/logos/jpm.png",
     note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI worked primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team, with an emphasis on how these strategies slot into multi‑asset portfolios for clients.",
+  },
+  {
+    year: "May 2026 to Aug 2026",
+    role: "Blueprint Fellow",
+    org: "Dorm Room Fund",
+    logo: "/logos/dorm-room-fund.jpg",
+    note: "Dorm Room Fund is a student‑run pre‑seed venture capital fund backed by First Round Capital, with 400+ investments, 140+ exits, and a portfolio of 300+ student‑led companies that have raised $6B+ in follow‑on capital.\n\nI was a fellow in their Blueprint track, an intensive program for underrepresented investors and founders, combining deal evaluation, founder support, and curriculum to help fellows build an investing toolkit and venture track record.",
   },
   {
     year: "January 2026 to June 2026",
