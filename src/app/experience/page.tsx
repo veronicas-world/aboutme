@@ -74,7 +74,7 @@ export default function ExperiencePage() {
           Education
         </div>
         <p className="xp-hint">Hover or tap to read more</p>
-        <ExperienceTimeline items={educationTimeline} animate={false} />
+        <ExperienceTimeline items={educationTimeline} />
 
         {/* Professional experience (rotating) */}
         <div

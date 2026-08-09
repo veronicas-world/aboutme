@@ -306,7 +306,7 @@ a { color: inherit; text-decoration: none; }
   font-family: "Times New Roman", Times, serif !important;
 }
 
-/* ---- ever-scrolling experience timeline ---- */
+/* ---- experience timeline (vertical, LinkedIn-style) ---- */
 .xp-hint {
   text-align: center;
   font-style: italic;
@@ -315,111 +315,67 @@ a { color: inherit; text-decoration: none; }
   color: var(--sepia-2);
   margin: 0 auto 26px;
 }
-.xp { --xp-chip: 210px; width: 100%; margin: 0 auto; }
-.xp-marquee {
-  position: relative;
-  overflow: hidden;
-  padding: 6px 0 12px;
-  /* fade the strip out at both edges for an endless feel */
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-}
-/* static horizontal axis the dots slide along */
-.xp-marquee::before {
+.xpv { max-width: 640px; margin: 0 auto; }
+.xpv-item { position: relative; padding-left: 30px; padding-bottom: 26px; }
+.xpv-item:last-child { padding-bottom: 0; }
+/* continuous vertical rail linking the dots */
+.xpv-item::before {
   content: "";
   position: absolute;
-  top: 11px;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(21, 17, 13, 0.15);
+}
+.xpv-item:first-child::before { top: 9px; }
+.xpv-item:last-child::before { bottom: auto; height: 9px; }
+.xpv-dot {
+  position: absolute;
   left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(21, 17, 13, 0.15);
-  z-index: 0;
-}
-.xp-track {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  width: max-content;
-  animation: xp-scroll 52s linear infinite;
-}
-.xp-marquee:hover .xp-track { animation-play-state: paused; }
-/* freeze the scroll while a card is open (needed on touch, where there's no hover) */
-.xp.paused .xp-track { animation-play-state: paused; }
-@keyframes xp-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-/* static variant — centered group, no rotation, axis runs node-to-node */
-.xp-marquee.xp-static {
-  overflow-x: auto;
-  -webkit-mask-image: none;
-          mask-image: none;
-}
-.xp-marquee.xp-static::before { display: none; }
-.xp-track.xp-static {
-  animation: none;
-  margin: 0 auto;
-}
-.xp-track.xp-static::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: calc(var(--xp-chip) / 2);
-  right: calc(var(--xp-chip) / 2);
-  height: 1px;
-  background: rgba(21, 17, 13, 0.15);
-  z-index: 0;
-}
-.xp-static .xp-chip {
-  padding: 0;
-  align-items: center;
-  text-align: center;
-}
-.xp-chip {
-  flex: 0 0 auto;
-  width: var(--xp-chip);
-  padding: 0 22px 0 0;
-  background: none;
-  border: 0;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.xp-dot {
+  top: 4px;
   width: 11px;
   height: 11px;
   border-radius: 50%;
   background: var(--bg);
   border: 1px solid rgba(21, 17, 13, 0.4);
-  margin-bottom: 14px;
+  margin: 0;
+  z-index: 1;
   transition: background 0.22s, transform 0.22s, border-color 0.22s;
 }
-.xp-chip:hover .xp-dot,
-.xp-chip.active .xp-dot {
+.xpv-item.active .xpv-dot {
   background: var(--ink);
   border-color: var(--ink);
-  transform: scale(1.2);
+  transform: scale(1.25);
+}
+.xpv-head {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 .xp-year {
+  display: block;
   font-size: 10.5px;
   letter-spacing: 0.1em;
   color: var(--sepia-2);
   transition: color 0.22s;
 }
-.xp-chip:hover .xp-year,
-.xp-chip.active .xp-year { color: var(--sepia); }
+.xpv-item.active .xp-year { color: var(--sepia); }
 .xp-role {
-  font-size: 16px;
-  line-height: 1.25;
+  display: block;
+  font-size: 18px;
+  line-height: 1.28;
   color: var(--ink-3);
   margin-top: 5px;
   transition: color 0.22s;
 }
-.xp-chip:hover .xp-role,
-.xp-chip.active .xp-role { color: var(--ink); }
+.xpv-item.active .xp-role { color: var(--ink); }
 .xp-org {
+  display: block;
   font-size: 10px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -427,36 +383,25 @@ a { color: inherit; text-decoration: none; }
   margin-top: 5px;
 }
 .xp-loc {
+  display: block;
   font-size: 11px;
   letter-spacing: 0.03em;
   color: var(--sepia-2);
   margin-top: 6px;
 }
-/* the card that pops out for the hovered role */
-.xp-detail {
-  position: relative;
-  height: 0;
-}
+/* detail card that expands inline beneath the hovered role */
 .xp-card {
-  position: absolute;
-  top: 16px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  /* placeholder — overridden below for the above/below variants */
-  width: 100%;
-  max-width: 640px;
   border: 1px solid rgba(21, 17, 13, 0.14);
   background: var(--bg-warm);
   border-radius: 4px;
-  padding: 24px 28px;
-  box-shadow: 0 18px 44px -26px rgba(21, 17, 13, 0.4);
-  z-index: 5;
-  animation: xp-pop 0.3s cubic-bezier(0.2, 0.7, 0.3, 1);
+  padding: 22px 26px;
+  box-shadow: 0 14px 40px -28px rgba(21, 17, 13, 0.4);
+  animation: xp-pop 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
+.xpv-card { margin: 14px 0 2px; max-width: 600px; }
 @keyframes xp-pop {
-  from { opacity: 0; transform: translateY(14px) scale(0.97); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .xp-card-logo {
   display: block;
@@ -465,11 +410,8 @@ a { color: inherit; text-decoration: none; }
   width: auto;
   height: auto;
   margin-bottom: 18px;
-  /* card bg is near-white, so multiply drops the logos' white backgrounds */
   mix-blend-mode: multiply;
 }
-/* self-contained logos with a colored background (e.g. white-on-navy) — show
-   the tile as-is, no blend, softened corners */
 .xp-card-logo-tile {
   mix-blend-mode: normal;
   max-height: 60px;
@@ -490,21 +432,8 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
 }
 .xp-note + .xp-note { margin-top: 12px; }
-/* card reveals above the row (professional experience) */
-.xp-detail-above .xp-card {
-  top: auto;
-  bottom: 16px;
-}
-.xp-card-loc { color: var(--sepia-2); }
-.xp-link {
-  color: inherit;
-  border-bottom: 1px solid rgba(21, 17, 13, 0.4);
-}
-.xp-bullets {
-  margin: 0;
-  padding-left: 20px;
-  list-style: none;
-}
+.xp-link { color: inherit; border-bottom: 1px solid rgba(21, 17, 13, 0.4); }
+.xp-bullets { margin: 0; padding-left: 20px; list-style: none; }
 .xp-bullets li {
   position: relative;
   font-weight: 300;
@@ -513,34 +442,18 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-2);
   margin-bottom: 10px;
 }
+.xp-bullets li:last-child { margin-bottom: 0; }
 .xp-bullets li::before {
-  content: "•";
+  content: "\2022";
   position: absolute;
   left: -18px;
   font-size: 15px;
   line-height: 1.5;
   color: var(--sepia-2);
 }
-@media (prefers-reduced-motion: reduce) {
-  .xp-track { animation: none; }
-  .xp-marquee { overflow-x: auto; }
-}
 @media (max-width: 640px) {
-  .xp { --xp-chip: 170px; display: flex; flex-direction: column; }
-  /* card sits above the row and flows in-line, so it opens above the dot yet
-     can never spill past the top/bottom of the screen */
-  .xp-detail { order: 1; height: auto; }
-  .xp-marquee { order: 2; }
-  .xp-card,
-  .xp-detail-above .xp-card {
-    position: static;
-    top: auto;
-    bottom: auto;
-    width: 100%;
-    max-width: none;
-    margin: 0 0 16px;
-  }
-  .xp-marquee.xp-static { -webkit-overflow-scrolling: touch; }
+  .xpv-card { padding: 18px 20px; }
+  .xp-role { font-size: 17px; }
 }
 
 /* ---- footer ---- */

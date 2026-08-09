@@ -39,88 +39,72 @@ function renderInline(text: string): ReactNode[] {
   return parts;
 }
 
-export default function ExperienceTimeline({
-  items,
-  animate = true,
-}: {
-  items: XP[];
-  animate?: boolean;
-}) {
+// Vertical, LinkedIn-style timeline. Each role sits on a continuous rail;
+// hovering (or tapping) a role expands its detail card inline beneath it.
+export default function ExperienceTimeline({ items }: { items: XP[] }) {
   const [active, setActive] = useState<number | null>(null);
-  const current = active !== null ? items[active] : null;
-  const hasContent = !!(
-    current && ((current.bullets && current.bullets.length) || current.note)
-  );
-
-  // Duplicate the list only when animating, so the marquee can loop seamlessly.
-  const loop = animate ? [...items, ...items] : items;
-
-  // Both timelines reveal the card ABOVE the row.
-  const detail = (
-    <div className="xp-detail xp-detail-above" aria-live="polite">
-      {hasContent && current && (
-        <div key={active} className="xp-card">
-          {current.logo && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              className={`xp-card-logo${current.logoTile ? " xp-card-logo-tile" : ""}`}
-              src={current.logo}
-              alt={current.org ?? current.role}
-            />
-          )}
-          <div className="xp-card-head mono">
-            {current.role}
-            {current.org ? ` · ${current.org}` : ""}
-          </div>
-          {current.bullets && current.bullets.length > 0 ? (
-            <ul className="xp-bullets">
-              {current.bullets.map((b, j) => (
-                <li key={j}>{b}</li>
-              ))}
-            </ul>
-          ) : (
-            current.note
-              ?.split("\n\n")
-              .map((p, k) => (
-                <p key={k} className="xp-note">
-                  {renderInline(p)}
-                </p>
-              ))
-          )}
-        </div>
-      )}
-    </div>
-  );
 
   return (
-    <div
-      className={`xp${active !== null ? " paused" : ""}`}
-      onMouseLeave={() => setActive(null)}
-    >
-      {detail}
-      <div className={`xp-marquee${animate ? "" : " xp-static"}`}>
-        <div className={`xp-track${animate ? "" : " xp-static"}`}>
-          {loop.map((e, i) => {
-            const idx = i % items.length;
-            return (
+    <div className="xpv" onMouseLeave={() => setActive(null)}>
+      {items.map((e, idx) => {
+        const isActive = active === idx;
+        const hasContent = !!(
+          (e.bullets && e.bullets.length) || e.note
+        );
+        return (
+          <div className={`xpv-item${isActive ? " active" : ""}`} key={idx}>
+            <span className="xpv-dot" />
+            <div className="xpv-body">
               <button
-                key={i}
-                className={`xp-chip${active === idx ? " active" : ""}`}
+                type="button"
+                className="xpv-head"
                 onMouseEnter={() => setActive(idx)}
                 onFocus={() => setActive(idx)}
                 onClick={() => setActive((a) => (a === idx ? null : idx))}
-                aria-label={`${e.role}, ${e.org ?? ""}`}
+                aria-expanded={isActive}
+                aria-label={`${e.role}${e.org ? `, ${e.org}` : ""}`}
               >
-                <span className="xp-dot" />
                 <span className="xp-year mono">{e.year}</span>
                 <span className="xp-role">{e.role}</span>
                 {e.org && <span className="xp-org mono">{e.org}</span>}
                 {e.location && <span className="xp-loc mono">{e.location}</span>}
               </button>
-            );
-          })}
-        </div>
-      </div>
+
+              {isActive && hasContent && (
+                <div className="xp-card xpv-card">
+                  {e.logo && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      className={`xp-card-logo${e.logoTile ? " xp-card-logo-tile" : ""}`}
+                      src={e.logo}
+                      alt={e.org ?? e.role}
+                    />
+                  )}
+                  <div className="xp-card-head mono">
+                    {e.role}
+                    {e.org ? ` · ${e.org}` : ""}
+                  </div>
+                  {e.bullets && e.bullets.length > 0 ? (
+                    <ul className="xp-bullets">
+                      {e.bullets.map((b, j) => (
+                        <li key={j}>{b}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    e.note
+                      ?.split("\n\n")
+                      .map((p, k) => (
+                        <p key={k} className="xp-note">
+                          {renderInline(p)}
+                        </p>
+                      ))
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
