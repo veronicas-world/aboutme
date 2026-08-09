@@ -88,7 +88,7 @@ export default function ExperiencePage() {
             Professional Experience
           </div>
           <p className="xp-hint">Hover or tap to read more</p>
-          <ExperienceTimeline items={[...experience].reverse()} />
+          <ExperienceTimeline items={experience} />
         </div>
       </div>
     </main>

@@ -95,7 +95,7 @@ export const experienceIntro =
 export const experience = [
   {
     year: "May 2026 to Aug 2026",
-    role: "Incoming Fall Analyst",
+    role: "Summer Analyst/Tech Investor",
     org: "New Enterprise Associates (NEA)",
     location: "New York, NY",
     logo: "/logos/nea.webp",
