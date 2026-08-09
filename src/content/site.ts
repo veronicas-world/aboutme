@@ -94,7 +94,7 @@ export const experienceIntro =
 
 export const experience = [
   {
-    year: "May 2026 to Aug 2026",
+    year: "May 2026 to Present",
     role: "Summer Analyst/Tech Investor",
     org: "New Enterprise Associates (NEA)",
     location: "New York, NY",
@@ -159,10 +159,7 @@ export const educationTimeline = [
     logo: "/logos/columbia.png",
     bullets: [
       "3.96 / 4.00 GPA",
-      "Student Advisory Board — Eric H. Holder Initiative for Civil and Political Rights",
-      "Board Member — Latino Professional Network",
-      "Interviewer — Gadfly Magazine",
-      "Member — Girls Into VC, Sustainable Finance Group, and Girls Who Invest",
+      "Girls Into VC, Girls Who Invest Intensive Program Scholar, Sustainable Finance Group, Gadfly Magazine, The Latino Professional Network, The Eric H. Holder Initiative for Civil and Political Rights",
     ],
   },
 ];
