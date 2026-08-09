@@ -2,8 +2,6 @@
 
 I was born in New York City and lived there for seven years, moved to Cali, Colombia for around half a decade (where my father's family resides), then to Boston, and am now back in NYC studying Philosophy, Economics, and Science, Technology & Society (STS) at Columbia. I am fluent in Spanish and English, and can read and write [Classical Latin](https://en.wikipedia.org/wiki/Classical_Latin), albeit slowly.
 
-My favorite food group is soup (everything from Miso and Sancocho to French Onion and Tom Kha Gai), and I recently learned that [every culture on earth has some tradition of broth-making](https://www.bbc.com/travel/article/20260304-why-every-culture-has-a-healing-broth), which is a much appreciated validation of my own adoration.
-
 My favorite music genre is ambient/experimental electronic, and if that's of interest, please reach out so that I can share the best playlist I've ever curated. My favorite TV show of all time is *Lost*, and my favorite comic series is *The Adventures of Tintin* (the latter is, as with a lot of older media, complicated. Some early books have very colonial stereotypes. I tend to prefer the later ones, where the politics are at least a bit more self-aware).
 
 ![Tintin on the Moon](https://substackcdn.com/image/fetch/$s_!0pan!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc1ab1046-0ea6-4de6-b7b2-9f5fc2fd841d_1036x1024.png)
