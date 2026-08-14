@@ -27,8 +27,8 @@ export default function Home() {
         position: "relative",
       }}
     >
-      <BgSketch name="interests" float={false} style={{ bottom: "3%", left: "-9%", width: 300, opacity: 0.55 }} />
-      <BgSketch name="trajectory" float={false} style={{ bottom: "12%", right: "-1%", width: 210, opacity: 0.55 }} />
+      <BgSketch name="interests" float={false} style={{ bottom: "3%", left: "-9%", width: 300, opacity: 0.45 }} />
+      <BgSketch name="trajectory" float={false} style={{ bottom: "12%", right: "-1%", width: 210, opacity: 0.45 }} />
 
       <div className="tcenter" style={{ maxWidth: 720, margin: "0 auto" }}>
         <HomeImage />
