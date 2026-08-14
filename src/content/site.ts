@@ -20,7 +20,8 @@ export const site = {
       "My interests within tech are many and they shift as I learn more. The most current account of what I'm interested in can be found ",
     linkText: "here",
     href: "/writings/veronicas-2026-mid-year-outlook",
-    after: ".",
+    after:
+      ". That said, most of my work in investing has been in applied AI. A good way to think about this vertical is that if the frontier labs are creating the next generation of generalist intelligence, then applied AI aims to be the successful deployment and configuration of that intelligence. And despite all the SaaSpocalypse fears from back in February, configuration and deployment is a very hard thing to do well. I enjoy the work and find it meaningful. Beyond that, I've also spent time in robotics, defense, fintech, and a bit of consumer.",
   },
   // Affiliations shown small under the hero line:
   heroAffiliations: [
