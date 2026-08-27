@@ -148,7 +148,7 @@ export const experience = [
     org: "Thinker",
     location: "Cambridge, MA",
     logo: "/logos/thinker.png",
-    note: "Thinker is an edtech startup spun out of Harvard's Philosophy Department that builds argument‑mapping tools and curriculum to teach critical thinking and argumentative reasoning, used by over 120+ schools and universities.\n\nDuring my time there, I led product, content, and growth initiatives, creating 25+ argument maps and 75+ pages of HarvardX course content. Additionally, I helped redesign their website for accessibility compliance (WCAG standards).",
+    note: "Thinker is an edtech startup spun out of Harvard's Philosophy Department that builds argument‑mapping tools and curriculum to teach critical thinking and argumentative reasoning, used by over 120+ schools and universities.\n\nDuring my time there, I led product, content, and growth initiatives, creating 25+ argument maps and 75+ pages of HarvardX course content. Additionally, I helped redesign their website for accessibility compliance (WCAG standards). Perhaps most formatively, I was trained in a strict curriculum of symbolic logic under graduate students from Harvard's Department of Philosophy.",
   },
 ];
 
