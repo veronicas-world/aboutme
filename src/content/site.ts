@@ -21,7 +21,7 @@ export const site = {
     linkText: "here",
     href: "/writings/veronicas-2026-mid-year-outlook",
     after:
-      ". That said, most of my work in investing has been in applied AI. A good way to frame this vertical, I think, is that if the frontier labs are creating the next generation of generalist intelligence models, then applied AI is the successful deployment and configuration of that intelligence in practice (to them, intelligence is a commodity). As it turns out, configuration and deployment is a very hard thing to do well. I enjoy this work and find it meaningful. Beyond applied AI, I've also spent time in robotics, defense, AI infra, fintech, and a bit of consumer. Recently, I have also developed a strong interest in world models.",
+      ". That said, most of my work in investing has been in applied AI. A good way to frame this vertical, I think, is that if the frontier labs are creating the next generation of generalist intelligence models, then applied AI is the successful deployment and configuration of that intelligence in practice (to them, intelligence is a commodity). As it turns out, configuration and deployment is a very hard thing to do well. I enjoy this work and find it meaningful. Beyond applied AI, I've spent time in robotics, defense, AI infra, fintech, and a bit of consumer. Recently, I have also developed a strong interest in world models.",
   },
   // Affiliations shown small under the hero line:
   heroAffiliations: [
