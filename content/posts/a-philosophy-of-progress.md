@@ -5,6 +5,7 @@ date: "2026-02-17"
 category: "philosophy"
 substackUrl: "https://veronicaagudelo.substack.com/p/my-why-venture-a-philosophy-of-progress"
 full: true
+cover: "https://substackcdn.com/image/fetch/$s_!XlT-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F308bd0d0-805e-41dc-9f94-e711315577d5_2456x3261.png"
 ---
 
 Early-stage investing is, above all, a discipline that requires deep curiosity about the world we live in and the various ways in which it functions. This is both what drew me to the work in the first place and what continues to hold me in it. The (brief time) I have spent in venture has been, above all, an education in the many ways in our society works, and I have had the privilege of being presented with various arguments for how we can make it better (after all, what is a pitch deck if not an argument for a founder’s vision of what ought to exist?).
@@ -19,7 +20,7 @@ Our contemporary imagination tends to flatten the word technology into software,
 
 I am partial to data. What follows are several graphs illustrating the relationship between technological advancement and the conditions of human life.
 
-![](https://ourworldindata.org/technology-long-run)
+[![](https://substackcdn.com/image/fetch/$s_!XlT-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F308bd0d0-805e-41dc-9f94-e711315577d5_2456x3261.png)](https://ourworldindata.org/technology-long-run)
 
 A couple of interesting conclusions can be derived from the chart above. The most notable is perhaps how recent most of our technological breakthroughs actually are. For thousands of years, technological change was so slow it was nearly imperceptible. Then, beginning around the Industrial Revolution, the curve bends sharply upward. Enter the printing press, the steam engine, electricity, antibiotics, semiconductors, the internet. The compression of innovation into the last two centuries is stark in its acceleration. Now place that acceleration beside human outcomes.
 
