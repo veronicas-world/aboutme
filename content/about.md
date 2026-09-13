@@ -1,4 +1,4 @@
-*tldr: I want the future to be bright, and I will work very hard to do my part in ensuring it is. I love this world and what it has allowed to exist. What a life. What a life.*
+*tldr: I want the future to be bright, and I will work very hard to do my part in ensuring it is. I love this world and what it has allowed to exist. And I am incredibly grateful to be a young person in this moment.*
 
 I was born in New York City and lived there for seven years, moved to Cali, Colombia for around half a decade (where my father's family resides), then to Boston, and am now back in NYC studying Philosophy, Economics, and Science, Technology & Society (STS) at Columbia. I am fluent in Spanish and English, and can read and write [Classical Latin](https://en.wikipedia.org/wiki/Classical_Latin), albeit slowly.
 
