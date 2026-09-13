@@ -248,7 +248,7 @@ export const projects = [
     role: "Founder",
     tags: ["Drug repurposing", "Women's health", "Research tooling"],
     summary:
-      "A drug-repurposing research tool that mines scattered evidence (trials, case reports, mechanisms) for conditions like endometriosis, PMDD, and PCOS — surfacing useful truths that can be present in data before anyone knows to look for them.",
+      "A graded evidence database for drug repurposing in women's health, pulling together scattered evidence (trials, registries, mechanisms, adverse-event data) for conditions like endometriosis, PMDD, and PCOS and grading the certainty of the evidence behind each drug-condition pair.",
     body: [
       "Whel (Women's Health Evidence Lab) began as a question: how many useful truths are already sitting in the literature, waiting for someone to connect them? It's a tool for finding repurposing candidates by mining scattered, under-connected evidence across trials, case reports, and mechanisms.",
       "EDIT — expand this with the story of why you started it, what it does today, and where it's going. The detailed essays are linked below.",

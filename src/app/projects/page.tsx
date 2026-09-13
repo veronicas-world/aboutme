@@ -5,7 +5,7 @@ import BgSketch from "@/components/BgSketch";
 export const metadata: Metadata = {
   title: "Projects · Veronica Agudelo",
   description:
-    "Projects — including Whel (Women's Health Evidence Lab), a drug-repurposing platform for female biology.",
+    "Projects — including Whel (Women's Health Evidence Lab), a graded evidence database for drug repurposing in women's health.",
 };
 
 const projects = [
@@ -14,7 +14,7 @@ const projects = [
     title: "Whel",
     meta: "Women's Health Evidence Lab",
     excerpt:
-      "A drug-repurposing knowledge graph for female biology that surfaces approved drugs for under-researched women's health conditions and scores the evidence behind each one.",
+      "A graded evidence database for drug repurposing in women's health that surfaces existing drugs for under-researched conditions and grades the certainty of the evidence behind each one.",
   },
 ];
 

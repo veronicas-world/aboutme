@@ -8,7 +8,7 @@ import BgSketch from "@/components/BgSketch";
 export const metadata: Metadata = {
   title: "Whel — Projects · Veronica Agudelo",
   description:
-    "Whel (Women's Health Evidence Lab) — a drug-repurposing platform for female biology.",
+    "Whel (Women's Health Evidence Lab) — a graded evidence database for drug repurposing in women's health.",
 };
 
 const links = [
