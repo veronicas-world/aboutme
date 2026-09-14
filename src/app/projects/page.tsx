@@ -16,6 +16,13 @@ const projects = [
     excerpt:
       "A graded evidence database for drug repurposing in women's health that surfaces existing drugs for under-researched conditions and grades the certainty of the evidence behind each one.",
   },
+  {
+    slug: "student-scraper",
+    title: "Veronica's Student Scraper",
+    meta: "Talent intelligence · Private",
+    excerpt:
+      "A talent-intelligence system for finding undergraduate and graduate builders early from public data. Over 47,000 students across US and Canadian universities, scored deterministically and refreshed daily.",
+  },
 ];
 
 export default function ProjectsPage() {
