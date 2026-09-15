@@ -35,7 +35,7 @@ export default function HomeImage() {
       style={{
         position: "relative",
         width: "100%",
-        maxWidth: 680,
+        maxWidth: 380,
         margin: "0 auto 34px",
       }}
     >
