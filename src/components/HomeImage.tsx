@@ -59,25 +59,49 @@ export default function HomeImage() {
       <button
         type="button"
         onClick={toggleSound}
-        className="mono"
         aria-label={muted ? "Turn sound on" : "Turn sound off"}
         style={{
           position: "absolute",
-          bottom: 12,
-          right: 12,
-          border: "1px solid rgba(247, 244, 236, 0.55)",
-          background: "rgba(21, 17, 13, 0.55)",
+          top: 10,
+          right: 10,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 26,
+          height: 26,
+          padding: 0,
+          border: "none",
+          borderRadius: "50%",
+          background: "rgba(21, 17, 13, 0.5)",
           color: "#f7f4ec",
-          fontSize: 10,
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          padding: "5px 10px",
-          borderRadius: 999,
           cursor: "pointer",
           backdropFilter: "blur(2px)",
         }}
       >
-        {muted ? "Sound on" : "Sound off"}
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+          {muted ? (
+            <>
+              <line x1="23" y1="9" x2="17" y2="15" />
+              <line x1="17" y1="9" x2="23" y2="15" />
+            </>
+          ) : (
+            <>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </>
+          )}
+        </svg>
       </button>
     </div>
   );
