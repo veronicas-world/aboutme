@@ -13,7 +13,7 @@ export const site = {
   eyebrow: "Investor · Writer · Student of complex systems",
   // The one big sentence under your name (EDIT — make it sound like you):
   heroLead:
-    "I am a junior at Columbia interested in early-stage investing, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time, in large part because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of human progress, and that through the thoughtful allocation of capital we can support those building a more resilient world.\n\nOutside of work, you can find me listening to electronic music, trying new restaurants in NYC (Lucali, Fish Cheeks, and Tacos Cano are my three favorites), watching professional soccer or a docuseries, cooking, and hiking.",
+    "I am a junior at Columbia interested in early-stage investing, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time, in large part because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of human progress, and that through the thoughtful allocation of capital we can support those building a more resilient world.\n\nOutside of work, you can find me listening to electronic music, trying new restaurants in NYC, watching professional soccer or a docuseries, cooking, and hiking.",
   // Standalone middle paragraph in the hero bio, with an inline link:
   heroInterests: {
     before:
@@ -21,7 +21,7 @@ export const site = {
     linkText: "here",
     href: "/writings/veronicas-2026-mid-year-outlook",
     after:
-      ". That said, most of my work in investing has been in applied AI. A good way to frame this vertical, I think, is that if the frontier labs are creating the next generation of generalist intelligence models, then applied AI is the successful deployment and configuration of that intelligence in practice (to them, intelligence is a commodity). As it turns out, configuration and deployment is a very hard thing to do well. I enjoy this work and find it meaningful. Beyond applied AI, I've spent time in robotics, defense, AI infra, fintech, and a bit of consumer. Recently, I have also developed a strong interest in world models.",
+      ". That said, most of my work in investing has been in applied AI. A good way to frame this vertical, I think, is that if the frontier labs are creating the next generation of generalist intelligence models, then applied AI is the successful deployment and configuration of that intelligence in practice. As it turns out, configuration and deployment is a very hard thing to do well. I enjoy this work and find it meaningful. Beyond applied AI, I've spent time in robotics, defense, AI infra, fintech, and a bit of consumer. Recently, I have also developed a strong interest in world models.",
   },
   // Affiliations shown small under the hero line:
   heroAffiliations: [
