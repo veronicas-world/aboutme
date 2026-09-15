@@ -33,8 +33,7 @@ content/posts/*.md          # your essays (imported from Substack), one file eac
 public/sketches/*.png       # the 5 sketch images
 ```
 
-## Editing the words (this is the part for you)
-
+## Editing the words 
 **All site copy lives in `src/content/site.ts`.** It's seeded with your real facts
 and some of your own About-page phrasing as a starting point — rewrite any of it.
 You don't need to touch any component to change wording. In there you control:
