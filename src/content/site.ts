@@ -41,6 +41,7 @@ export const nav = [
   { label: "Writings", href: "/writings" },
   { label: "Readings", href: "/readings" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 // ---- HOME labeled rows (Atlas-style) --------------------------------------

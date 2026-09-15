@@ -49,36 +49,6 @@ export default function AboutPage() {
       <div className="col about">
         <Article content={md} />
         <MountainGallery />
-
-        <section
-          id="contact"
-          style={{ marginTop: 64, paddingTop: 32, borderTop: "1px solid var(--line)" }}
-        >
-          <div
-            className="mono"
-            style={{
-              fontSize: 12,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "var(--sepia-3)",
-              marginBottom: 18,
-            }}
-          >
-            Contact
-          </div>
-          <p className="article" style={{ fontSize: 17, margin: 0 }}>
-            I can be reached through my email:{" "}
-            <a href="mailto:vla2117@columbia.edu">vla2117@columbia.edu</a>, or on{" "}
-            <a
-              href="https://www.linkedin.com/in/vlagudelo/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>{" "}
-            messages.
-          </p>
-        </section>
       </div>
     </main>
   );
