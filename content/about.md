@@ -1,6 +1,6 @@
 *tldr: I want the future to be bright, and I will work very hard to do my part in ensuring it is. I love this world and what it has allowed to exist. And I am incredibly grateful to be a young person in this moment.*
 
-I was born in New York City and lived there for seven years, moved to Cali, Colombia for around half a decade, then to Boston, and am now back in NYC studying Philosophy, Economics, and Science, Technology & Society (STS) at Columbia. I am fluent in Spanish and English, and can read and write [Classical Latin](https://en.wikipedia.org/wiki/Classical_Latin), albeit slowly.
+I was born in New York City and lived there for seven years, moved to Cali, Colombia for around half a decade, then to Boston, and am now back in NYC studying Philosophy, Economics, and Science, Technology & Society (with a minor in AI) at Columbia. I am fluent in Spanish and English, and can read and write [Classical Latin](https://en.wikipedia.org/wiki/Classical_Latin), albeit slowly.
 
 My favorite music genre is ambient/experimental electronic, and if that's of interest, please reach out so that I can share the best playlist I've ever curated. My favorite TV show of all time is *Lost*, and my favorite comic series is *The Adventures of Tintin* (the latter is, as with a lot of older media, complicated. Some early books have very colonial stereotypes. I tend to prefer the later ones, where the politics are at least a bit more self-aware).
 
