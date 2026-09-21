@@ -57,6 +57,7 @@ As for albums I am enjoying currently:
 8. [Axios Pro Rata](https://www.axios.com/signup/pro-rata)
    - Not much to say about this one. You probably know it.
 9. [SemiAnalysis](https://semianalysis.com/)
+10. [Dwarkesh Podcast](https://www.dwarkesh.com/)
 
 ### PROJECTS
 
