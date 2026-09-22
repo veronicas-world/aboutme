@@ -14,7 +14,8 @@ const projects = [
     title: "Whel",
     meta: "Women's Health Evidence Lab",
     excerpt:
-      "A graded evidence database for drug repurposing in women's health that surfaces existing drugs for under-researched conditions and grades the certainty of the evidence behind each one.",
+      "An open-source database for drug repurposing in women's health that surfaces existing drugs for under-researched conditions and grades certainty of evidence.",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Postgres / Supabase", "Python", "Vercel"],
   },
   {
     slug: "student-scraper",
@@ -22,6 +23,7 @@ const projects = [
     meta: "Talent intelligence · Private",
     excerpt:
       "A talent-intelligence system for finding undergraduate and graduate builders early from public data. Over 47,000 students across US and Canadian universities, scored deterministically and refreshed daily.",
+    stack: ["Next.js", "TypeScript", "Postgres / Supabase", "Python", "GitHub Actions", "Vercel"],
   },
 ];
 
@@ -85,6 +87,19 @@ export default function ProjectsPage() {
                 >
                   {p.excerpt}
                 </p>
+                {p.stack && (
+                  <div
+                    className="mono"
+                    style={{
+                      fontSize: 10.5,
+                      letterSpacing: "0.08em",
+                      color: "var(--sepia-3)",
+                      marginBottom: 12,
+                    }}
+                  >
+                    {p.stack.join("  ·  ")}
+                  </div>
+                )}
                 <span
                   className="mono post-card-cta"
                   style={{
