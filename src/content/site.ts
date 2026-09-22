@@ -116,7 +116,7 @@ export const experience = [
     org: "J.P. Morgan",
     location: "New York, NY",
     logo: "/logos/jpm.png",
-    note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI worked primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team, with an emphasis on how these strategies slot into multi‑asset portfolios for clients.",
+    note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI worked primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team. Much of my focus was on alternative investment opportunities in the AI and frontier-tech buildout, and how these strategies slot into multi‑asset portfolios for clients.",
   },
   {
     year: "May 2026 to Aug 2026",
