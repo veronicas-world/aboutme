@@ -42,8 +42,8 @@ export default function HomeImage() {
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         ref={ref}
-        src="/home-hero-web.mp4"
-        poster="/home-hero-poster.jpg"
+        src="/home-hero-hq.mp4"
+        poster="/home-hero-poster-hq.jpg"
         autoPlay
         loop
         muted
