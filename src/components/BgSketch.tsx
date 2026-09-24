@@ -3,18 +3,15 @@
 export default function BgSketch({
   name,
   style,
-  className,
   float = true,
   draw = false,
 }: {
   name: "hero" | "about" | "trajectory" | "interests" | "contact";
   style?: React.CSSProperties;
-  className?: string;
   float?: boolean;
   draw?: boolean;
 }) {
-  const base = draw ? "bg-sketch bg-draw" : `bg-sketch${float ? " bg-float" : ""}`;
-  const cls = className ? `${base} ${className}` : base;
+  const cls = draw ? "bg-sketch bg-draw" : `bg-sketch${float ? " bg-float" : ""}`;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
