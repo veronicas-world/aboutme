@@ -44,12 +44,10 @@ a { color: inherit; text-decoration: none; }
 /* home hero background sketches — desktop positions (moved up to fill the top);
    mobile keeps the original two and hides the dining-table one */
 .home-sk-left { top: 5%; left: -6%; bottom: auto; }
-.home-sk-right { top: 6%; right: -3%; bottom: auto; }
-.home-sk-table { top: 42%; left: -4%; bottom: auto; }
+.home-sk-right { top: 15%; right: -3%; bottom: auto; }
 @media (max-width: 700px) {
   .home-sk-left { top: auto; bottom: 3%; left: -9%; }
   .home-sk-right { top: auto; bottom: 12%; right: -1%; }
-  .home-sk-table { display: none; }
 }
 
 .mono { font-family: var(--font-mono), ui-monospace, monospace; }

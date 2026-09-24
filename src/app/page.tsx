@@ -28,7 +28,6 @@ export default function Home() {
       }}
     >
       <BgSketch name="interests" float={false} className="home-sk-left" style={{ width: 300, opacity: 0.45 }} />
-      <BgSketch name="contact" float={false} className="home-sk-table" style={{ width: 240, opacity: 0.45 }} />
       <BgSketch name="trajectory" float={false} className="home-sk-right" style={{ width: 210, opacity: 0.45 }} />
 
       <div className="tcenter" style={{ maxWidth: 720, margin: "0 auto" }}>
