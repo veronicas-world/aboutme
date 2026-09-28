@@ -42,22 +42,20 @@ As for albums I am enjoying currently:
 
 ### NEWSLETTERS + BLOGS
 
-1. [Collab Blog](https://collabfund.com/blog/) (from Collaborative Fund)
-   - One of my favorite fund blogs.
-2. [Not Boring](https://www.notboring.co/) by Packy McCormick
+1. [Not Boring](https://www.notboring.co/) by Packy McCormick
    - The name rings true. Packy McCormick makes everything more interesting. A recent favorite of mine was his essay on [World Models](https://www.notboring.co/p/world-models) with General Intuition's Pim De Witte.
-3. a16z's [Charts of the Week](https://www.a16z.news/t/charts)
+2. a16z's [Charts of the Week](https://www.a16z.news/t/charts)
    - World data in context (not all about AI).
-4. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
+3. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
    - Brilliant. Her and Katherine Boyle have long been role models of mine.
-5. NEA's [Insights](https://www.nea.com/blog)
+4. NEA's [Insights](https://www.nea.com/blog)
    - Biased ;)
-6. [Farnam Street's Newsletter](https://fs.blog/newsletter/)
-7. [CTVC Newsletter](https://www.ctvc.co/)
-8. [Axios Pro Rata](https://www.axios.com/signup/pro-rata)
+5. [Farnam Street's Newsletter](https://fs.blog/newsletter/)
+6. [CTVC Newsletter](https://www.ctvc.co/)
+7. [Axios Pro Rata](https://www.axios.com/signup/pro-rata)
    - Not much to say about this one. You probably know it.
-9. [SemiAnalysis](https://semianalysis.com/)
-10. [Dwarkesh Podcast](https://www.dwarkesh.com/)
+8. [SemiAnalysis](https://semianalysis.com/)
+9. [Dwarkesh Podcast](https://www.dwarkesh.com/)
 
 ### PROJECTS
 
