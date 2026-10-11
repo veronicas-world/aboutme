@@ -95,6 +95,13 @@ export const experienceIntro =
 
 export const experience = [
   {
+    year: "Oct 2026 to Present",
+    role: "New Media",
+    org: "Lightspeed Venture Partners",
+    location: "New York, NY",
+    note: "Lightspeed Venture Partners is a multi-stage global venture capital firm with over $51 billion in assets under management, backing founders from seed through growth across enterprise, consumer, fintech, and health.",
+  },
+  {
     year: "Aug 2026 to Present",
     role: "Growth",
     org: "Factory",
