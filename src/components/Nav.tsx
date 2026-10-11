@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import GoldenRecord from "./GoldenRecord";
+import NavTintin from "./NavTintin";
 import { nav } from "@/content/site";
 
 export default function Nav() {
@@ -32,6 +33,7 @@ export default function Nav() {
             <GoldenRecord />
           )}
         </Link>
+        <NavTintin />
         <button
           className="nav-toggle mono"
           aria-label="Toggle menu"
