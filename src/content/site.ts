@@ -99,6 +99,7 @@ export const experience = [
     role: "New Media",
     org: "Lightspeed Venture Partners",
     location: "New York, NY",
+    logo: "/logos/lightspeed.png",
     note: "Lightspeed Venture Partners is a multi-stage global venture capital firm with over $51 billion in assets under management, backing founders from seed through growth across enterprise, consumer, fintech, and health.",
   },
   {
