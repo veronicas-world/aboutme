@@ -99,7 +99,7 @@ export const experience = [
     role: "New Media",
     org: "Lightspeed Venture Partners",
     location: "New York, NY",
-    logo: "/logos/lightspeed.png",
+    logo: "/logos/std/lightspeed.png",
     note: "Lightspeed Venture Partners is a multi-stage global venture capital firm with over $51 billion in assets under management, backing founders from seed through growth across enterprise, consumer, fintech, and health.",
   },
   {
@@ -107,7 +107,7 @@ export const experience = [
     role: "Growth",
     org: "Factory",
     location: "New York, NY",
-    logo: "/logos/factory.png",
+    logo: "/logos/std/factory.png",
     note: "[Factory](https://factory.ai) builds agent-native software development tools, where AI agents called Droids automate coding, testing, and deployment for engineering teams. I first started working with Factory during my time at NEA, which had been an investor in their Series B, and I now help build up their [Guild](https://factory.ai/ambassador) program on college campuses while looking for growth opportunities in the student and university builder community more broadly. So far, I have manually prospected over 500 students across more than 30 universities and built a database of over 45,000 engineers and leading builders across the US and Canada.",
   },
   {
@@ -115,7 +115,7 @@ export const experience = [
     role: "Summer Analyst/Tech Investor",
     org: "New Enterprise Associates (NEA)",
     location: "New York, NY",
-    logo: "/logos/nea.webp",
+    logo: "/logos/std/nea.webp",
     note: "One of two students in the first Summer/Fall Analyst class in NEA's ~fifty–year history, continuing the work I started during my fellowship.",
   },
   {
@@ -123,14 +123,15 @@ export const experience = [
     role: "Sophomore Summer Analyst, Asset & Wealth Management",
     org: "J.P. Morgan",
     location: "New York, NY",
-    logo: "/logos/jpm.png",
+    logo: "/logos/std/jpm.png",
     note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI worked primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team. Much of my focus was on alternative investment opportunities in the AI and frontier-tech buildout, and how these strategies slot into multi‑asset portfolios for clients.",
   },
   {
     year: "May 2026 to Aug 2026",
     role: "Blueprint Fellow",
     org: "Dorm Room Fund",
-    logo: "/logos/dorm-room-fund.jpg",
+    logo: "/logos/std/dorm-room-fund.jpg",
+    logoTile: true,
     note: "Dorm Room Fund is a student‑run pre‑seed venture capital fund backed by First Round Capital, with 400+ investments, 140+ exits, and a portfolio of 300+ student‑led companies that have raised $6B+ in follow‑on capital.\n\nI was a fellow in their Blueprint track, an intensive program for underrepresented investors and founders, combining deal evaluation, founder support, and curriculum to help fellows build an investing toolkit and venture track record.",
   },
   {
@@ -138,7 +139,7 @@ export const experience = [
     role: "Fellow",
     org: "New Enterprise Associates (NEA)",
     location: "New York, NY",
-    logo: "/logos/nea.webp",
+    logo: "/logos/std/nea.webp",
     note: "New Enterprise Associates (NEA) is a venture capital firm with ~$30B+ in assets under management, nearly 1,000 investments, 270+ IPOs and 450+ M&A exits across technology and healthcare companies from seed through IPO (fun fact, NEA is one of the largest suppliers of companies to the public market!).\n\nDuring my time as a [fellow](https://neafellowship.com/), I assessed prospective investments via market sizing, competitive and customer analysis, and investment memos, while building sector theses and market maps that identified key technical, commercial, and operational inflection points to inform NEA's sourcing and diligence. My work contributed directly to two firmwide investments.",
   },
   {
@@ -146,7 +147,7 @@ export const experience = [
     role: "Fall Analyst",
     org: "Burnt Island Ventures",
     location: "New York, NY",
-    logo: "/logos/burnt-island.webp",
+    logo: "/logos/std/burnt-island.webp",
     logoTile: true,
     note: "Burnt Island Ventures is an early‑to-growth stage venture capital firm focused exclusively on water technology, backing founders who build critical infrastructure, analytics, and climate‑resilient solutions in the $1.6T global water market.\n\nI ran fund communications during my time there (including during the launch of their $50 million Fund II in October of 2025), leading LP and founder‑facing materials and digital strategy across LinkedIn, web, YouTube, and X. Additionally, I partnered with portfolio companies on go‑to‑market and operational initiatives, using performance analytics to improve reach and engagement outcomes.",
   },
@@ -155,7 +156,7 @@ export const experience = [
     role: "Summer Analyst",
     org: "Draper Richards Kaplan Foundation",
     location: "Boston, MA & Menlo Park, CA",
-    logo: "/logos/drkf.jpg",
+    logo: "/logos/std/drkf.jpg",
     note: "The Draper Richards Kaplan Foundation (DRK) is a global venture‑philanthropy firm that supports early‑stage (mostly Series A), high‑impact social enterprises tackling urgent social and environmental problems. They have funded 277+ early‑stage social enterprises whose portfolio has collectively impacted over 610 million lives across sectors including healthcare, education, climate resilience, and food access.\n\nDuring my time there, I worked on financial and impact data from their 200+ portfolio companies to create the annual report, validating growth metrics and investment communications across stakeholders.",
   },
   {
@@ -163,7 +164,7 @@ export const experience = [
     role: "Analyst",
     org: "Thinker",
     location: "Cambridge, MA",
-    logo: "/logos/thinker.png",
+    logo: "/logos/std/thinker.png",
     note: "Thinker is an edtech startup spun out of Harvard's Philosophy Department that builds argument‑mapping tools and curriculum to teach critical thinking and argumentative reasoning, used by over 120+ schools and universities.\n\nDuring my time there, I led product, content, and growth initiatives, creating 25+ argument maps and 75+ pages of HarvardX course content. Additionally, I helped redesign their website for accessibility compliance (WCAG standards). Perhaps most formatively, I was trained in a strict curriculum of symbolic logic under graduate students from Harvard's Department of Philosophy.",
   },
 ];
@@ -173,7 +174,7 @@ export const educationTimeline = [
     year: "Aug 2024 to May 2028 (expected)",
     role: "Columbia University",
     location: "New York, NY",
-    logo: "/logos/columbia.png",
+    logo: "/logos/std/columbia.png",
     bullets: [
       "Philosophy and AI",
       "3.96 / 4.00 GPA",
