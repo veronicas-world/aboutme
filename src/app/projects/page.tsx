@@ -19,8 +19,8 @@ const projects = [
   },
   {
     slug: "findable-future",
-    title: "Building a Findable Future",
-    meta: "Built with Factory",
+    title: "Building a Findable Future (with Factory!)",
+    meta: "Talent intelligence",
     excerpt:
       "A database for finding the next generation of great builders early, by name and with evidence attached: 4,698 builders, 28,814 research papers, and 6,058 pieces of company-formation evidence across thirty-eight universities.",
     stack: ["Factory", "Postgres / Supabase", "Next.js", "GitHub GraphQL API", "Semantic Scholar", "OpenAlex", "arXiv"],

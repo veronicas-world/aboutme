@@ -6,7 +6,7 @@ import Article from "@/components/Article";
 import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
-  title: "Building a Findable Future — Projects · Veronica Agudelo",
+  title: "Building a Findable Future (with Factory!) — Projects · Veronica Agudelo",
   description:
     "A database for finding the next generation of great builders early, by name and with evidence attached. Built with Factory.",
 };
@@ -44,7 +44,7 @@ export default function FindableFuturePage() {
             margin: "0 0 16px",
           }}
         >
-          Building a Findable Future
+          Building a Findable Future (with Factory!)
         </h1>
         <p
           className="mono"
@@ -56,7 +56,7 @@ export default function FindableFuturePage() {
             margin: 0,
           }}
         >
-          Built with Factory
+          Talent intelligence
         </p>
       </header>
 
