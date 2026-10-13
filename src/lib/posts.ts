@@ -17,6 +17,9 @@ export type PostMeta = {
   truncated?: boolean;
   archived?: boolean;
   full?: boolean;
+  // optional: link one word/phrase of the title on the post page
+  titleLinkText?: string;
+  titleLinkHref?: string;
 };
 
 export type Post = PostMeta & { content: string };
@@ -43,6 +46,8 @@ function readPost(file: string): Post {
     truncated: data.truncated || false,
     archived: data.archived || false,
     full: data.full || false,
+    titleLinkText: data.titleLinkText || undefined,
+    titleLinkHref: data.titleLinkHref || undefined,
     content,
   };
 }

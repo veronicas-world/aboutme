@@ -44,7 +44,11 @@ export default function FindableFuturePage() {
             margin: "0 0 16px",
           }}
         >
-          Building a Findable Future (with Factory!)
+          Building a Findable Future (with{" "}
+          <a href="https://factory.ai" target="_blank" rel="noopener noreferrer" className="title-link">
+            Factory
+          </a>
+          !)
         </h1>
         <p
           className="mono"

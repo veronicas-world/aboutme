@@ -83,7 +83,22 @@ export default async function PostPage({
             margin: "0 0 14px",
           }}
         >
-          {post.title}
+          {post.titleLinkText && post.titleLinkHref && post.title.includes(post.titleLinkText) ? (
+            <>
+              {post.title.split(post.titleLinkText)[0]}
+              <a
+                href={post.titleLinkHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="title-link"
+              >
+                {post.titleLinkText}
+              </a>
+              {post.title.split(post.titleLinkText).slice(1).join(post.titleLinkText)}
+            </>
+          ) : (
+            post.title
+          )}
         </h1>
         {post.subtitle && (
           <p

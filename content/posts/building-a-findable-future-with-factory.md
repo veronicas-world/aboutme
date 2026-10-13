@@ -4,6 +4,8 @@ date: "2026-10-12"
 category: "projects"
 substackUrl: "https://veronicaagudelo.substack.com/p/building-a-findable-future-with-factory"
 full: true
+titleLinkText: "Factory"
+titleLinkHref: "https://factory.ai"
 cover: "https://substackcdn.com/image/fetch/$s_!e1_9!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b8d9e80-caaa-4aea-aa3c-8cae159695c7_319x169.png"
 ---
 
