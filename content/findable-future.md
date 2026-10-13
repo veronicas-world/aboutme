@@ -2,7 +2,7 @@
 
 My premise is that the next generation of great builders is findable: by name and with evidence attached. Before the YC batch, before a Series A, many people who will build something important have already left a long, legible trail of proof in public - commits on GitHub, preprints on arXiv, medal lists in olympiad archives, winner galleries on hackathon sites, and names on lab rosters.
 
-To test that claim, I built a database that since September has grown into 4,698 builders, 28,814 research papers, and 6,058 pieces of company-formation evidence across thirty-eight universities. I built it entirely through Factory, as a person who cannot code.
+To test that claim, I built a database that since September has grown into 4,698 builders, 28,814 research papers, and 6,058 pieces of company-formation evidence across thirty-eight universities. I built it entirely through [Factory](https://factory.ai).
 
 ### How it works
 
