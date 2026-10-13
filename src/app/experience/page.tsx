@@ -52,7 +52,7 @@ export default function ExperiencePage() {
       </header>
 
       <div className="col">
-        <div style={{ maxWidth: 720, margin: "0 auto 56px" }}>
+        <div style={{ maxWidth: "var(--read)", margin: "0 auto 56px" }}>
           {experienceIntro.split("\n\n").map((para, i) => (
             <p
               key={i}

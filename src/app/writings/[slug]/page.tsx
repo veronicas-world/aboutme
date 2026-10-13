@@ -45,7 +45,7 @@ export default async function PostPage({
 
   return (
     <main className="wrap" style={{ paddingTop: 46, paddingBottom: 48 }}>
-      <TableOfContents items={toc} />
+      <TableOfContents items={toc} variant="fixed" />
       <Link
         href="/writings"
         className="mono"
@@ -61,7 +61,7 @@ export default async function PostPage({
         ← Writings
       </Link>
 
-      <div className="col post-full" style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div className="col post-full">
         <div
           className="mono"
           style={{
@@ -97,6 +97,7 @@ export default async function PostPage({
             {post.subtitle}
           </p>
         )}
+        <TableOfContents items={toc} variant="inline" />
         <Article content={post.content} />
       </div>
     </main>

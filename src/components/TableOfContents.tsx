@@ -7,7 +7,13 @@ import type { TocItem } from "@/lib/posts";
 // only (see .post-toc in globals.css — it is display:none below 1240px, so it
 // never crowds the article on laptops, tablets, or phones). Clicking a section
 // smooth-scrolls to it; the section you are reading is highlighted.
-export default function TableOfContents({ items }: { items: TocItem[] }) {
+export default function TableOfContents({
+  items,
+  variant = "fixed",
+}: {
+  items: TocItem[];
+  variant?: "fixed" | "inline";
+}) {
   const [active, setActive] = useState<string>(items[0]?.id ?? "");
 
   useEffect(() => {
@@ -45,7 +51,10 @@ export default function TableOfContents({ items }: { items: TocItem[] }) {
   };
 
   return (
-    <nav className="post-toc" aria-label="Table of contents">
+    <nav
+      className={variant === "inline" ? "post-toc post-toc-inline" : "post-toc post-toc-fixed"}
+      aria-label="Table of contents"
+    >
       <div className="post-toc-title">Contents</div>
       <ul>
         {items.map((it) => (

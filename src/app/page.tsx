@@ -30,7 +30,7 @@ export default function Home() {
       <BgSketch name="interests" float={false} className="home-sk-left" style={{ width: 300, opacity: 0.45 }} />
       <BgSketch name="trajectory" float={false} className="home-sk-right" style={{ width: 210, opacity: 0.45 }} />
 
-      <div className="tcenter" style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div className="tcenter" style={{ maxWidth: "var(--read)", margin: "0 auto" }}>
         <HomeImage />
         <h1
           className="home-name"

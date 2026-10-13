@@ -14,6 +14,7 @@
   --line: rgba(21, 17, 13, 0.14);
   --line-soft: rgba(21, 17, 13, 0.12);
   --maxw: 1180px;
+  --read: 960px; /* width of all reading text across the site */
   --pad: 40px;
   /* Times New Roman throughout */
   --font-serif: "Times New Roman", Times, serif;
@@ -58,7 +59,7 @@ a { color: inherit; text-decoration: none; }
 .relative { position: relative; }
 
 /* centered reading column + centered headings (Atlas-style) */
-.col { max-width: 880px; margin-left: auto; margin-right: auto; }
+.col { max-width: var(--read); margin-left: auto; margin-right: auto; }
 .tcenter { text-align: center; }
 
 /* ---- sticky nav ---- */
@@ -542,13 +543,27 @@ a { color: inherit; text-decoration: none; }
 /* ---- on-page table of contents (wide screens only) ---- */
 .post-full .article h2 { scroll-margin-top: 90px; }
 .post-toc { display: none; }
-@media (min-width: 1280px) {
-  .post-toc {
+/* inline contents block at the top of an article (laptops/tablets) */
+.post-toc-inline {
+  display: block;
+  margin: 0 0 38px;
+  padding: 20px 0 10px;
+  border-top: 1px solid rgba(21,17,13,0.12);
+  border-bottom: 1px solid rgba(21,17,13,0.12);
+}
+.post-toc-inline ul { columns: 2; column-gap: 40px; }
+.post-toc-inline li { break-inside: avoid; }
+@media (max-width: 700px) { .post-toc-inline ul { columns: 1; } }
+/* on very wide screens the contents float in the left margin instead,
+   clear of the wider reading column */
+@media (min-width: 1560px) {
+  .post-toc-inline { display: none; }
+  .post-toc-fixed {
     display: block;
     position: fixed;
     top: 150px;
-    left: calc(50% - 600px);
-    width: 208px;
+    left: calc(50% - var(--read) / 2 - 240px);
+    width: 200px;
     max-height: 72vh;
     overflow-y: auto;
     z-index: 20;
