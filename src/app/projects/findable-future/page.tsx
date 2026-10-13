@@ -60,7 +60,7 @@ export default function FindableFuturePage() {
         </p>
       </header>
 
-      <div className="col">
+      <div className="col post-building-a-findable-future-with-factory">
         <Article content={md} />
       </div>
     </main>

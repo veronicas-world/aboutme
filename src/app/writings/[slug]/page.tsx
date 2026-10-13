@@ -61,7 +61,7 @@ export default async function PostPage({
         ← Writings
       </Link>
 
-      <div className="col post-full">
+      <div className={`col post-full post-${slug}`}>
         <div
           className="mono"
           style={{
