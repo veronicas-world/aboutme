@@ -47,13 +47,11 @@ As for albums I am enjoying currently:
 2. a16z's [Charts of the Week](https://www.a16z.news/t/charts)
    - World data in context (not all about AI).
 3. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
-   - Brilliant. Her and Katherine Boyle have long been role models of mine.
 4. NEA's [Insights](https://www.nea.com/blog)
    - Biased ;)
 5. [Farnam Street's Newsletter](https://fs.blog/newsletter/)
 6. [CTVC Newsletter](https://www.ctvc.co/)
 7. [Axios Pro Rata](https://www.axios.com/signup/pro-rata)
-   - Not much to say about this one. You probably know it.
 8. [SemiAnalysis](https://semianalysis.com/)
 9. [Dwarkesh Podcast](https://www.dwarkesh.com/)
 
