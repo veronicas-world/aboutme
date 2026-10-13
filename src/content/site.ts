@@ -108,7 +108,7 @@ export const experience = [
     org: "Factory",
     location: "New York, NY",
     logo: "/logos/std/factory.png",
-    note: "[Factory](https://factory.ai) builds agent-native software development tools, where AI agents called Droids automate coding, testing, and deployment for engineering teams. I first started working with Factory during my time at NEA, which had been an investor in their Series B, and I now help build up their [Guild](https://factory.ai/ambassador) program on college campuses while looking for growth opportunities in the student and university builder community more broadly. So far, I have manually prospected over 500 students across more than 30 universities and built a database of over 45,000 engineers and leading builders across the US and Canada.",
+    note: "[Factory](https://factory.ai) builds agent-native software development tools, where AI agents called Droids automate coding, testing, and deployment for engineering teams. I first started working with Factory during my time at NEA, which had been an investor in their Series B, and I now help build up their [Guild](https://factory.ai/ambassador) program on college campuses while looking for growth opportunities in the student and university builder community more broadly. So far, I have manually prospected over 500 students across more than 30 universities and built a [database](/projects/findable-future) of 4,698 builders, 28,814 research papers, and 6,058 pieces of company-formation evidence across thirty-eight universities.",
   },
   {
     year: "May 2026 to Aug 2026",
