@@ -6,14 +6,14 @@ import Article from "@/components/Article";
 import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
-  title: "Veronica's Student Scraper — Projects · Veronica Agudelo",
+  title: "Building a Findable Future — Projects · Veronica Agudelo",
   description:
-    "Veronica's Student Scraper — a talent-intelligence system for finding undergraduate and graduate builders.",
+    "A database for finding the next generation of great builders early, by name and with evidence attached. Built with Factory.",
 };
 
-export default function StudentScraperPage() {
+export default function FindableFuturePage() {
   const md = fs.readFileSync(
-    path.join(process.cwd(), "content", "student-scraper.md"),
+    path.join(process.cwd(), "content", "findable-future.md"),
     "utf8"
   );
 
@@ -44,7 +44,7 @@ export default function StudentScraperPage() {
             margin: "0 0 16px",
           }}
         >
-          Veronica&apos;s Student Scraper
+          Building a Findable Future
         </h1>
         <p
           className="mono"
@@ -56,7 +56,7 @@ export default function StudentScraperPage() {
             margin: 0,
           }}
         >
-          Private project
+          Built with Factory
         </p>
       </header>
 
