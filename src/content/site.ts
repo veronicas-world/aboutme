@@ -104,7 +104,7 @@ export const experience = [
   },
   {
     year: "Aug 2026 to Present",
-    role: "Guild",
+    role: "Growth",
     org: "Factory",
     location: "New York, NY",
     logo: "/logos/std/factory.png",
