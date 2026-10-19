@@ -1,4 +1,4 @@
-*tldr: I want the future to be bright and I will work very hard to do my part in ensuring it is. I love this world and everything in it. And I am both incredibly grateful and excited to be a young person in this moment.*
+*tldr: I feel incredibly lucky to be a young person interested in technology in this day and age. I am incredibly excited (though, of course, cautious) about how the world is changing, and feel no greater calling than to find a way to take part in shaping it. I want the future to be bright and abundant.*
 
 I was born in New York City, grew up in Cali, Colombia, and attended most of middle and high school in Boston. I am now back in NYC studying Philosophy and AI at Columbia.
 

@@ -47,6 +47,35 @@ export default function AboutPage() {
       </header>
 
       <div className="col about">
+        <figure style={{ maxWidth: 760, margin: "0 auto 48px" }}>
+          <a
+            href="https://en.wikipedia.org/wiki/The_City_Rises"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read about The City Rises on Wikipedia (opens in a new tab)"
+            style={{ display: "block" }}
+          >
+            <img
+              src="/the-city-rises.jpg"
+              alt="Workers and horses amid a city under construction in Umberto Boccioni's The City Rises."
+              width={1024}
+              height={680}
+              loading="eager"
+              style={{ display: "block", width: "100%", height: "auto", borderRadius: 3 }}
+            />
+          </a>
+          <figcaption
+            style={{
+              marginTop: 12,
+              fontSize: 13,
+              lineHeight: 1.5,
+              color: "var(--sepia)",
+              textAlign: "center",
+            }}
+          >
+            The City Rises, 1910 · Umberto Boccioni
+          </figcaption>
+        </figure>
         <Article content={md} />
         <MountainGallery />
 
