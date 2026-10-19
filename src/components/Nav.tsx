@@ -18,20 +18,40 @@ export default function Nav() {
           aria-label="Veronica Agudelo, home"
           onClick={() => setOpen(false)}
         >
-          {imgOk ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src="/golden-record.png"
-              alt="Voyager Golden Record"
-              width={55}
-              height={55}
-              className="record-spin"
-              style={{ width: 55, height: 55, borderRadius: "50%", objectFit: "cover", display: "block" }}
-              onError={() => setImgOk(false)}
-            />
-          ) : (
+          <span
+            className="record-spin"
+            style={{
+              position: "relative",
+              display: "grid",
+              placeItems: "center",
+              width: 55,
+              height: 55,
+              flexShrink: 0,
+            }}
+          >
             <GoldenRecord />
-          )}
+            {imgOk && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src="/golden-record-nav.png"
+                alt="Voyager Golden Record"
+                width={55}
+                height={55}
+                loading="eager"
+                fetchPriority="high"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: 55,
+                  height: 55,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+                onError={() => setImgOk(false)}
+              />
+            )}
+          </span>
         </Link>
         <NavTintin />
         <button
