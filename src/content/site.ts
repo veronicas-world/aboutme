@@ -103,6 +103,14 @@ export const experience = [
     note: "Lightspeed Venture Partners is a multi-stage global venture capital firm with over $51 billion in assets under management, backing founders from seed through growth across enterprise, consumer, fintech, and health.",
   },
   {
+    year: "Oct 2026 to Present",
+    role: "Investment Partner",
+    org: "Dorm Room Fund",
+    location: "New York, NY",
+    logo: "/logos/std/dorm-room-fund-dark.png",
+    note: "[Dorm Room Fund](https://www.dormroomfund.com/) is a student-run venture capital firm that writes the first check for founders still in school or just out. Over 12+ years, DRF has backed 339+ companies that have gone on to raise $14B+ in follow-on capital, including Cursor, Shield AI, Commure, Dandy, Hightouch, and Inversion Space.\n\nAs an Investment Partner on the New York & Midwest team, I source student founders, work every deal with my regional team (pressure-testing the pitch and the assumptions underneath it), and make investment decisions - partners hold full investment authority over the fund's capital.",
+  },
+  {
     year: "Aug 2026 to Present",
     role: "Growth",
     org: "Factory",
@@ -125,14 +133,6 @@ export const experience = [
     location: "New York, NY",
     logo: "/logos/std/jpm.png",
     note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI worked primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team. Much of my focus was on alternative investment opportunities in the AI and frontier-tech buildout, and how these strategies slot into multi‑asset portfolios for clients.",
-  },
-  {
-    year: "May 2026 to Aug 2026",
-    role: "Blueprint Fellow",
-    org: "Dorm Room Fund",
-    logo: "/logos/std/dorm-room-fund.jpg",
-    logoTile: true,
-    note: "Dorm Room Fund is a student‑run pre‑seed venture capital fund backed by First Round Capital, with 400+ investments, 140+ exits, and a portfolio of 300+ student‑led companies that have raised $6B+ in follow‑on capital.\n\nI was a fellow in their Blueprint track, an intensive program for underrepresented investors and founders, combining deal evaluation, founder support, and curriculum to help fellows build an investing toolkit and venture track record.",
   },
   {
     year: "January 2026 to June 2026",
