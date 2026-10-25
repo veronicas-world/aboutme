@@ -1,14 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import GoldenRecord from "./GoldenRecord";
 import NavTintin from "./NavTintin";
 import { nav } from "@/content/site";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [imgOk, setImgOk] = useState(true);
+  // if the photo fails (flaky mobile/in-app browsers), retry with a
+  // cache-busting URL instead of falling back to a drawing
+  const [retry, setRetry] = useState(0);
+  const imgRef = useRef<HTMLImageElement>(null);
+  // an image that failed before React hydrated never fires onError, so check
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth === 0) setRetry((n) => n + 1);
+  }, [retry]);
   return (
     <header className="nav">
       <div className="nav-inner">
@@ -27,13 +34,17 @@ export default function Nav() {
               width: 55,
               height: 55,
               flexShrink: 0,
+              borderRadius: "50%",
+              // dark-gold disc shown only for the instant before the photo paints
+              background: "radial-gradient(circle at 40% 35%, #8a6a2a 0%, #3a2a10 55%, #1a1208 100%)",
             }}
           >
-            <GoldenRecord />
-            {imgOk && (
+            {retry < 3 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src="/golden-record-nav.png"
+                key={retry}
+                ref={imgRef}
+                src={retry === 0 ? "/golden-record-nav.png" : `/golden-record-nav.png?r=${retry}`}
                 alt="Voyager Golden Record"
                 width={55}
                 height={55}
@@ -48,7 +59,7 @@ export default function Nav() {
                   objectFit: "cover",
                   display: "block",
                 }}
-                onError={() => setImgOk(false)}
+                onError={() => setRetry((n) => n + 1)}
               />
             )}
           </span>
