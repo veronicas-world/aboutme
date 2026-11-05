@@ -1,4 +1,3 @@
-import Link from "next/link";
 import BgSketch from "@/components/BgSketch";
 import TypeName from "@/components/TypeName";
 import HomeImage from "@/components/HomeImage";
@@ -47,13 +46,6 @@ export default function Home() {
         </h1>
         <div style={{ textAlign: "left" }}>
           <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>{heroParas[0]}</p>
-          <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>
-            {site.heroInterests.before}
-            <Link href={site.heroInterests.href} className="hero-inline-link">
-              {site.heroInterests.linkText}
-            </Link>
-            {site.heroInterests.after}
-          </p>
           {heroParas.slice(1).map((para, i, arr) => (
             <p
               key={i}
