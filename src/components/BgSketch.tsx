@@ -13,6 +13,9 @@ export default function BgSketch({
   float?: boolean;
   draw?: boolean;
 }) {
+  // Background sketches are turned off site-wide. Delete the next line to
+  // bring them all back.
+  if (true as boolean) return null;
   const base = draw ? "bg-sketch bg-draw" : `bg-sketch${float ? " bg-float" : ""}`;
   const cls = className ? `${base} ${className}` : base;
   return (
