@@ -4,6 +4,7 @@
 2. [AI as Normal Technology](https://knightcolumbia.org/content/ai-as-normal-technology)
 3. [Choose Good Quests](https://www.piratewires.com/p/choose-good-quests)
 4. [Beating China isn't Enough](https://substack.com/home/post/p-193027374)
+5. [Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace)
 
 ### BOOKS
 

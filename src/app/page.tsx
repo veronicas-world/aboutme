@@ -35,7 +35,7 @@ export default function Home() {
     fontSize: 17,
     lineHeight: 1.62,
     color: "var(--ink-2)",
-    textIndent: "1.5em",
+    margin: 0,
   } as const;
 
   return (
@@ -71,15 +71,9 @@ export default function Home() {
           <TypeName text="Veronica Agudelo" />
         </h1>
         <div style={{ textAlign: "left" }}>
-          <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>{withLinks(heroParas[0])}</p>
-          {heroParas.slice(1).map((para, i, arr) => (
-            <p
-              key={i}
-              style={{
-                ...heroParaStyle,
-                margin: i === arr.length - 1 ? 0 : "0 0 16px",
-              }}
-            >
+          <p className="indent-p" style={heroParaStyle}>{withLinks(heroParas[0])}</p>
+          {heroParas.slice(1).map((para, i) => (
+            <p key={i} className="indent-p" style={heroParaStyle}>
               {withLinks(para)}
             </p>
           ))}

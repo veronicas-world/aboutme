@@ -484,7 +484,7 @@ a { color: inherit; text-decoration: none; }
 }
 .xp-note + .xp-note { margin-top: 12px; }
 /* traditional first-line indent on body paragraphs across the site */
-.article p, .xp-note, .indent-p { text-indent: 1.5em; }
+/* book-style paragraphs (see bottom of file) */
 .xp-link { color: inherit; border-bottom: 1px solid rgba(21, 17, 13, 0.4); }
 .xp-bullets { margin: 0; padding-left: 20px; list-style: none; }
 .xp-bullets li {
@@ -709,3 +709,18 @@ a { color: inherit; text-decoration: none; }
   * { animation: none !important; scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---- book-style paragraphs ----
+   No gap between paragraphs; a paragraph is indented only when it directly
+   follows another paragraph, so the first one on a page or after a heading,
+   image, or list starts flush left, as in a printed book. */
+.article p { margin: 0; }
+.article p + p,
+.xp-note + .xp-note,
+.indent-p + .indent-p { text-indent: 1.5em; }
+.xp-note + .xp-note { margin-top: 0; }
+.article p + ul, .article p + ol, .article p + table, .article p + blockquote { margin-top: 1.1em; }
+.article ul + p, .article ol + p, .article table + p { margin-top: 1.1em; }
+/* images sit in their own paragraph: keep space around them, and don't
+   indent the paragraph that follows an image */
+.article p:has(> img) + p { text-indent: 0; }
