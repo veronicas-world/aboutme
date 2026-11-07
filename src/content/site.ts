@@ -133,7 +133,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/jpm.png",
     logoWide: true,
-    note: "Work in venture and growth-equity funds for the alternatives platform and mapped the neolab and frontier AI ecosystem in NYC.",
+    note: "Mostly worked in venture and growth-equity funds for the alternatives platform and mapped the neolab and frontier AI ecosystem in NYC.",
   },
   {
     year: "Jan – Jun 2026",
