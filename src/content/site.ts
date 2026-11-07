@@ -115,7 +115,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/factory.png",
     logoWide: true,
-    note: "Building Factory's Guild program on college campuses, and built a database of 4,698 student builders across 38 universities.",
+    note: "Building Factory's Guild program on college campuses — built a database of 4,698 engineers across 38 universities.",
   },
   {
     year: "May – Aug 2026",
@@ -124,7 +124,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/nea.webp",
     logoWide: true,
-    note: "One of two students in the first Summer/Fall Analyst class in NEA's ~50-year history.",
+    note: "One of two students in the first Summer Analyst class in NEA's ~50-year history.",
   },
   {
     year: "May – Aug 2026",
@@ -133,7 +133,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/jpm.png",
     logoWide: true,
-    note: "Researched venture and growth-equity funds for the U.S. Private Bank's alternatives platform, and mapped the neolab and frontier AI ecosystem in NYC.",
+    note: "Work in venture and growth-equity funds for the alternatives platform and mapped the neolab and frontier AI ecosystem in NYC.",
   },
   {
     year: "Jan – Jun 2026",
