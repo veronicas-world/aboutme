@@ -10,13 +10,6 @@
 1. Gabriel García Márquez's *One Hundred Years of Solitude*
 2. Bertrand Russell's *The Impact of Science on Society*
 3. Marshall McLuhan's *Understanding Media: The Extensions of Man*
-
-![](https://substackcdn.com/image/fetch/$s_!EZGb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbb998d92-6669-495b-93e8-8336806f9aab_1154x584.png)
-
-So, the answer is yes, and of course I asked to see what he wrote — here it is:
-
-[a16z, Laws of (New) Media — Andrew McLuhan](https://www.a16z.news/p/laws-of-new-media)
-
 4. Friedrich Nietzsche's *On the Genealogy of Morals*
 5. Alexis de Tocqueville's *Democracy in America* (Part I, Chapters 3 and 4)
 
