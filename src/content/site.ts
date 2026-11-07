@@ -37,7 +37,8 @@ export const site = {
 // ---- NAVIGATION -----------------------------------------------------------
 export const nav = [
   { label: "Experience", href: "/experience" },
-  { label: "Projects", href: "/projects" },
+  // Projects page archived: hidden from the menu, but /projects still works.
+  // { label: "Projects", href: "/projects" },
   { label: "Writings", href: "/writings" },
   { label: "Library", href: "/readings" },
   { label: "About", href: "/about" },
