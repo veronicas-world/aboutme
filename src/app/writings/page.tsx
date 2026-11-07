@@ -73,23 +73,6 @@ export default function WritingsPage({
             {renderIntroParagraph(p)}
           </p>
         ))}
-        <a
-          href={localMaxima.substackUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mono"
-          style={{
-            display: "inline-block",
-            fontSize: 11,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            color: "var(--sepia-3)",
-            borderBottom: "1px solid rgba(21,17,13,.25)",
-            paddingBottom: 2,
-          }}
-        >
-          Subscribe on Substack →
-        </a>
       </header>
 
       <div className="col">
