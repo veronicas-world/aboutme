@@ -71,9 +71,9 @@ export default function Home() {
           <TypeName text="Veronica Agudelo" />
         </h1>
         <div style={{ textAlign: "left" }}>
-          <p className="indent-p" style={heroParaStyle}>{withLinks(heroParas[0])}</p>
+          <p style={heroParaStyle}>{withLinks(heroParas[0])}</p>
           {heroParas.slice(1).map((para, i) => (
-            <p key={i} className="indent-p" style={heroParaStyle}>
+            <p key={i} style={{ ...heroParaStyle, marginTop: 18 }}>
               {withLinks(para)}
             </p>
           ))}
