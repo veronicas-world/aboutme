@@ -13,7 +13,7 @@ export const site = {
   eyebrow: "Investor · Writer · Student of complex systems",
   // The one big sentence under your name (EDIT — make it sound like you):
   heroLead:
-    "I am a junior at Columbia interested in venture capital, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of progress, and that through the thoughtful allocation of capital we can accelerate the work of those building a resilient and abundant future.\n\nMost of my time today is spent at [Lightspeed](https://lsvp.com/), [Dorm Room Fund](https://www.dormroomfund.com/), and [Factory](https://factory.ai/). I find this work incredibly fulfilling and have been lucky to learn from a number of brilliant people early on in my career. This is not an opportunity I take lightly.\n\nAs for my interests in tech, they are many, but I have spent the most time in applied AI. The categories that I think will become massive in the next five years are the space economy, cybersecurity, robotics-as-a-service (RaaS) + the data and deployment companies that support it, and drug discovery.\n\nOutside of work, you can find me listening to electronic music, trying new restaurants in NYC, watching professional soccer or a docuseries, cooking, and hiking.",
+    "I am a junior at Columbia interested in venture capital, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of progress, and that through the thoughtful allocation of capital we can accelerate the work of those building a resilient and abundant future.\n\nMost of my time today is spent at [Lightspeed](https://lsvp.com/) and [Dorm Room Fund](https://www.dormroomfund.com/). I find this work incredibly fulfilling and have been lucky to learn from a number of brilliant people early on in my career. This is not an opportunity I take lightly.\n\nAs for my interests in tech, they are many, but I have spent the most time in applied AI. The categories that I think will become massive in the next five years are the space economy, cybersecurity, robotics-as-a-service (RaaS) + the data and deployment companies that support it, and drug discovery.\n\nOutside of work, you can find me listening to electronic music, trying new restaurants in NYC, watching professional soccer or a docuseries, cooking, and hiking.",
   // Standalone middle paragraph in the hero bio, with an inline link:
   heroInterests: {
     before:
@@ -115,6 +115,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/factory.png",
     logoWide: true,
+    note: "Building Factory's Guild program on college campuses, and built a database of 4,698 student builders across 38 universities.",
   },
   {
     year: "May – Aug 2026",
@@ -123,6 +124,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/nea.webp",
     logoWide: true,
+    note: "One of two students in the first Summer/Fall Analyst class in NEA's ~50-year history.",
   },
   {
     year: "May – Aug 2026",
@@ -131,6 +133,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/jpm.png",
     logoWide: true,
+    note: "Researched venture and growth-equity funds for the U.S. Private Bank's alternatives platform, and mapped the neolab and frontier AI ecosystem in NYC.",
   },
   {
     year: "Jan – Jun 2026",
