@@ -35,6 +35,7 @@ As for albums I am enjoying currently:
 4. [SemiAnalysis](https://semianalysis.com/)
 5. [Dwarkesh Podcast](https://www.dwarkesh.com/)
 6. [Asimov Press](https://press.asimov.com/)
+7. [Cosmos Institute's Blog](https://blog.cosmos-institute.org/)
 
 ### PROJECTS
 
