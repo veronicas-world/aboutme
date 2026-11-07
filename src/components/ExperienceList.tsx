@@ -6,6 +6,7 @@ export type XP = {
   location?: string;
   logo?: string;
   logoWide?: boolean;
+  note?: string;
 };
 
 // Plain résumé rows: dates on the left, role and organization in the middle,
@@ -31,6 +32,7 @@ export default function ExperienceList({ items }: { items: XP[] }) {
                   )}
                 </div>
               )}
+              {e.note && <p className="xp-note">{e.note}</p>}
             </div>
             <div className="xp-mark">
               {e.logo && (

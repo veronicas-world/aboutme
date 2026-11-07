@@ -390,6 +390,13 @@ a { color: inherit; text-decoration: none; }
 .xp-role { font-size: 20px; line-height: 1.3; color: var(--ink); }
 .xp-org { font-size: 17px; line-height: 1.4; color: var(--ink-3); margin-top: 2px; }
 .xp-meta { color: var(--sepia-2); }
+.xp-note {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--sepia);
+  margin: 6px 0 0;
+  max-width: 58ch;
+}
 /* Logos vary wildly in shape, so each sits in a fixed box. Multiply drops
    white logo backgrounds onto the page color; the box needs its own
    background because .page is a transparent stacking context, so there is
