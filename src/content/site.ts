@@ -90,99 +90,91 @@ export const writingTeaser = {
 };
 
 // ---- EXPERIENCE -----------------------------------------------------------
-// Intro shown at the top of the Experience page. EDIT freely.
-export const experienceIntro =
-  "For the past few years, my goal has been to explore as much as I can while figuring out what kind of work I find most fulfilling and purposeful. I believe deeply in being a generalist (although you must SPIKE in something) and I've tried to build as much range as I can in order to understand what's happening in the world around me and where I can best contribute.";
-
+// logoWide: wordmark logos (much wider than tall) get a shorter max height so
+// they read at the same visual weight as square marks.
 export const experience = [
   {
-    year: "Oct 2026 to Present",
+    year: "Oct 2026 – Now",
     role: "New Media",
     org: "Lightspeed Venture Partners",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/lightspeed.png",
-    note: "Lightspeed Venture Partners is a multi-stage global venture capital firm with over $51 billion in assets under management, backing founders from seed through growth across enterprise, consumer, fintech, and health.",
+    logoWide: true,
   },
   {
-    year: "Oct 2026 to Present",
+    year: "Oct 2026 – Now",
     role: "Investment Partner",
     org: "Dorm Room Fund",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/dorm-room-fund-dark.png",
-    note: "[Dorm Room Fund](https://www.dormroomfund.com/) is a student-run venture capital firm that writes the first check for founders still in school or just out. Over 12+ years, DRF has backed 339+ companies that have gone on to raise $14B+ in follow-on capital, including Cursor, Shield AI, Commure, Dandy, Hightouch, and Inversion Space.\n\nAs an Investment Partner on the New York & Midwest team, I source student founders, work every deal with my regional team (pressure-testing the pitch and the assumptions underneath it), and make investment decisions - partners hold full investment authority over the fund's capital.",
   },
   {
-    year: "Aug 2026 to Present",
-    role: "Growth",
+    year: "Aug 2026 – Now",
+    role: "Campus Growth",
     org: "Factory",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/factory.png",
-    note: "[Factory](https://factory.ai) builds agent-native software development tools, where AI agents called Droids automate coding, testing, and deployment for engineering teams. I first started working with Factory during my time at NEA, which had been an investor in their Series B, and I now help build up their [Guild](https://factory.ai/ambassador) program on college campuses while looking for growth opportunities in the student and university builder community more broadly. So far, I have manually prospected over 500 students across more than 30 universities and built a [database](/projects/findable-future) of 4,698 builders, 28,814 research papers, and 6,058 pieces of company-formation evidence across thirty-eight universities.",
+    logoWide: true,
   },
   {
-    year: "May 2026 to Aug 2026",
-    role: "Summer Analyst/Tech Investor",
+    year: "May – Aug 2026",
+    role: "Summer Analyst, Tech Investing",
     org: "New Enterprise Associates (NEA)",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/nea.webp",
-    note: "One of two students in the first Summer/Fall Analyst class in NEA's ~fifty–year history, continuing the work I started during my fellowship.",
+    logoWide: true,
   },
   {
-    year: "May 2026 to Aug 2026",
-    role: "Sophomore Summer Analyst, Asset & Wealth Management",
+    year: "May – Aug 2026",
+    role: "Summer Analyst, Asset & Wealth Management",
     org: "J.P. Morgan",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/jpm.png",
-    note: "J.P. Morgan's Asset & Wealth Management platform oversees roughly $4.8 trillion in assets under management (AUM) and $7.1 trillion in total client assets, delivering public and private market strategies, portfolio construction, and advisory across institutions and clients.\n\nI worked primarily within the U.S. Private Bank on their alternatives platform, researching venture and growth‑equity funds sourced from the Global Alternative Investment Solutions team. Much of my focus was on alternative investment opportunities in the AI and frontier-tech buildout, and how these strategies slot into multi‑asset portfolios for clients.",
+    logoWide: true,
   },
   {
-    year: "January 2026 to June 2026",
+    year: "Jan – Jun 2026",
     role: "Fellow",
     org: "New Enterprise Associates (NEA)",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/nea.webp",
-    note: "New Enterprise Associates (NEA) is a venture capital firm with ~$30B+ in assets under management, nearly 1,000 investments, 270+ IPOs and 450+ M&A exits across technology and healthcare companies from seed through IPO (fun fact, NEA is one of the largest suppliers of companies to the public market!).\n\nDuring my time as a [fellow](https://neafellowship.com/), I assessed prospective investments via market sizing, competitive and customer analysis, and investment memos, while building sector theses and market maps that identified key technical, commercial, and operational inflection points to inform NEA's sourcing and diligence. My work contributed directly to two firmwide investments.",
+    logoWide: true,
   },
   {
-    year: "Sept 2025 to Dec 2025",
+    year: "Sep – Dec 2025",
     role: "Fall Analyst",
     org: "Burnt Island Ventures",
-    location: "New York, NY",
+    location: "NYC",
     logo: "/logos/std/burnt-island.webp",
-    logoTile: true,
-    note: "Burnt Island Ventures is an early‑to-growth stage venture capital firm focused exclusively on water technology, backing founders who build critical infrastructure, analytics, and climate‑resilient solutions in the $1.6T global water market.\n\nI ran fund communications during my time there (including during the launch of their $50 million Fund II in October of 2025), leading LP and founder‑facing materials and digital strategy across LinkedIn, web, YouTube, and X. Additionally, I partnered with portfolio companies on go‑to‑market and operational initiatives, using performance analytics to improve reach and engagement outcomes.",
   },
   {
-    year: "May 2025 to Aug 2025",
+    year: "May – Aug 2025",
     role: "Summer Analyst",
     org: "Draper Richards Kaplan Foundation",
-    location: "Boston, MA & Menlo Park, CA",
+    location: "Boston & Menlo Park",
     logo: "/logos/std/drkf.jpg",
-    note: "The Draper Richards Kaplan Foundation (DRK) is a global venture‑philanthropy firm that supports early‑stage (mostly Series A), high‑impact social enterprises tackling urgent social and environmental problems. They have funded 277+ early‑stage social enterprises whose portfolio has collectively impacted over 610 million lives across sectors including healthcare, education, climate resilience, and food access.\n\nDuring my time there, I worked on financial and impact data from their 200+ portfolio companies to create the annual report, validating growth metrics and investment communications across stakeholders.",
+    logoWide: true,
   },
   {
-    year: "May 2023 to Aug 2024",
+    year: "May 2023 – Aug 2024",
     role: "Analyst",
     org: "Thinker",
-    location: "Cambridge, MA",
+    location: "Cambridge",
     logo: "/logos/std/thinker.png",
-    note: "Thinker is an edtech startup spun out of Harvard's Philosophy Department that builds argument‑mapping tools and curriculum to teach critical thinking and argumentative reasoning, used by over 120+ schools and universities.\n\nDuring my time there, I led product, content, and growth initiatives, creating 25+ argument maps and 75+ pages of HarvardX course content. Additionally, I helped redesign their website for accessibility compliance (WCAG standards). Perhaps most formatively, I was trained in a strict curriculum of symbolic logic under graduate students from Harvard's Department of Philosophy.",
+    logoWide: true,
   },
 ];
 
 export const educationTimeline = [
   {
-    year: "Aug 2024 to May 2028 (expected)",
+    year: "2024 – 2028",
     role: "Columbia University",
-    location: "New York, NY",
+    org: "Philosophy & AI",
+    details: ["3.96/4.00 GPA"],
+    location: "NYC",
     logo: "/logos/std/columbia.png",
-    bullets: [
-      "Philosophy and AI",
-      "3.96 / 4.00 GPA",
-    ],
   },
 ];
-
 export const education = {
   schools: [
     {
