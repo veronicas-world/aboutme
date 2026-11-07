@@ -22,12 +22,24 @@ export default function TypeName({
       return;
     }
     let i = 0;
-    const id = setInterval(() => {
-      i += 1;
-      setCount(i);
-      if (i >= text.length) clearInterval(id);
-    }, speed);
-    return () => clearInterval(id);
+    let id: ReturnType<typeof setInterval> | undefined;
+    const start = () => {
+      id = setInterval(() => {
+        i += 1;
+        setCount(i);
+        if (i >= text.length) clearInterval(id);
+      }, speed);
+    };
+    // Hold the typing until the home intro overlay (HomeIntro) clears.
+    if (document.documentElement.dataset.intro === "playing") {
+      window.addEventListener("intro-done", start, { once: true });
+    } else {
+      start();
+    }
+    return () => {
+      window.removeEventListener("intro-done", start);
+      clearInterval(id);
+    };
   }, [text, speed]);
 
   return (
