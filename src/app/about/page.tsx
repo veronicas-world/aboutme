@@ -78,6 +78,12 @@ export default function AboutPage() {
         </figure>
         <Article content={md} />
         <MountainGallery />
+        <div className="article" style={{ marginTop: 32 }}>
+          <p>
+            I also love to travel, and it is my dream to visit all of the modern and natural
+            wonders of the world, and the last enduring ancient one (the Great Pyramid of Giza).
+          </p>
+        </div>
 
         <section
           id="contact"
