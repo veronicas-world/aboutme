@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { nav } from "@/content/site";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   // if the photo fails (flaky mobile/in-app browsers), retry with a
   // cache-busting URL instead of falling back to a drawing
   const [retry, setRetry] = useState(0);
@@ -75,7 +77,12 @@ export default function Nav() {
         </button>
         <nav className={`nav-links${open ? " open" : ""}`}>
           {nav.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={pathname?.startsWith(item.href) ? "active" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {item.label}
             </Link>
           ))}

@@ -26,8 +26,17 @@ export default function ExperienceList({ items }: { items: XP[] }) {
                   {e.org}
                   {meta.length > 0 && (
                     <span className="xp-meta">
-                      {e.org ? " · " : ""}
-                      {meta.join(" · ")}
+                      {meta.map((m, k) => (
+                        <span key={k}>
+                          {(e.org || k > 0) && (
+                            <>
+                              <span className="px-sep" aria-hidden="true" />
+                              <span className="sr-only">, </span>
+                            </>
+                          )}
+                          {m}
+                        </span>
+                      ))}
                     </span>
                   )}
                 </div>

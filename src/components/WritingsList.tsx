@@ -84,17 +84,6 @@ export default function WritingsList({
                     {p.subtitle}
                   </p>
                 )}
-                <span
-                  className="mono post-card-cta"
-                  style={{
-                    fontSize: 11,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: "var(--sepia)",
-                  }}
-                >
-                  {p.full ? "Read the essay →" : "Read on Substack ↗"}
-                </span>
               </div>
             </>
           );

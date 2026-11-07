@@ -335,7 +335,7 @@ a { color: inherit; text-decoration: none; }
 }
 .xp-row {
   display: grid;
-  grid-template-columns: 160px 1fr 132px;
+  grid-template-columns: 200px 1fr 132px;
   gap: 24px;
   align-items: center;
   padding: 20px 0;
@@ -644,3 +644,82 @@ html[data-intro="seen"] .intro { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .intro { display: none; }
 }
+
+/* ============================================================
+   RETRO ACCENTS — pixel type for small labels, one periwinkle
+   accent, pixel sparkles, and a dithered cloud band at the foot
+   of every page. Body text, palette, and layout are unchanged.
+   ============================================================ */
+:root {
+  --accent: #8e8ee6;
+  --font-mono: var(--font-pixel), "Times New Roman", Times, serif;
+  --sparkle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath fill='%238e8ee6' d='M3 0h1v2H3zM3 5h1v2H3zM0 3h2v1H0zM5 3h2v1H5zM2 2h3v3H2z'/%3E%3Cpath fill='%23fcfaf4' d='M3 3h1v1H3z'/%3E%3C/svg%3E");
+}
+::selection { background: var(--accent); color: #fff; }
+.hero-inline-link:hover { border-color: var(--accent); }
+
+/* pixel font is wide, so labels need less tracking than Times did */
+.nav-brand, .nav-links, .section-label, .chip, .mono { letter-spacing: 0.04em; }
+.nav-links { font-size: 11px; font-weight: 400; }
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { position: relative; }
+.nav-links a.active::before {
+  content: "";
+  position: absolute; left: -15px; top: 50%;
+  width: 9px; height: 9px; margin-top: -5px;
+  background: var(--sparkle) center / contain no-repeat;
+  image-rendering: pixelated;
+  animation: px-twinkle 2.4s steps(1) infinite;
+}
+@keyframes px-twinkle {
+  0%, 70%, 100% { transform: scale(1); opacity: 1; }
+  78% { transform: scale(0.6); opacity: 0.6; }
+  86% { transform: scale(1.25); opacity: 1; }
+}
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+
+/* Experience page forces Times on everything; let its labels use pixel type */
+.page-serif .xp-when,
+.page-serif .xp-section { font-family: var(--font-mono) !important; }
+.xp-when { font-size: 12px; letter-spacing: 0.02em; }
+.xp-section { font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* sparkle used in place of the "·" separator; keep it with the text after it */
+.xp-meta > span { white-space: nowrap; }
+.px-sep {
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin: 0 7px 2px;
+  vertical-align: middle;
+  background: var(--sparkle) center / contain no-repeat;
+  image-rendering: pixelated;
+}
+
+/* dithered cloud horizon at the bottom of every page */
+.cloud-band {
+  height: 240px;
+  margin-top: 48px;
+  background: url("/retro/cloud-band.png") left bottom / auto 240px repeat-x;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+@media (max-width: 700px) {
+  .cloud-band { height: 120px; background-size: auto 120px; }
+  .nav-links a.active::before { left: auto; right: var(--pad); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a.active::before { animation: none; }
+}
+
+/* pixel labels: one readable size and tracking everywhere. !important beats
+   the inline fontSize/letterSpacing several pages set for their old Times
+   labels. */
+.mono,
+.nav-links, .nav-brand, .section-label, .chip, .lrow-label,
+.footer, .footer-contact,
+.page-serif .xp-when, .page-serif .xp-section {
+  font-size: 13px !important;
+  letter-spacing: 0.05em !important;
+}
+.nav-links { font-size: 13.5px !important; }
+.xp-when { color: var(--sepia); }

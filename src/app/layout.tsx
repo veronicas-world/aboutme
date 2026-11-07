@@ -1,7 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { Silkscreen } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+
+const pixel = Silkscreen({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pixel",
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -33,11 +41,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={pixel.variable}>
       <body>
         <div className="page">
           <Nav />
           {children}
+          <div className="cloud-band" aria-hidden="true" />
         </div>
         <Analytics />
       </body>
