@@ -31,12 +31,8 @@ As for albums I am enjoying currently:
 1. [Not Boring](https://www.notboring.co/) by Packy McCormick
 2. a16z's [Charts of the Week](https://www.a16z.news/t/charts)
 3. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
-4. NEA's [Insights](https://www.nea.com/blog)
-5. [Farnam Street's Newsletter](https://fs.blog/newsletter/)
-6. [CTVC Newsletter](https://www.ctvc.co/)
-7. [Axios Pro Rata](https://www.axios.com/signup/pro-rata)
-8. [SemiAnalysis](https://semianalysis.com/)
-9. [Dwarkesh Podcast](https://www.dwarkesh.com/)
+4. [SemiAnalysis](https://semianalysis.com/)
+5. [Dwarkesh Podcast](https://www.dwarkesh.com/)
 
 ### PROJECTS
 
