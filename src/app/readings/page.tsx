@@ -5,7 +5,7 @@ import Article from "@/components/Article";
 import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
-  title: "Readings · Veronica Agudelo",
+  title: "Library · Veronica Agudelo",
   description:
     "The sources and media I keep returning to and continuously enjoy learning from.",
 };
@@ -31,7 +31,7 @@ export default function ReadingsPage() {
             marginBottom: 22,
           }}
         >
-          Readings
+          Library
         </div>
         <h1
           style={{
