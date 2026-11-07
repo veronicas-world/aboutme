@@ -3,6 +3,31 @@ import TypeName from "@/components/TypeName";
 import HomeImage from "@/components/HomeImage";
 import { site } from "@/content/site";
 
+// Turns [text](url) in a bio paragraph into an external link.
+function withLinks(text: string) {
+  const parts: React.ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    parts.push(
+      <a
+        key={m.index}
+        href={m[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hero-inline-link"
+      >
+        {m[1]}
+      </a>
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
 export default function Home() {
   const heroParas = site.heroLead.split("\n\n");
   const heroParaStyle = {
@@ -46,7 +71,7 @@ export default function Home() {
           <TypeName text="Veronica Agudelo" />
         </h1>
         <div style={{ textAlign: "left" }}>
-          <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>{heroParas[0]}</p>
+          <p style={{ ...heroParaStyle, margin: "0 0 16px" }}>{withLinks(heroParas[0])}</p>
           {heroParas.slice(1).map((para, i, arr) => (
             <p
               key={i}
@@ -55,7 +80,7 @@ export default function Home() {
                 margin: i === arr.length - 1 ? 0 : "0 0 16px",
               }}
             >
-              {para}
+              {withLinks(para)}
             </p>
           ))}
         </div>
