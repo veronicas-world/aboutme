@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import NavTintin from "./NavTintin";
 import { nav } from "@/content/site";
 
 export default function Nav() {
@@ -64,7 +63,6 @@ export default function Nav() {
             )}
           </span>
         </Link>
-        <NavTintin />
         <button
           className="nav-toggle mono"
           aria-label="Toggle menu"
