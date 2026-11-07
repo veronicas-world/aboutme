@@ -1,20 +1,15 @@
 ### ESSAYS
 
 1. [Paul Graham's Essays](https://www.paulgraham.com/articles.html)
-   - For those unfamiliar, Paul Graham is an entrepreneur best known as the co-founder of Y Combinator. My personal favorites are "[Why Smart People Have Bad Ideas](https://www.paulgraham.com/bronze.html)" and "[What the Bubble Got Right](https://www.paulgraham.com/bubble.html)."
 2. [AI as Normal Technology](https://knightcolumbia.org/content/ai-as-normal-technology)
-   - You probably also know this one, or, at the very least, are familiar with the people who wrote it. Very close to home ([The Knight First Amendment Institute](https://knightcolumbia.org/) was founded at Columbia University).
 3. [Choose Good Quests](https://www.piratewires.com/p/choose-good-quests)
 4. [Beating China isn't Enough](https://substack.com/home/post/p-193027374)
 
 ### BOOKS
 
 1. Gabriel García Márquez's *One Hundred Years of Solitude*
-   - My favorite book of all time. Full stop. I have read it in both English and Spanish — the Spanish is better, of course, but the English version is remarkably good for a translation. Not directly tech-related in the way that others on this list are, but Márquez's magical realism stretches the boundaries of reality far beyond what Sora has been able to do.
 2. Bertrand Russell's *The Impact of Science on Society*
-   - One of the most brilliant philosophers of the 20th century.
 3. Marshall McLuhan's *Understanding Media: The Extensions of Man*
-   - I first read this in during my junior year of high school, when I undertook an overly ambitious thesis. Anyway, I was reminded of this book (but mostly the first chapter where the infamous "the medium is the message" statement lies) when I read a16z's "[What is New Media?](https://a16z.com/what-is-new-media/)" blog post. a16z takes a much more operational and opportunistic stance on the current state of media, but conceptual overlap was clear. I, curious as to whether they were influenced by the writings of McLuhan, Debord, or Baudrillard, reached out and asked (see below, anonymity preserved).
 
 ![](https://substackcdn.com/image/fetch/$s_!EZGb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbb998d92-6669-495b-93e8-8336806f9aab_1154x584.png)
 
@@ -36,19 +31,14 @@ I adore music and feel so lucky to have been born in a century where I can liste
 As for albums I am enjoying currently:
 
 1. *open this wall* by berlioz
-   - His debut full-length release. So impressive. Personal favorite tracks are "ascension" and "free fall."
 2. *Random Access Memories* by Daft Punk
-   - The word I would choose to describe this album is "lush."
 
 ### NEWSLETTERS + BLOGS
 
 1. [Not Boring](https://www.notboring.co/) by Packy McCormick
-   - The name rings true. Packy McCormick makes everything more interesting. A recent favorite of mine was his essay on [World Models](https://www.notboring.co/p/world-models) with General Intuition's Pim De Witte.
 2. a16z's [Charts of the Week](https://www.a16z.news/t/charts)
-   - World data in context (not all about AI).
 3. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
 4. NEA's [Insights](https://www.nea.com/blog)
-   - Biased ;)
 5. [Farnam Street's Newsletter](https://fs.blog/newsletter/)
 6. [CTVC Newsletter](https://www.ctvc.co/)
 7. [Axios Pro Rata](https://www.axios.com/signup/pro-rata)
@@ -58,11 +48,8 @@ As for albums I am enjoying currently:
 ### PROJECTS
 
 1. [Common Voice](https://commonvoice.mozilla.org/en)
-   - A crowdsourcing project started by Mozilla to create a free and open speech corpus. Now the most diverse open voice dataset in the world!
 2. [The Anthropic Institute](https://www.anthropic.com/institute)
-   - [This](https://www.anthropic.com/news/the-anthropic-institute) is a helpful introduction, and out of their four focus areas, the one that interests me the most is [AI systems in the wild](https://www.anthropic.com/research/anthropic-institute-agenda), led by their [societal impacts team](https://www.anthropic.com/research/team/societal-impacts).
 3. [Every Cure](https://everycure.org/)
-   - A nonprofit using AI and large-scale data to identify new uses for existing FDA-approved drugs (drug-repurposing). Of great use for [Whel](https://veronicaagudelo.substack.com/p/my-first-project-womens-health-evidence).
 
 ### ETC
 
@@ -71,4 +58,3 @@ As for albums I am enjoying currently:
 3. [Hot Side](https://maxbaroni.substack.com/)
 4. [Opening notes, Founders Fund's Annual Meeting](https://x.com/foundersfund/status/1313151184287477767) (2020)
 5. *Lost*
-   - Indisputably the best tv series of all time.
