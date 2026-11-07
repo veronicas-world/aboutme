@@ -34,6 +34,7 @@ As for albums I am enjoying currently:
 3. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
 4. [SemiAnalysis](https://semianalysis.com/)
 5. [Dwarkesh Podcast](https://www.dwarkesh.com/)
+6. [Asimov Press](https://press.asimov.com/)
 
 ### PROJECTS
 
