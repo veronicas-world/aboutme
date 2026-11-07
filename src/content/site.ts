@@ -115,7 +115,7 @@ export const experience = [
     location: "NYC",
     logo: "/logos/std/factory.png",
     logoWide: true,
-    note: "Building Factory's Guild program on college campuses — built a database of 4,698 engineers across 38 universities.",
+    note: "Building Factory's Guild program on college campuses and created a database of 4,698 engineers across 38 universities.",
   },
   {
     year: "May – Aug 2026",
