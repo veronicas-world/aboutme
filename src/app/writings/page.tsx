@@ -64,12 +64,12 @@ export default function WritingsPage({
         >
           <span className="italic">{localMaxima.title}</span>
         </h1>
-        <p className="body-l" style={{ fontSize: 17, textAlign: "left" }}>
+        <p className="body-l indent-p" style={{ fontSize: 17, textAlign: "left" }}>
           {localMaxima.intro[0]}
         </p>
         <LocalMaximaSketch />
         {localMaxima.intro.slice(1).map((p, i) => (
-          <p key={i} className="body-l" style={{ fontSize: 17, textAlign: "left" }}>
+          <p key={i} className="body-l indent-p" style={{ fontSize: 17, textAlign: "left" }}>
             {renderIntroParagraph(p)}
           </p>
         ))}

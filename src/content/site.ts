@@ -178,7 +178,6 @@ export const educationTimeline = [
     bullets: [
       "Philosophy and AI",
       "3.96 / 4.00 GPA",
-      "Girls Into VC, Girls Who Invest Intensive Program Scholar, Sustainable Finance Group, Gadfly Magazine, The Latino Professional Network, The Eric H. Holder Initiative for Civil and Political Rights",
     ],
   },
 ];

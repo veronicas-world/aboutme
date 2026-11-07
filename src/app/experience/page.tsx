@@ -56,6 +56,7 @@ export default function ExperiencePage() {
           {experienceIntro.split("\n\n").map((para, i) => (
             <p
               key={i}
+              className="indent-p"
               style={{
                 fontWeight: 400,
                 fontSize: 17,

@@ -483,6 +483,8 @@ a { color: inherit; text-decoration: none; }
   margin: 0;
 }
 .xp-note + .xp-note { margin-top: 12px; }
+/* traditional first-line indent on body paragraphs across the site */
+.article p, .xp-note, .indent-p { text-indent: 1.5em; }
 .xp-link { color: inherit; border-bottom: 1px solid rgba(21, 17, 13, 0.4); }
 .xp-bullets { margin: 0; padding-left: 20px; list-style: none; }
 .xp-bullets li {

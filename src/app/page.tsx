@@ -10,6 +10,7 @@ export default function Home() {
     fontSize: 17,
     lineHeight: 1.62,
     color: "var(--ink-2)",
+    textIndent: "1.5em",
   } as const;
 
   return (
