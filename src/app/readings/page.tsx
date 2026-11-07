@@ -36,15 +36,13 @@ export default function ReadingsPage() {
         <h1
           style={{
             fontWeight: 300,
-            fontSize: "clamp(23px,3vw,36px)",
-            lineHeight: 1.18,
-            letterSpacing: "-0.015em",
-            maxWidth: 760,
-            margin: "0 auto",
+            fontSize: "clamp(32px,4.5vw,52px)",
+            lineHeight: 0.98,
+            letterSpacing: "-0.02em",
+            margin: 0,
           }}
         >
-          A running list of sources and media I have found useful, across essays,
-          books, music, newsletters, and projects.
+          Library
         </h1>
       </header>
 
