@@ -174,7 +174,6 @@ export const educationTimeline = [
     role: "Columbia University",
     org: "Philosophy & AI",
     details: ["3.96/4.00 GPA"],
-    location: "NYC",
     logo: "/logos/std/columbia.png",
   },
 ];
