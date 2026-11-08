@@ -1,8 +1,6 @@
 // Frames extracted directly from the user's black-and-white horse sheet.
 const PAPER = "#f7f4ec";
-const REVEAL_DELAY = 150;
 export const HORSE_INTRO_DURATION = 3900;
-export const HORSE_REVEAL_AT = 650 + REVEAL_DELAY;
 
 const FRAME_WIDTH = 376;
 const FRAME_HEIGHT = 208;
@@ -144,25 +142,9 @@ export function paintHorseIntro(
   const trailX = lastHorse.x + lastHorse.w * 0.43;
   const groundY = lastHorse.y + lastHorse.h * 0.9;
   const dispersal = ease(Math.max(0, Math.min(1, (elapsed - 2950) / 700)));
-  // Hold the visible fade back as well as the intro event. Let that tiny
-  // delay ease away with the dust so no cover remains at the final frame.
-  const revealX = trailX - travel / 2800 * REVEAL_DELAY * (1 - dispersal);
-
-  // The page emerges through a soft, full-height sweep behind the herd.
-  // Keep the natural dust cloud separate from the reveal's geometry.
+  // Keep the page fully covered until HomeIntro removes the finished intro.
   ctx.fillStyle = PAPER;
   ctx.fillRect(0, 0, width, height);
-  if (elapsed > HORSE_REVEAL_AT) {
-    const feather = Math.max(90, Math.min(240, width * 0.16));
-    const fade = ctx.createLinearGradient(revealX - feather * 2, 0, revealX, 0);
-    fade.addColorStop(0, "rgba(0,0,0,1)");
-    fade.addColorStop(0.5, "rgba(0,0,0,0.5)");
-    fade.addColorStop(1, "rgba(0,0,0,0)");
-    ctx.globalCompositeOperation = "destination-out";
-    ctx.fillStyle = fade;
-    ctx.fillRect(0, 0, width, height);
-    ctx.globalCompositeOperation = "source-over";
-  }
 
   // The main cloud stays behind the final horse; small hoof puffs below
   // join the leading horses as they enter, before the full plume arrives.

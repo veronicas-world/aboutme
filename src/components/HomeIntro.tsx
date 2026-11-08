@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   createHorseSprites,
   HORSE_INTRO_DURATION,
-  HORSE_REVEAL_AT,
   paintHorseIntro,
   type HorseSprites,
 } from "@/lib/horse-intro";
@@ -14,7 +13,6 @@ const bootScript = `try{var d=document.documentElement;d.dataset.intro=(!matchMe
 
 export default function HomeIntro() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const finishRef = useRef<() => void>(() => {});
   const eligibleRef = useRef<boolean | null>(null);
   const [phase, setPhase] = useState<"play" | "gone">("play");
 
@@ -41,23 +39,15 @@ export default function HomeIntro() {
     } catch {}
     let sprites: HorseSprites | null = null;
     let frame = 0;
-    let revealed = false;
     let finished = false;
-    const reveal = () => {
-      if (revealed) return;
-      revealed = true;
-      root.dataset.intro = "revealing";
-      window.dispatchEvent(new Event("intro-done"));
-    };
     const finish = () => {
       if (finished) return;
       finished = true;
       cancelAnimationFrame(frame);
-      reveal();
       root.dataset.intro = "seen";
+      window.dispatchEvent(new Event("intro-done"));
       setPhase("gone");
     };
-    finishRef.current = finish;
     const resize = () => {
       // One canvas pixel per CSS pixel: the sprites supply their own chunky grid.
       canvas.width = window.innerWidth;
@@ -70,7 +60,6 @@ export default function HomeIntro() {
       // The first RAF timestamp can predate this effect within the same
       // browser frame. Never use a negative sprite-frame index.
       const elapsed = Math.max(0, now - started);
-      if (elapsed >= HORSE_REVEAL_AT) reveal();
       if (elapsed >= HORSE_INTRO_DURATION) {
         finish();
         return;
@@ -118,9 +107,6 @@ export default function HomeIntro() {
       {phase === "play" && (
         <div className="intro horse-intro">
           <canvas ref={canvasRef} className="horse-intro-canvas" aria-hidden="true" />
-          <button className="intro-skip-button" onClick={() => finishRef.current()}>
-            Skip intro
-          </button>
         </div>
       )}
     </>

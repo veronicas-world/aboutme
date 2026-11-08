@@ -600,12 +600,11 @@ a { color: inherit; text-decoration: none; }
    indent the paragraph that follows an image */
 .article p:has(> img) + p { text-indent: 0; }
 
-/* ---- home intro: original pixel horses pull a dusty reveal to the right ---- */
+/* ---- home intro: pixel horses finish before the landing page appears ---- */
 .intro {
   position: fixed; inset: 0; z-index: 100;
   overflow: hidden;
-  cursor: pointer;
-  transition: opacity 0.35s ease, visibility 0.35s;
+  background: var(--bg);
 }
 html[data-intro="seen"] .intro { display: none; }
 .horse-intro-canvas {
@@ -614,32 +613,8 @@ html[data-intro="seen"] .intro { display: none; }
   height: 100%;
   image-rendering: pixelated;
 }
-.horse-intro-canvas:not([data-painted]) { background: var(--bg); }
-.intro-skip-button {
-  position: fixed;
-  bottom: max(20px, env(safe-area-inset-bottom));
-  padding: 9px 12px;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--sepia);
-  font-family: var(--font-mono), monospace;
-  font-size: 11px;
-  line-height: 1.4;
-  cursor: pointer;
-}
-.intro-skip-button { right: 20px; }
-.intro-skip-button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-html[data-intro="playing"] .intro-landing { transform: translateX(-36px); }
-html[data-intro="revealing"] .intro-landing {
-  animation: herd-page-pull 2.9s cubic-bezier(0.2, 0.65, 0.35, 1) both;
-}
-@keyframes herd-page-pull {
-  from { transform: translateX(-36px); }
-  to { transform: translateX(0); }
-}
 @media (prefers-reduced-motion: reduce) {
   .intro { display: none; }
-  html[data-intro] .intro-landing { animation: none; transform: none; }
 }
 
 /* ============================================================
