@@ -1,105 +1,142 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  createHorseSprites,
+  HORSE_INTRO_DURATION,
+  HORSE_REVEAL_AT,
+  paintHorseIntro,
+  type HorseSprites,
+} from "@/lib/horse-intro";
 
-// Pixel stars streak across the screen on the first home-page visit of a
-// browser session, and the page is wiped in behind them from left to right.
-//
-// The inline script runs while the HTML is still parsing, before the overlay
-// first paints, so returning visitors (and reduced-motion users) never see a
-// flash of it. It records the state on <html data-intro>, which also
-// survives client-side navigation back to the home page.
-const KEY = "intro-seen";
-// Start typing the name once the wipe has uncovered the middle of the page.
-const TYPE_AT = 1700;
-const GONE_AT = 3700;
-
-const bootScript = `try{var d=document.documentElement;d.dataset.intro=(sessionStorage.getItem("${KEY}")||matchMedia("(prefers-reduced-motion: reduce)").matches)?"seen":"playing"}catch(e){document.documentElement.dataset.intro="seen"}`;
-
-// Sprite widths at half the source size; the four sprites differ only in
-// trail length. Positions and delays are fixed so server and client markup
-// match.
-const SPRITES = [73, 106, 140, 172];
-const stars = [
-  { s: 4, top: 9, delay: 0 },
-  { s: 1, top: 17, delay: 260 },
-  { s: 3, top: 25, delay: 120 },
-  { s: 2, top: 33, delay: 430 },
-  { s: 4, top: 41, delay: 60 },
-  { s: 1, top: 48, delay: 340 },
-  { s: 3, top: 56, delay: 190 },
-  { s: 2, top: 63, delay: 510 },
-  { s: 4, top: 71, delay: 140 },
-  { s: 1, top: 78, delay: 390 },
-  { s: 3, top: 85, delay: 240 },
-  { s: 2, top: 92, delay: 580 },
-];
+const KEY = "horse-intro-seen-v1";
+const bootScript = `try{var d=document.documentElement;d.dataset.intro=(!matchMedia("(prefers-reduced-motion: reduce)").matches&&(new URLSearchParams(location.search).get("intro")==="horses"||!sessionStorage.getItem("${KEY}")))?"playing":"seen";if(d.dataset.intro==="playing")setTimeout(function(){if(d.dataset.intro==="playing"&&!document.querySelector(".horse-intro-canvas[data-painted]")){d.dataset.intro="seen";dispatchEvent(new Event("intro-done"))}},6000)}catch(e){document.documentElement.dataset.intro="seen"}`;
 
 export default function HomeIntro() {
-  const [phase, setPhase] = useState<"play" | "skip" | "gone">("play");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const finishRef = useRef<() => void>(() => {});
+  const eligibleRef = useRef<boolean | null>(null);
+  const [phase, setPhase] = useState<"play" | "gone">("play");
+  const [preview, setPreview] = useState(false);
+  const [run, setRun] = useState(0);
 
   useEffect(() => {
     const root = document.documentElement;
-    if (root.dataset.intro !== "playing") {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const isPreview = new URLSearchParams(location.search).get("intro") === "horses";
+    setPreview(isPreview);
+    if (eligibleRef.current === null) eligibleRef.current = root.dataset.intro === "playing";
+    if (motion.matches || (run === 0 && !eligibleRef.current)) {
+      root.dataset.intro = "seen";
       setPhase("gone");
       return;
     }
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) {
+      root.dataset.intro = "seen";
+      window.dispatchEvent(new Event("intro-done"));
+      setPhase("gone");
+      return;
+    }
+    root.dataset.intro = "playing";
     try {
       sessionStorage.setItem(KEY, "1");
     } catch {}
-    // "revealing" keeps the overlay up while the page types; "seen" hides it.
-    const typeTimer = setTimeout(() => {
+    let sprites: HorseSprites | null = null;
+    let frame = 0;
+    let revealed = false;
+    let finished = false;
+    const reveal = () => {
+      if (revealed) return;
+      revealed = true;
       root.dataset.intro = "revealing";
       window.dispatchEvent(new Event("intro-done"));
-    }, TYPE_AT);
-    const goneTimer = setTimeout(() => setPhase("gone"), GONE_AT);
+    };
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      cancelAnimationFrame(frame);
+      reveal();
+      root.dataset.intro = "seen";
+      setPhase("gone");
+    };
+    finishRef.current = finish;
+    const resize = () => {
+      // One canvas pixel per CSS pixel: the sprites supply their own chunky grid.
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    let started = 0;
+    const tick = (now: number) => {
+      if (!sprites || finished) return;
+      // The first RAF timestamp can predate this effect within the same
+      // browser frame. Never use a negative sprite-frame index.
+      const elapsed = Math.max(0, now - started);
+      if (elapsed >= HORSE_REVEAL_AT) reveal();
+      if (elapsed >= HORSE_INTRO_DURATION) {
+        finish();
+        return;
+      }
+      paintHorseIntro(ctx, sprites, canvas.width, canvas.height, elapsed);
+      frame = requestAnimationFrame(tick);
+    };
+    ctx.fillStyle = "#f7f4ec";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") finish();
+    };
+    const motionChange = () => {
+      if (motion.matches) finish();
+    };
+    // A backgrounded tab must not leave the visitor behind a frozen curtain.
+    let fallback = window.setTimeout(finish, 6000);
+    void createHorseSprites().then((loaded) => {
+      if (finished) return;
+      sprites = loaded;
+      started = performance.now();
+      paintHorseIntro(ctx, sprites, canvas.width, canvas.height, 0);
+      canvas.dataset.painted = "true";
+      window.clearTimeout(fallback);
+      fallback = window.setTimeout(finish, HORSE_INTRO_DURATION + 200);
+      frame = requestAnimationFrame(tick);
+    }).catch(finish);
+    window.addEventListener("resize", resize);
+    window.addEventListener("keydown", escape);
+    motion.addEventListener("change", motionChange);
     return () => {
-      clearTimeout(typeTimer);
-      clearTimeout(goneTimer);
+      finished = true;
+      cancelAnimationFrame(frame);
+      window.clearTimeout(fallback);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("keydown", escape);
+      motion.removeEventListener("change", motionChange);
       root.dataset.intro = "seen";
     };
-  }, []);
+  }, [run]);
 
-  const skip = () => {
-    if (phase !== "play") return;
-    document.documentElement.dataset.intro = "seen";
-    try {
-      sessionStorage.setItem(KEY, "1");
-    } catch {}
-    window.dispatchEvent(new Event("intro-done"));
-    setPhase("skip");
-    setTimeout(() => setPhase("gone"), 400);
+  const replay = () => {
+    document.documentElement.dataset.intro = "playing";
+    setPhase("play");
+    setRun((value) => value + 1);
   };
 
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: bootScript }} />
-      {phase !== "gone" && (
-        <div
-          className={`intro${phase === "skip" ? " intro-skip" : ""}`}
-          aria-hidden="true"
-          onClick={skip}
-        >
-          <div className="intro-curtain" />
-          {stars.map((st, i) => {
-            const w = SPRITES[st.s - 1];
-            return (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={i}
-                className="intro-star"
-                src={`/intro/star-${st.s}.png`}
-                alt=""
-                draggable={false}
-                style={{
-                  top: `${st.top}%`,
-                  width: `min(${w}px, ${(w / 172) * 40}vw)`,
-                  animationDelay: `${st.delay}ms`,
-                }}
-              />
-            );
-          })}
+      {phase === "play" && (
+        <div className="intro horse-intro">
+          <canvas ref={canvasRef} className="horse-intro-canvas" aria-hidden="true" />
+          <button className="intro-skip-button" onClick={() => finishRef.current()}>
+            Skip intro
+          </button>
         </div>
+      )}
+      {preview && phase === "gone" && (
+        <button className="intro-replay-button" onClick={replay}>
+          Replay horse intro
+        </button>
       )}
     </>
   );
