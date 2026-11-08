@@ -1,0 +1,405 @@
+.preview {
+  padding-top: clamp(48px, 7vw, 86px);
+  padding-bottom: 20px;
+}
+
+.previewHeader {
+  max-width: 760px;
+  margin: 0 auto clamp(68px, 9vw, 112px);
+}
+
+.kicker,
+.sectionKicker,
+.interestKicker,
+.noteMeta {
+  color: var(--sepia);
+  font-family: var(--font-mono), "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.045em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.kicker {
+  margin: 0 0 20px;
+  color: #5d5a94;
+}
+
+.previewHeader h1 {
+  max-width: 700px;
+  margin: 0 0 18px;
+  font-size: clamp(34px, 5.3vw, 58px);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.03;
+}
+
+.introCopy {
+  max-width: 620px;
+  margin: 0;
+  color: var(--ink-3);
+  font-size: 17px;
+  line-height: 1.62;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 22px;
+  border-bottom: 1px solid var(--line);
+  color: var(--sepia);
+  font-size: 15px;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.homeSample {
+  padding-bottom: clamp(66px, 9vw, 110px);
+  border-bottom: 1px solid var(--line);
+}
+
+.sectionHeading {
+  max-width: var(--read);
+  margin: 0 auto 30px;
+}
+
+.sectionKicker {
+  margin: 0 0 14px;
+  color: var(--sepia);
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.bio {
+  max-width: var(--read);
+  margin: 0 auto;
+  color: var(--ink-2);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.62;
+}
+
+.bio p {
+  margin: 0;
+}
+
+.bio p + p {
+  margin-top: 18px;
+}
+
+.interestBlock {
+  max-width: 780px;
+  margin: 38px auto 0;
+  padding-top: 17px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.interestHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.interestKicker {
+  color: var(--sepia);
+}
+
+.interestCaption {
+  color: var(--sepia);
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.constellation {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: 210px;
+  margin: 14px auto 0;
+}
+
+.connections {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.connections line {
+  stroke: var(--faint);
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.mapCenter,
+.mapTopic {
+  position: absolute;
+  z-index: 1;
+  padding: 4px 7px;
+  background: var(--bg);
+  font-family: var(--font-mono), "Times New Roman", serif;
+  font-size: 10px;
+  letter-spacing: 0.035em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.mapCenter {
+  top: 50%;
+  left: 50%;
+  padding: 7px 11px;
+  color: var(--ink);
+  transform: translate(-50%, -50%);
+}
+
+.mapTopic::before {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  background: var(--sparkle) center / contain no-repeat;
+  content: "";
+  image-rendering: pixelated;
+  vertical-align: 1px;
+}
+
+.appliedAi {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.worldModels {
+  top: 19%;
+  left: 82%;
+  transform: translateX(-50%);
+}
+
+.robotics {
+  top: 71%;
+  left: 82%;
+  transform: translateX(-50%);
+}
+
+.drugDiscovery {
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spaceEconomy {
+  top: 71%;
+  left: 18%;
+  transform: translateX(-50%);
+}
+
+.cybersecurity {
+  top: 19%;
+  left: 18%;
+  transform: translateX(-50%);
+}
+
+.writingSample {
+  max-width: var(--read);
+  margin: clamp(64px, 8vw, 96px) auto 0;
+}
+
+.writingSample .sectionHeading {
+  margin-bottom: 18px;
+}
+
+.sectionDescription {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--sepia);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.starRule {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: 18px;
+  margin: 0 0 3px;
+}
+
+.starRule::before,
+.starRule::after {
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+  content: "";
+}
+
+.starRule span {
+  width: 9px;
+  height: 9px;
+  background: var(--sparkle) center / contain no-repeat;
+  image-rendering: pixelated;
+}
+
+.noteList {
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 21px 2px;
+  border-top: 1px solid var(--line-soft);
+  color: inherit;
+  text-decoration: none;
+  transition: padding-left 200ms ease;
+}
+
+a.note:hover,
+a.note:focus-visible {
+  padding-left: 10px;
+}
+
+.noteStar {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  background: var(--sparkle) center / contain no-repeat;
+  image-rendering: pixelated;
+}
+
+.noteBody {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.noteMeta {
+  color: var(--sepia);
+  font-size: 10px;
+}
+
+.noteTitle {
+  font-size: clamp(19px, 2.5vw, 23px);
+  line-height: 1.25;
+}
+
+.noteSubtitle {
+  max-width: 65ch;
+  color: var(--sepia);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.noteArrow {
+  flex: 0 0 auto;
+  color: var(--sepia-2);
+  font-size: 17px;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+a.note:hover .noteArrow,
+a.note:focus-visible .noteArrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.keepNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  max-width: var(--read);
+  margin: 34px auto 0;
+  color: var(--sepia);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.keepNote p {
+  margin: 0;
+}
+
+.noteDot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  margin-top: 6px;
+  background: var(--accent);
+}
+
+@media (max-width: 620px) {
+  .preview {
+    padding-top: 44px;
+  }
+
+  .previewHeader {
+    margin-bottom: 62px;
+  }
+
+  .interestHeading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .interestCaption {
+    text-align: left;
+  }
+
+  .constellation {
+    height: 205px;
+  }
+
+  .mapTopic {
+    padding: 4px 3px;
+    font-size: 9px;
+    letter-spacing: 0.015em;
+  }
+
+  .mapTopic::before {
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+  }
+
+  .worldModels,
+  .robotics {
+    left: 84%;
+  }
+
+  .spaceEconomy,
+  .cybersecurity {
+    left: 16%;
+  }
+
+  .note {
+    gap: 12px;
+    padding: 19px 0;
+  }
+
+  .noteSubtitle {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backLink,
+  .note,
+  .noteArrow {
+    transition: none;
+  }
+}

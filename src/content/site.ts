@@ -12,8 +12,11 @@ export const site = {
   // Small uppercase line above your name in the hero:
   eyebrow: "Investor · Writer · Student of complex systems",
   // The one big sentence under your name (EDIT — make it sound like you):
-  heroLead:
-    "I am a junior at Columbia interested in venture capital, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of progress, and that through the thoughtful allocation of capital we can accelerate the work of those building a resilient and abundant future.\n\nMost of my time today is spent at [Lightspeed](https://lsvp.com/) and [Dorm Room Fund](https://www.dormroomfund.com/). I find this work incredibly fulfilling and have been lucky to learn from a number of brilliant people early on in my career. This is not an opportunity I take lightly.\n\nAs for my interests in tech, they are many, but I have spent the most time in applied AI. The categories that I think will become massive in the next five years are the space economy, cybersecurity, robotics-as-a-service (RaaS) + the data and deployment companies that support it, and drug discovery.\n\nOutside of work, you can find me listening to electronic music, trying new restaurants in NYC, watching professional soccer or a docuseries, cooking, and hiking.",
+  heroLead: [
+    "I am a junior at Columbia interested in venture capital, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of progress, and that through the thoughtful allocation of capital we can accelerate the work of those building a resilient and abundant future.",
+    "As for my interests in tech, they are many, but I have spent the most time in applied AI. The categories that I think will become massive in the next five years are the space economy, cybersecurity, world models, robotics-as-a-service (RaaS) + the data and deployment companies that support it, and drug discovery. I am sure there is much I am overlooking (tell me!).",
+    "Most of my time today is spent at [Lightspeed](https://lsvp.com/). I find this work incredibly fulfilling and have been fortunate to learn from a number of brilliant people early on in my career. Outside of work, you can find me listening to electronic music, trying new restaurants in NYC, watching professional soccer or a docuseries, cooking, and hiking.",
+  ].join("\n\n"),
   // Standalone middle paragraph in the hero bio, with an inline link:
   heroInterests: {
     before:
@@ -53,7 +56,7 @@ export const homeNow =
 export const homeElsewhere = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/vlagudelo/" },
   { label: "Substack", href: "https://veronicaagudelo.substack.com/" },
-  { label: "Email", href: "mailto:vla2117@columbia.edu" },
+  { label: "Email", href: "mailto:veronica.agudelo@dormroomfund.com" },
 ];
 
 // ---- ABOUT (home, section 01) ---------------------------------------------

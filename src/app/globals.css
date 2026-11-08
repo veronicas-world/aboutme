@@ -615,8 +615,7 @@ html[data-intro="seen"] .intro { display: none; }
   image-rendering: pixelated;
 }
 .horse-intro-canvas:not([data-painted]) { background: var(--bg); }
-.intro-skip-button,
-.intro-replay-button {
+.intro-skip-button {
   position: fixed;
   bottom: max(20px, env(safe-area-inset-bottom));
   padding: 9px 12px;
@@ -629,9 +628,7 @@ html[data-intro="seen"] .intro { display: none; }
   cursor: pointer;
 }
 .intro-skip-button { right: 20px; }
-.intro-replay-button { left: 20px; z-index: 40; }
-.intro-skip-button:focus-visible,
-.intro-replay-button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.intro-skip-button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 html[data-intro="playing"] .intro-landing { transform: translateX(-36px); }
 html[data-intro="revealing"] .intro-landing {
   animation: herd-page-pull 2.9s cubic-bezier(0.2, 0.65, 0.35, 1) both;

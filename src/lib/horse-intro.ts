@@ -11,6 +11,10 @@ const HORSE_WIDTH = 52;
 // lift, reach, extension, push-off, recovery, and collection.
 const GALLOP_ORDER = [1, 2, 3, 6, 7, 8, 5, 4];
 const GALLOP_FRAME_MS = 100;
+// Lift charcoal midtones just enough to separate the coat's shaded planes.
+// Black pixels stay black, and the source silhouette and alpha stay intact.
+const COAT_TONES = Uint8Array.from({ length: 256 }, (_, value) =>
+  Math.round(255 * (value / 255) ** 0.9));
 
 function hash(x: number, y: number, seed: number) {
   const value = Math.sin(x * 127.1 + y * 311.7 + seed * 74.7) * 43758.5453;
@@ -74,6 +78,13 @@ export async function createHorseSprites(): Promise<HorseSprites> {
       FRAME_WIDTH, FRAME_HEIGHT,
       0, 0, FRAME_WIDTH, FRAME_HEIGHT,
     );
+    const coat = ctx.getImageData(0, 0, FRAME_WIDTH, FRAME_HEIGHT);
+    for (let i = 0; i < coat.data.length; i += 4) {
+      coat.data[i] = COAT_TONES[coat.data[i]];
+      coat.data[i + 1] = COAT_TONES[coat.data[i + 1]];
+      coat.data[i + 2] = COAT_TONES[coat.data[i + 2]];
+    }
+    ctx.putImageData(coat, 0, 0);
     return canvas;
   });
   return {
@@ -153,8 +164,8 @@ export function paintHorseIntro(
     ctx.globalCompositeOperation = "source-over";
   }
 
-  // A continuous, finely shaded grayscale cloud, not oversized confetti.
-  // Its low bed and lifting billows all remain behind the final horse.
+  // The main cloud stays behind the final horse; small hoof puffs below
+  // join the leading horses as they enter, before the full plume arrives.
   const dustOpacity = Math.min(1, elapsed / 450) * Math.max(0, Math.min(1, (3650 - elapsed) / 700));
   const tip = trailX;
   const plumeLength = Math.min(
@@ -166,7 +177,7 @@ export function paintHorseIntro(
   // hooves. Its right edge remains pinned behind the rearmost horse.
   const fadingWidth = plumeLength * (1 + dispersal * 0.65);
   const fadingHeight = plumeHeight * (1 + dispersal * 1.5);
-  ctx.globalAlpha = dustOpacity * 0.85;
+  ctx.globalAlpha = dustOpacity * 0.9;
   ctx.drawImage(sprites.dust, Math.round(tip - fadingWidth), Math.round(groundY - fadingHeight * 0.94), Math.round(fadingWidth), Math.round(fadingHeight));
   ctx.globalAlpha = dustOpacity * 0.26;
   ctx.drawImage(sprites.dust, Math.round(tip - plumeLength * 0.8), Math.round(groundY - plumeHeight * 0.16), Math.round(plumeLength * 0.8), Math.round(plumeHeight * 0.65));
@@ -177,12 +188,12 @@ export function paintHorseIntro(
     const h = plumeHeight * (0.45 + spread * 2.2) * (1 + dispersal * 0.75);
     const right = tip - age * plumeLength * 0.8;
     const y = groundY - h * 0.86 - age * plumeHeight * 0.55;
-    ctx.globalAlpha = dustOpacity * (1 - age) ** 1.15 * 0.44;
+    ctx.globalAlpha = dustOpacity * (1 - age) ** 1.15 * 0.5;
     ctx.drawImage(sprites.dust, Math.floor(right - w), Math.round(y), Math.round(w), Math.round(h));
   }
   const kickWidth = Math.round(leadWidth * 0.7);
   const kickHeight = Math.round(plumeHeight * 0.62);
-  ctx.globalAlpha = dustOpacity * 0.66;
+  ctx.globalAlpha = dustOpacity * 0.7;
   ctx.drawImage(sprites.kick, Math.floor(tip - kickWidth), Math.round(groundY - kickHeight * 0.7), kickWidth, kickHeight);
   const colors = ["#545454", "#777777", "#a2a2a2", "#c6c6c6", "#dedede"];
   const grain = Math.max(1, Math.round(leadWidth / 170));
@@ -196,6 +207,17 @@ export function paintHorseIntro(
     ctx.fillStyle = colors[i % colors.length];
     ctx.fillRect(x, Math.round(y), size, size);
   }
+  herd.forEach((horse) => {
+    for (let i = 0; i < 2; i++) {
+      const age = (elapsed / 700 + horse.phase * 0.13 + i * 0.5) % 1;
+      const w = horse.w * (0.4 + age * 0.35);
+      const h = horse.h * (0.22 + age * 0.2);
+      const right = horse.x + horse.w * 0.43 - age * horse.w * 0.4;
+      const ground = horse.y + horse.h * 0.9;
+      ctx.globalAlpha = dustOpacity * (1 - age) ** 0.8 * 0.24;
+      ctx.drawImage(sprites.kick, Math.floor(right - w), Math.round(ground - h * 0.55), Math.round(w), Math.round(h));
+    }
+  });
   ctx.globalAlpha = 1;
 
   herd.forEach((horse) => {

@@ -103,7 +103,7 @@ export default function AboutPage() {
           </div>
           <p className="article" style={{ fontSize: 17, margin: 0 }}>
             I can be reached through my email,{" "}
-            <a href="mailto:vla2117@columbia.edu">vla2117@columbia.edu</a>, or on{" "}
+            <a href="mailto:veronica.agudelo@dormroomfund.com">veronica.agudelo@dormroomfund.com</a>, or on{" "}
             <a
               href="https://www.linkedin.com/in/vlagudelo/"
               target="_blank"

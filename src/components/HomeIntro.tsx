@@ -17,16 +17,12 @@ export default function HomeIntro() {
   const finishRef = useRef<() => void>(() => {});
   const eligibleRef = useRef<boolean | null>(null);
   const [phase, setPhase] = useState<"play" | "gone">("play");
-  const [preview, setPreview] = useState(false);
-  const [run, setRun] = useState(0);
 
   useEffect(() => {
     const root = document.documentElement;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const isPreview = new URLSearchParams(location.search).get("intro") === "horses";
-    setPreview(isPreview);
     if (eligibleRef.current === null) eligibleRef.current = root.dataset.intro === "playing";
-    if (motion.matches || (run === 0 && !eligibleRef.current)) {
+    if (motion.matches || !eligibleRef.current) {
       root.dataset.intro = "seen";
       setPhase("gone");
       return;
@@ -114,13 +110,7 @@ export default function HomeIntro() {
       motion.removeEventListener("change", motionChange);
       root.dataset.intro = "seen";
     };
-  }, [run]);
-
-  const replay = () => {
-    document.documentElement.dataset.intro = "playing";
-    setPhase("play");
-    setRun((value) => value + 1);
-  };
+  }, []);
 
   return (
     <>
@@ -132,11 +122,6 @@ export default function HomeIntro() {
             Skip intro
           </button>
         </div>
-      )}
-      {preview && phase === "gone" && (
-        <button className="intro-replay-button" onClick={replay}>
-          Replay horse intro
-        </button>
       )}
     </>
   );
