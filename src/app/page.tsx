@@ -1,7 +1,6 @@
 import BgSketch from "@/components/BgSketch";
 import TypeName from "@/components/TypeName";
 import HomeImage from "@/components/HomeImage";
-import HomeIntro from "@/components/HomeIntro";
 import { site } from "@/content/site";
 
 // Turns [text](url) in a bio paragraph into an external link.
@@ -53,11 +52,10 @@ export default function Home() {
         position: "relative",
       }}
     >
-      <HomeIntro />
       <BgSketch name="interests" float={false} className="home-sk-left" style={{ width: 300, opacity: 0.45 }} />
       <BgSketch name="trajectory" float={false} className="home-sk-right" style={{ width: 210, opacity: 0.45 }} />
 
-      <div className="tcenter intro-landing" style={{ maxWidth: "var(--read)", margin: "0 auto" }}>
+      <div className="tcenter" style={{ maxWidth: "var(--read)", margin: "0 auto" }}>
         <HomeImage />
         <h1
           className="home-name"

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Keep mobile downloads light and wait for the horse intro before playback.
+// Keep mobile downloads light and play only while the video is visible.
 // Captions are baked in; sound stays opt-in.
 export default function HomeImage() {
   const ref = useRef<HTMLVideoElement>(null);
@@ -14,9 +14,8 @@ export default function HomeImage() {
     const v = ref.current;
     if (!ok || !v) return;
     let active = true;
-    let introDone = document.documentElement.dataset.intro !== "playing";
     let inView = false;
-    const canPlay = () => introDone && inView && !document.hidden;
+    const canPlay = () => inView && !document.hidden;
     const resume = () => {
       if (!canPlay()) {
         v.pause();
@@ -27,10 +26,6 @@ export default function HomeImage() {
         if (active && canPlay() && v.paused) setNeedsPlay(true);
       });
     };
-    const introFinished = () => {
-      introDone = true;
-      resume();
-    };
     const playing = () => {
       if (!canPlay()) v.pause();
       else setNeedsPlay(false);
@@ -40,7 +35,6 @@ export default function HomeImage() {
     v.muted = true;
     v.addEventListener("playing", playing);
     v.addEventListener("pause", paused);
-    window.addEventListener("intro-done", introFinished);
     window.addEventListener("pageshow", resume);
     document.addEventListener("visibilitychange", resume);
     const observer = typeof IntersectionObserver === "undefined" ? null :
@@ -58,7 +52,6 @@ export default function HomeImage() {
       observer?.disconnect();
       v.removeEventListener("playing", playing);
       v.removeEventListener("pause", paused);
-      window.removeEventListener("intro-done", introFinished);
       window.removeEventListener("pageshow", resume);
       document.removeEventListener("visibilitychange", resume);
       v.pause();
