@@ -5,6 +5,7 @@
 3. [Choose Good Quests](https://www.piratewires.com/p/choose-good-quests)
 4. [Beating China isn't Enough](https://substack.com/home/post/p-193027374)
 5. [Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace)
+6. [Founder Profiles](https://www.founderprofiles.ai/) by Nova
 
 ### BOOKS
 
