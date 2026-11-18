@@ -15,7 +15,7 @@ function renderIntroParagraph(text: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <Link href="/readings" style={{ borderBottom: "1px solid rgba(21,17,13,.4)" }}>
+      <Link href="/readings" style={{ borderBottom: "1px solid rgba(var(--ink-rgb), .4)" }}>
         here
       </Link>
       {text.slice(idx + token.length)}

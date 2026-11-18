@@ -7,15 +7,16 @@ function Spark({ x, y, s = 13 }: { x: number; y: number; s?: number }) {
     <path
       transform={`translate(${x - s / 2} ${y - s / 2}) scale(${s / 24})`}
       d="M12 0C12.8 7 14 9.2 24 12 14 14.8 12.8 17 12 24 11.2 17 10 14.8 0 12 10 9.2 11.2 7 12 0Z"
-      fill="#15110D"
+      style={{ fill: "var(--ink)" }}
     />
   );
 }
 
 export default function LocalMaximaSketch() {
-  const ink = "#15110D";
-  const sepia = "#6b6155";
-  const faint = "#a89d8c";
+  // CSS variables so the sketch follows the light/dark theme
+  const ink = "var(--ink)";
+  const sepia = "var(--sepia)";
+  const faint = "var(--sepia-3)";
   const labelBase = {
     fontFamily: mono,
     fontSize: 11,
@@ -29,10 +30,10 @@ export default function LocalMaximaSketch() {
         viewBox="0 0 680 330"
         role="img"
         aria-label="A sketch of a curve marking its local maximum, global maximum, local minimum, and global minimum."
-        style={{ width: "100%", height: "auto", display: "block", mixBlendMode: "multiply" }}
+        style={{ width: "100%", height: "auto", display: "block" }}
       >
         {/* axes */}
-        <g stroke={sepia} strokeWidth="1" opacity="0.5" fill="none" strokeLinecap="round">
+        <g style={{ stroke: sepia }} strokeWidth="1" opacity="0.5" fill="none" strokeLinecap="round">
           <path d="M52 26 L52 288" />
           <path d="M52 288 L642 288" />
           <path d="M52 26 l-5 10 M52 26 l5 10" />
@@ -40,7 +41,7 @@ export default function LocalMaximaSketch() {
         </g>
 
         {/* leader lines */}
-        <g stroke={faint} strokeWidth="1" fill="none">
+        <g style={{ stroke: faint }} strokeWidth="1" fill="none">
           <path d="M122 56 L122 40" />
           <path d="M238 250 L238 266" />
           <path d="M406 122 L406 108" />
@@ -51,7 +52,7 @@ export default function LocalMaximaSketch() {
         <path
           d="M58 98 C 80 52 104 50 122 60 C 156 80 182 252 238 250 C 300 248 360 128 406 124 C 452 120 496 198 526 198 C 564 198 604 170 630 152"
           fill="none"
-          stroke={ink}
+          style={{ stroke: ink }}
           strokeWidth="2.4"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -64,16 +65,16 @@ export default function LocalMaximaSketch() {
         <Spark x={526} y={198} />
 
         {/* labels — global in ink, local in sepia */}
-        <text x={122} y={32} textAnchor="middle" style={{ ...labelBase, fontWeight: 500 }} fill={ink}>
+        <text x={122} y={32} textAnchor="middle" style={{ ...labelBase, fontWeight: 500, fill: ink }}>
           Global maximum
         </text>
-        <text x={238} y={282} textAnchor="middle" style={{ ...labelBase, fontWeight: 500 }} fill={ink}>
+        <text x={238} y={282} textAnchor="middle" style={{ ...labelBase, fontWeight: 500, fill: ink }}>
           Global minimum
         </text>
-        <text x={406} y={100} textAnchor="middle" style={labelBase} fill={sepia}>
+        <text x={406} y={100} textAnchor="middle" style={{ ...labelBase, fill: sepia }}>
           Local maximum
         </text>
-        <text x={526} y={232} textAnchor="middle" style={labelBase} fill={sepia}>
+        <text x={526} y={232} textAnchor="middle" style={{ ...labelBase, fill: sepia }}>
           Local minimum
         </text>
       </svg>

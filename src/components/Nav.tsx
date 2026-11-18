@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { nav } from "@/content/site";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -65,28 +66,31 @@ export default function Nav() {
             )}
           </span>
         </Link>
-        <button
-          className="nav-toggle mono"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span style={{ fontSize: 12, letterSpacing: "0.12em" }}>
-            {open ? "CLOSE" : "MENU"}
-          </span>
-        </button>
-        <nav className={`nav-links${open ? " open" : ""}`}>
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={pathname?.startsWith(item.href) ? "active" : undefined}
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="nav-right">
+          <button
+            className="nav-toggle mono"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span style={{ fontSize: 12, letterSpacing: "0.12em" }}>
+              {open ? "CLOSE" : "MENU"}
+            </span>
+          </button>
+          <nav className={`nav-links${open ? " open" : ""}`}>
+            {nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={pathname?.startsWith(item.href) ? "active" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

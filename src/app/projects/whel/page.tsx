@@ -72,7 +72,7 @@ export default function WhelPage() {
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 color: "var(--ink-2)",
-                borderBottom: "1px solid rgba(21,17,13,.35)",
+                borderBottom: "1px solid rgba(var(--ink-rgb), .35)",
                 paddingBottom: 3,
               }}
             >

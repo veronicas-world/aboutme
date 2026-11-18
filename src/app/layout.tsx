@@ -1,15 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Silkscreen } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
-const pixel = Silkscreen({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-pixel",
-  display: "swap",
-});
+// Runs before first paint so a saved dark theme never flashes light.
+const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}`;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -41,11 +36,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={pixel.variable}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <div className="page">
           <Nav />
           {children}
+          <footer className="site-footer">
+            <span>New York</span>
+            <span>Columbia University</span>
+            <span>©Veronica Agudelo, {new Date().getFullYear()}</span>
+          </footer>
           <div className="cloud-band" aria-hidden="true" />
         </div>
         <Analytics />
