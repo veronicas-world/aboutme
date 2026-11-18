@@ -22,7 +22,7 @@
 
 .kicker {
   margin: 0 0 20px;
-  color: #5d5a94;
+  color: var(--accent);
 }
 
 .previewHeader h1 {
