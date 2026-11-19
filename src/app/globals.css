@@ -25,20 +25,20 @@
   --font-mono: "Times New Roman", Times, serif;
 }
 
-/* dark theme: midnight blue with soft cream ink, chosen with the nav toggle */
+/* dark theme: ink black with soft cream ink, chosen with the nav toggle */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0f1630;
-  --bg-warm: #141c38;
+  --bg: #12151c;
+  --bg-warm: #171a22;
   --ink: #ebe9e1;
   --ink-2: #e0ded5;
   --ink-3: #cdcbc2;
-  --sepia: #9a9cb0;
-  --sepia-2: #818398;
-  --sepia-3: #6a6c83;
-  --faint: #474a63;
+  --sepia: #9b9da6;
+  --sepia-2: #81848d;
+  --sepia-3: #6b6e78;
+  --faint: #464953;
   --ink-rgb: 235, 233, 225;
-  --bg-rgb: 15, 22, 48;
+  --bg-rgb: 18, 21, 28;
 }
 
 * { box-sizing: border-box; }
@@ -621,22 +621,20 @@ a { color: inherit; text-decoration: none; }
 .article p:has(> img) + p { text-indent: 0; }
 
 /* ============================================================
-   ACCENTS — Times New Roman throughout, one Golden Record gold accent, small
+   ACCENTS — Times New Roman throughout, one dark navy accent (cream in dark mode), small
    sparkle separators, a pastel cloud band at the foot of every
    page, and a light/dark theme toggle in the nav.
    ============================================================ */
 :root {
-  --accent: #a8843f;
-  --accent-rgb: 168, 132, 63;
-  --sparkle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23a8843f' d='M3 0h1v2H3zM3 5h1v2H3zM0 3h2v1H0zM5 3h2v1H5zM2 2h3v3H2z'/%3E%3Cpath fill='%23f9f9f7' d='M3 3h1v1H3z'/%3E%3C/svg%3E");
+  --accent: #172b4d;
+  --sparkle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23172b4d' d='M3 0h1v2H3zM3 5h1v2H3zM0 3h2v1H0zM5 3h2v1H5zM2 2h3v3H2z'/%3E%3Cpath fill='%23f9f9f7' d='M3 3h1v1H3z'/%3E%3C/svg%3E");
 }
 :root[data-theme="dark"] {
-  --accent: #d4b46a;
-  --accent-rgb: 212, 180, 106;
-  --sparkle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23d4b46a' d='M3 0h1v2H3zM3 5h1v2H3zM0 3h2v1H0zM5 3h2v1H5zM2 2h3v3H2z'/%3E%3Cpath fill='%230f1630' d='M3 3h1v1H3z'/%3E%3C/svg%3E");
+  /* navy vanishes on the dark page, so the accent becomes the cream ink */
+  --accent: #ebe9e1;
+  --sparkle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23ebe9e1' d='M3 0h1v2H3zM3 5h1v2H3zM0 3h2v1H0zM5 3h2v1H5zM2 2h3v3H2z'/%3E%3Cpath fill='%2312151c' d='M3 3h1v1H3z'/%3E%3C/svg%3E");
 }
-/* gold is too light to carry text on paper, so the highlight is a gold wash */
-::selection { background: rgba(var(--accent-rgb), 0.35); color: var(--ink); }
+::selection { background: var(--accent); color: var(--bg); }
 .hero-inline-link:hover { border-color: var(--accent); }
 .chip:hover { border-color: var(--accent); color: var(--ink); }
 
@@ -725,4 +723,72 @@ a { color: inherit; text-decoration: none; }
 .page-serif .xp-section {
   font-size: 12.5px !important;
   letter-spacing: 0.1em !important;
+}
+
+/* ============================================================
+   STORYBOOK TOUCHES — printed-paper grain, fleuron dividers,
+   drop caps, and a faint star chart behind the page in dark mode.
+   ============================================================ */
+:root {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain-opacity: 0.07;
+  --fleuron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 14'%3E%3Cpath d='M0 7h96M144 7h96' stroke='%23000' stroke-width='1'/%3E%3Ccircle cx='104' cy='7' r='1.6'/%3E%3Ccircle cx='136' cy='7' r='1.6'/%3E%3Cpath transform='translate(113 0) scale(.5833)' d='M12 0C12.8 7 14 9.2 24 12 14 14.8 12.8 17 12 24 11.2 17 10 14.8 0 12 10 9.2 11.2 7 12 0Z'/%3E%3C/svg%3E");
+}
+:root[data-theme="dark"] {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain-opacity: 0.045;
+}
+
+/* the grain lies over everything like paper texture (it never takes clicks);
+   the star chart sits under .page (z-index 2) */
+body::before,
+body::after {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+}
+body::before {
+  z-index: 40;
+  background: var(--grain);
+  opacity: var(--grain-opacity);
+}
+body::after { z-index: 0; display: none; }
+:root[data-theme="dark"] body::after {
+  display: block;
+  background: url("/fable/constellations.svg") center / cover no-repeat;
+  opacity: 0.55;
+}
+
+/* centered fleuron: a fine rule broken by a small star */
+.fleuron,
+.site-footer::before,
+.xp-section ~ .xp-section::before,
+.readings .article h3:not(:first-child)::before,
+.article hr {
+  display: block;
+  height: 14px;
+  border: 0;
+  background: var(--sepia-3);
+  -webkit-mask: var(--fleuron) center / 240px 14px no-repeat;
+  mask: var(--fleuron) center / 240px 14px no-repeat;
+}
+.site-footer::before { content: ""; flex-basis: 100%; margin-bottom: 26px; }
+.xp-section ~ .xp-section::before { content: ""; margin-bottom: 44px; }
+.xp-section ~ .xp-section { margin-top: 56px; }
+.readings .article h3:not(:first-child)::before { content: ""; margin: 0 0 40px; }
+.readings .article h3:not(:first-child) { margin-top: 52px; }
+.article hr { margin: 2.6em auto; }
+
+/* drop caps: the opening letter spans about three lines, as in a printed book */
+.dropcap { text-indent: 0 !important; }
+.dropcap::first-letter {
+  float: left;
+  font-size: 4.15em;
+  line-height: 0.8;
+  margin: 0.06em 0.09em 0 0;
+  color: var(--ink);
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .dropcap::first-letter { font-size: 3.6em; }
 }

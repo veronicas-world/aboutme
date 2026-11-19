@@ -113,7 +113,7 @@ export default async function PostPage({
           </p>
         )}
         <TableOfContents items={toc} variant="inline" />
-        <Article content={post.content} />
+        <Article content={post.content} dropCap />
       </div>
     </main>
   );
