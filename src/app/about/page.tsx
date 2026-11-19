@@ -76,7 +76,7 @@ export default function AboutPage() {
             The City Rises, 1910 · Umberto Boccioni
           </figcaption>
         </figure>
-        <Article content={md} dropCap />
+        <Article content={md} />
         <MountainGallery />
         <div className="article" style={{ marginTop: 32 }}>
           <p style={{ textIndent: 0 }}>

@@ -17,16 +17,7 @@ function nodeText(node: ReactNode): string {
   return "";
 }
 
-export default function Article({
-  content,
-  dropCap = false,
-}: {
-  content: string;
-  dropCap?: boolean;
-}) {
-  // Only a real opening paragraph gets the drop cap: skip image-only, italic
-  // notes, and one-line "read on Substack" stubs.
-  let dropped = !dropCap;
+export default function Article({ content }: { content: string }) {
   return (
     <div className="article">
       <ReactMarkdown
@@ -40,24 +31,6 @@ export default function Article({
           a: ({ node, ...props }) => (
             <a target="_blank" rel="noopener noreferrer" {...props} />
           ),
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          p: ({ node, children, ...props }) => {
-            const first = Array.isArray(children) ? children[0] : children;
-            if (
-              !dropped &&
-              typeof first === "string" &&
-              /^[A-Za-z]/.test(first) &&
-              nodeText(children).length > 160
-            ) {
-              dropped = true;
-              return (
-                <p className="dropcap" {...props}>
-                  {children}
-                </p>
-              );
-            }
-            return <p {...props}>{children}</p>;
-          },
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           h2: ({ node, children, ...props }) => (
             <h2 id={slugify(nodeText(children))} {...props}>
