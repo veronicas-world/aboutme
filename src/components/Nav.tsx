@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { nav } from "@/content/site";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -89,7 +88,6 @@ export default function Nav() {
               </Link>
             ))}
           </nav>
-          <ThemeToggle />
         </div>
       </div>
     </header>

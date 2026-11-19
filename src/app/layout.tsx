@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import ThemeToggle from "@/components/ThemeToggle";
 
 // Runs before first paint so a saved dark theme never flashes light.
 const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}`;
@@ -48,6 +49,7 @@ export default function RootLayout({
             <span>New York</span>
             <span>Columbia University</span>
             <span>©Veronica Agudelo, {new Date().getFullYear()}</span>
+            <ThemeToggle />
           </footer>
           <div className="cloud-band" aria-hidden="true" />
         </div>
