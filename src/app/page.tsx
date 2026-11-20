@@ -40,14 +40,13 @@ export default function Home() {
   return (
     <main
       id="top"
-      className="wrap"
+      className="wrap home-main"
       style={{
-        minHeight: "82vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
         paddingTop: 48,
-        paddingBottom: 60,
+        paddingBottom: 24,
         position: "relative",
       }}
     >
