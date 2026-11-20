@@ -1,5 +1,4 @@
 import BgSketch from "@/components/BgSketch";
-import TypeName from "@/components/TypeName";
 import HomeImage from "@/components/HomeImage";
 import { site } from "@/content/site";
 
@@ -56,20 +55,8 @@ export default function Home() {
       <BgSketch name="trajectory" float={false} className="home-sk-right" style={{ width: 210, opacity: 0.45 }} />
 
       <div className="tcenter" style={{ maxWidth: "var(--read)", margin: "0 auto" }}>
+        <h1 className="sr-only">Introduction</h1>
         <HomeImage />
-        <h1
-          className="home-name"
-          style={{
-            fontWeight: 300,
-            fontSize: "clamp(30px,4.6vw,52px)",
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            whiteSpace: "nowrap",
-            margin: "0 0 38px",
-          }}
-        >
-          <TypeName text="Veronica Agudelo" />
-        </h1>
         <div style={{ textAlign: "left" }}>
           <p style={heroParaStyle}>{withLinks(heroParas[0])}</p>
           {heroParas.slice(1).map((para, i) => (

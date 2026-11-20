@@ -144,16 +144,6 @@ a { color: inherit; text-decoration: none; }
 @keyframes record-spin { to { transform: rotate(360deg); } }
 .record-spin { animation: record-spin 22s linear infinite; }
 
-/* typewriter caret for the home name */
-.type-caret {
-  display: inline-block; width: 0.055em; height: 0.92em;
-  background: currentColor; margin-left: 0.06em;
-  vertical-align: -0.08em;
-  animation: caret-blink 1.05s step-end infinite;
-}
-@keyframes caret-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .type-caret { display: none; } }
-
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
@@ -578,12 +568,6 @@ a { color: inherit; text-decoration: none; }
   .body-l { font-size: 18px; }
   .article { font-size: 18px; }
   .footer { flex-direction: column; gap: 14px; align-items: flex-start; }
-}
-
-@media (max-width: 480px) {
-  /* the home name is kept on one line by design; floor the size so it
-     never forces horizontal scroll on small phones */
-  .home-name { font-size: clamp(22px, 7.2vw, 52px) !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
