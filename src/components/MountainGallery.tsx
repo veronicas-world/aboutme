@@ -5,8 +5,8 @@ import type { CSSProperties } from "react";
 
 // Justified row of mountain photos for the About page. Each image's
 // flex-grow is its aspect ratio (passed via the --ar CSS variable), so with
-// flex-basis 0 they all render at the same height and the row fills the
-// column edge-to-edge. On phones it wraps into a 2-up grid instead (see
+// flex-basis 0 they all render at the same height within a centered strip.
+// On phones it wraps into a compact 2-up grid instead (see
 // .mtn-row / .mtn-img in globals.css) so the photos stay a readable size.
 // Missing files hide themselves so nothing breaks.
 const imgs = [

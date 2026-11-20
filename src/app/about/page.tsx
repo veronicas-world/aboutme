@@ -44,7 +44,7 @@ export default function AboutPage() {
       </header>
 
       <div className="col about">
-        <figure style={{ maxWidth: 760, margin: "0 auto 48px" }}>
+        <figure style={{ width: "min(88%, 540px)", margin: "0 auto 36px" }}>
           <a
             href="https://en.wikipedia.org/wiki/The_City_Rises"
             target="_blank"

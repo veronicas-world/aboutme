@@ -271,7 +271,7 @@ a { color: inherit; text-decoration: none; }
 }
 .post-card:hover { padding-left: 10px; }
 .post-card-thumb {
-  flex: none; width: 180px; height: 120px;
+  flex: none; width: min(100%, 144px); height: auto; aspect-ratio: 3 / 2;
   object-fit: cover; border-radius: 3px;
   filter: grayscale(0.15);
 }
@@ -280,7 +280,6 @@ a { color: inherit; text-decoration: none; }
 .post-card:hover .post-card-cta { color: var(--ink); }
 @media (max-width: 640px) {
   .post-card { flex-direction: column; gap: 14px; }
-  .post-card-thumb { width: 100%; height: 180px; }
 }
 
 .pill {
@@ -467,26 +466,6 @@ a { color: inherit; text-decoration: none; }
 .readings .article em, .readings .article i,
 .about .article em, .about .article i,
 .post-full .article em, .post-full .article i { font-style: italic; }
-/* the Tintin image on the About page is a small centered figure */
-.about .article img,
-.readings .article img { height: 425px; width: auto; max-width: 100%; margin: 1.6em auto; display: block; }
-.readings .article img:first-of-type { height: 283px; }
-@media (max-width: 640px) {
-  /* fixed pixel heights + width:auto can overflow/squish on narrow phones —
-     switch to auto-both with a max-height so aspect ratio stays correct */
-  .about .article img,
-  .readings .article img,
-  .readings .article img:first-of-type {
-    height: auto; width: auto; max-width: 100%; max-height: 260px;
-  }
-}
-.readings .article img[src="/spacex-falcon-9-landing.avif"] {
-  width: min(100%, 520px);
-  height: auto;
-  max-height: none;
-  aspect-ratio: 2000 / 1318;
-  margin: 0.85em 0 1em;
-}
 .article strong { font-weight: 600; color: var(--ink); }
 .article ul, .article ol { margin: 0 0 1.35em; padding-left: 1.4em; }
 .article li { margin: 0 0 0.5em; }
@@ -496,15 +475,23 @@ a { color: inherit; text-decoration: none; }
   font-style: normal; color: var(--ink-3);
 }
 .article img {
-  display: block; max-width: 100%; height: auto;
-  margin: 2em auto; border-radius: 3px;
+  display: block; width: auto; height: auto;
+  max-width: min(88%, 520px); max-height: 480px;
+  margin: 1.5em auto; border-radius: 3px;
 }
-/* the reading column is wide, so keep post images at a comfortable size
-   instead of stretching them edge to edge */
-.post-full .article img { max-width: min(100%, 680px); }
+.about .article img { max-width: min(88%, 300px); max-height: 300px; }
+@media (max-width: 640px) {
+  .about .article img { max-height: 210px; }
+}
+.readings .article > p img { max-width: min(88%, 310px); }
+.readings .article img[src="/spacex-falcon-9-landing.avif"] {
+  width: min(88%, 400px);
+  aspect-ratio: 2000 / 1318;
+  margin: 0.85em 0 1em;
+}
 /* Findable Future: the opening meme is small at its native size */
 .post-building-a-findable-future-with-factory .article > p:first-child img {
-  width: 480px; max-width: 100%;
+  width: 320px;
 }
 .title-link {
   border-bottom: 1px solid rgba(var(--ink-rgb), 0.35);
@@ -540,13 +527,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---- mountain photo row (About page) ---- */
-.mtn-row { display: flex; align-items: flex-start; gap: 10px; margin: 24px 0 8px; width: 100%; }
+.mtn-row { display: flex; align-items: flex-start; gap: 10px; margin: 20px auto 8px; width: min(88%, 640px); }
 .mtn-img { flex-grow: var(--ar); flex-basis: 0; min-width: 0; height: auto; display: block; border-radius: 3px; }
 @media (max-width: 640px) {
   /* 4 images squeezed into one row get crushed to slivers on phones —
      use a uniform 2-up grid so there are no awkward height gaps */
   .mtn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .mtn-img { width: 100%; height: 150px; max-width: none; object-fit: cover; }
+  .mtn-img { width: 100%; height: min(26vw, 112px); object-fit: cover; }
 }
 
 /* ============================================================
