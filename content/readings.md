@@ -32,7 +32,7 @@ As for albums/songs/artists I am enjoying currently:
 5. Lil Wayne’s *Tha Carter III*
 6. Santigold
 7. *Éthiopiques, Vol. 4: Ethio Jazz & Musique Instrumentale (1969–1974)*. “Tezeta (Nostalgia)” is my favorite track.
-8. Tchaikovsky’s *Piano Concerto No. 1 in B-flat minor, Op. 23*. I played the violin for about ten years, and this was my favorite piece to play!
+8. Tchaikovsky’s *Piano Concerto No. 1 in B-flat minor, Op. 23*. I played the violin for about ten years, and this was my favorite piece I learned!
 
 ### NEWSLETTERS + BLOGS
 
