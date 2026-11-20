@@ -13,7 +13,7 @@ export const site = {
   eyebrow: "Investor · Writer · Student of complex systems",
   // Bio paragraphs below the homepage video:
   heroLead: [
-    "I am a junior at Columbia interested in venture capital, philosophy, entrepreneurship, and emerging/disruptive technologies. I believe that the world has gotten better over time because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of progress, and that through the thoughtful allocation of capital we can accelerate the work of those building a resilient and abundant future.",
+    "I am a junior at Columbia interested in emerging and disruptive technologies. I believe that the world has gotten better over time because founders have taken on hard, uncertain projects that few others would, and as such, I have an enormous amount of respect for the people who dedicate their lives to that kind of work. More broadly, my view is that technological innovation is the greatest catalyst of progress, and that through the thoughtful allocation of capital we can accelerate the work of those building a resilient and abundant future.",
     "Most of my time today is spent at [Lightspeed](https://lsvp.com/). I find this work incredibly fulfilling and have been fortunate to learn from a number of brilliant people early on in my career. Outside of work, you can find me listening to electronic music, trying new restaurants in NYC, watching professional soccer or a docuseries, cooking, and hiking.",
   ].join("\n\n"),
   // Standalone middle paragraph in the hero bio, with an inline link:

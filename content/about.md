@@ -24,13 +24,6 @@ Unlike with philosophy, I only decided to study CS and AI very recently. This wa
 
 ### More about my beliefs
 
-I think that the most interesting thing about a person is the convictions that they are willing to defend, or better put, whatever stake they put in the ground that required effort to arrive at. The qualities I care most about in people are:
-
-1. A charitable understanding of others (which more simply might be called "empathy").
-2. Curiosity about the world around us and the ways in which it functions or could be better. And, arguably more importantly, the willingness to actually act on that curiosity. If something strikes you as interesting or confusing, chase it down, fully.
-3. The humility to recognize that the more seriously you try to know something, the less certain you become (and how exciting that is, as opposed to, say, nihilism-inducing).
-4. Being scrappy, which, in my view is an instinct to keep building even (especially) when a pre-built plan stops cooperating. Have grit!
-
 I am, above all, a (cautious) techno-optimist. This conviction stems from my belief that progress, and, more specifically, the evolution of technology, is contingent, as it requires decisions, resources, and collaboration to be realized. I've come to understand technology not as something that evolves independent of us, but as something inextricably human throughout its entire value chain, from its conception to the ways it is built, maintained, and eventually repurposed by people. That framing matters a lot, I think, because if technology is a human project rather than an autonomous upward slope, then questions about "what it might do" are more so questions about what we choose to build and take responsibility for.
 
 At the same time, technological change is fundamentally a cumulative endeavor. Each new system is built (and dependent) on layers of prior invention, infrastructure, and social adaptation. Airplanes, laptops, and agentic software are not standalone breakthroughs so much as they are inheritances of decades of prior research. The agricultural revolution enabled surplus and, eventually, the specialization of labor; the mass adoption of automobiles made the existence suburbs viable and reorganized daily life around mobility. Innovation compounds across centuries, which both expands the frontier of what is possible and, at the same time, deepens the responsibility embedded in each decision. Recognizing that "building something" is never starting from scratch, but instead intervening in a long, accelerating chain of human choices, is another aspect of innovation that I find deeply compelling.
