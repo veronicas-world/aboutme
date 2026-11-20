@@ -2,10 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
-import ThemeToggle from "@/components/ThemeToggle";
-
-// Runs before first paint so a saved dark theme never flashes light.
-const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}`;
+import SiteFooter from "@/components/SiteFooter";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -37,21 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
+    <html lang="en">
       <body>
         <div className="page">
           <Nav />
           {children}
-          <footer className="site-footer">
-            <span>New York</span>
-            <span>Columbia University</span>
-            <span>©Veronica Agudelo, {new Date().getFullYear()}</span>
-            <ThemeToggle />
-          </footer>
-          <div className="cloud-band" aria-hidden="true" />
+          <SiteFooter />
         </div>
         <Analytics />
       </body>
