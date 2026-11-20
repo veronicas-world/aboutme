@@ -53,6 +53,7 @@ As for albums/songs/artists I am enjoying currently:
 ### ETC
 
 1. SpaceX's Falcon 9 First Stage Landing – ORBCOMM-2 (Dec 21, 2015)
+   ![Two bright trails from the Falcon 9 launch and first-stage landing over the coast at night](/spacex-falcon-9-landing.avif)
 2. Anthony Bourdain: *Parts Unknown*
 3. [Hot Side](https://maxbaroni.substack.com/)
 4. [Opening notes, Founders Fund's Annual Meeting](https://x.com/foundersfund/status/1313151184287477767) (2020)

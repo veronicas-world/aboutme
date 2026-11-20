@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import Nav from "@/components/Nav";
 import SiteFooter from "@/components/SiteFooter";
 
 export const viewport: Viewport = {
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="page">
+          <Nav />
           {children}
           <SiteFooter />
         </div>

@@ -27,7 +27,6 @@ export default function SiteFooter() {
           href="https://en.wikipedia.org/wiki/Apple_I"
           aria-label="Read about the Apple I on Wikipedia"
         >
-          <title>Apple I on Wikipedia</title>
           <rect x="742" y="601" width="281" height="222" rx="10" />
         </a>
       </svg>
