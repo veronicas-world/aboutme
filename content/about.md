@@ -1,4 +1,4 @@
-*tldr: I feel incredibly lucky to be a young person interested in technology in this day and age. I am incredibly excited (though, of course, cautious) about how the world is changing, and feel no greater calling than to find a way to take part in shaping it. I want the future to be bright and abundant.*
+*tldr: I feel incredibly lucky to be a young person interested in technology and believe we are living through the most consequential time in history. I am incredibly excited (though, of course, cautious) about how the world is changing, and feel no greater calling than to find a way to take part in shaping it. I want the future to be bright and abundant.*
 
 I was born in New York City, grew up in Cali, Colombia, and attended most of middle and high school in Boston. I am now back in NYC studying Philosophy and AI at Columbia.
 
@@ -8,7 +8,7 @@ My favorite music genre is ambient/experimental electronic, and if that's of int
 
 *Tintin says "For the first time certainly in the history of mankind, there is an explorer on the Moon!" Who would have guessed, reading the story in 1954, the words of Neil Armstrong 15 years later: "That's one small step for (a) man, one giant leap for mankind."?*
 
-Lastly, my favorite childhood pastime was building Legos. I was once featured in Lego Magazine.
+Lastly, my favorite childhood pastime was building Legos.
 
 ### Philosophy major?
 
@@ -28,7 +28,7 @@ I am, above all, a (cautious) techno-optimist. This conviction stems from my bel
 
 At the same time, technological change is fundamentally a cumulative endeavor. Each new system is built (and dependent) on layers of prior invention, infrastructure, and social adaptation. Airplanes, laptops, and agentic software are not standalone breakthroughs so much as they are inheritances of decades of prior research. The agricultural revolution enabled surplus and, eventually, the specialization of labor; the mass adoption of automobiles made the existence suburbs viable and reorganized daily life around mobility. Innovation compounds across centuries, which both expands the frontier of what is possible and, at the same time, deepens the responsibility embedded in each decision. Recognizing that "building something" is never starting from scratch, but instead intervening in a long, accelerating chain of human choices, is another aspect of innovation that I find deeply compelling.
 
-Back to why I am an optimist, well, the world has gotten better over time (objectively) because real people worked (mostly on better technologies) to make it so, and I find that fact incredibly motivating. The longer version of that reasoning is [here](https://veronicaagudelo.substack.com/p/my-why-venture-a-philosophy-of-progress).
+Back to why I am an optimist, well, the world has gotten better over time (objectively) because real people worked (mostly on better technologies) to make it so, and I find that fact incredibly motivating.
 
 Venture turned out to be a place where that motivation/optimism has somewhere useful to go, which I didn't fully expect, and neither did I expect how philosophically saturated this world would be. The most recurrent conversations are drawn from a fairly specific canon ([EA](https://en.wikipedia.org/wiki/Effective_altruism), [longtermism](https://en.wikipedia.org/wiki/Longtermism), [rationalism](https://en.wikipedia.org/wiki/Rationalism), [techno-optimism](https://a16z.com/the-techno-optimist-manifesto/)). I don't agree with a lot of the conclusions being put forth, and frankly, a lot of it is just bad philosophy, but the fact that these conversations exist at all, that people in this industry argue seriously about ideas and their consequences, is exciting.
 

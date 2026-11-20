@@ -17,9 +17,9 @@
 
 ### MUSIC
 
-I adore music and feel so lucky to have been born in a century where I can listen on demand. For an overview of my taste (it's all over), please see below my most listened to songs of all time:
+For an overview of my taste (it's all over), please see below my most listened to songs of all time:
 
-![](https://substackcdn.com/image/fetch/$s_!i8XY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f0a3699-44c3-4f88-a4c5-e90d2073a0c1_1292x960.png)
+![Veronica’s most-listened-to songs](https://substackcdn.com/image/fetch/$s_!i8XY!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1f0a3699-44c3-4f88-a4c5-e90d2073a0c1_1292x960.png)
 
 "I'm On Fire" is a far-ahead first. And the others are… a mix of classics, moody ambient/electronic, and…. R&B and rock?
 

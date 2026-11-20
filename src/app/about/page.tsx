@@ -42,7 +42,7 @@ export default function AboutPage() {
             margin: 0,
           }}
         >
-          More about me
+          Where will you be at the world&apos;s end?
         </h1>
       </header>
 
@@ -80,8 +80,9 @@ export default function AboutPage() {
         <MountainGallery />
         <div className="article" style={{ marginTop: 32 }}>
           <p style={{ textIndent: 0 }}>
-            I also love to travel, and it is my dream to visit all of the modern and natural
-            wonders of the world and the last enduring ancient one (the Great Pyramid of Giza).
+            I also love to travel (above are photos I have taken!), and it is my dream to visit
+            all of the modern and natural wonders of the world and the last enduring ancient one
+            (the Great Pyramid of Giza).
           </p>
         </div>
 
