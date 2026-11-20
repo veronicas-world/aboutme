@@ -230,9 +230,8 @@ export const contact = [
 export const localMaxima = {
   title: "Local Maxima",
   tagline: "Observations, philosophical inquiries, and the occasional half-formed argument.",
-  // The first paragraph renders, then the sketch, then the rest.
   intro: [
-    "In math, local maxima are points on a graph that look like peaks when you zoom in, but aren't the highest points overall (those are called global maxima (see the sketch below)).",
+    "In math, local maxima are points on a graph that look like peaks when you zoom in, but aren't the highest points overall (those are called global maxima).",
     "This blog is a collection of my own local maxima. I enjoy writing about technology, projects I build, a bit of philosophy, etc, and of course am fully aware that there are far higher summits than whatever I happen to write about (many of which you can find {{readings}}).",
   ],
   substackUrl: "https://veronicaagudelo.substack.com/",

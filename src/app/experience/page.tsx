@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BgSketch from "@/components/BgSketch";
 import ExperienceList from "@/components/ExperienceList";
 import { experience, educationTimeline } from "@/content/site";
 
@@ -14,9 +13,6 @@ export default function ExperiencePage() {
       className="wrap page-serif"
       style={{ paddingTop: 70, paddingBottom: 90, position: "relative" }}
     >
-      <BgSketch name="trajectory" style={{ top: "14%", right: "-4%", width: 320 }} />
-      <BgSketch name="hero" style={{ bottom: "6%", left: "-6%", width: 380 }} />
-
       <div className="col xp-page">
         <h1 className="xp-title">Experience</h1>
 

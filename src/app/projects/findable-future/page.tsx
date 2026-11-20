@@ -3,7 +3,6 @@ import path from "path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Article from "@/components/Article";
-import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
   title: "Building a Findable Future (with Factory!) — Projects · Veronica Agudelo",
@@ -19,7 +18,6 @@ export default function FindableFuturePage() {
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
-      <BgSketch name="hero" style={{ top: "10%", right: "-7%", width: 480 }} />
       <header className="col tcenter" style={{ margin: "0 auto 40px" }}>
         <Link
           href="/projects"

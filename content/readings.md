@@ -23,10 +23,14 @@ For an overview of my taste (it's all over), please see below my most listened t
 
 "I'm On Fire" is a far-ahead first. And the others are… a mix of classics, moody ambient/electronic, and…. R&B and rock?
 
-As for albums I am enjoying currently:
+As for albums/songs/artists I am enjoying currently:
 
 1. *open this wall* by berlioz
 2. *Random Access Memories* by Daft Punk
+3. Wagner *Tannhäuser Overture*
+4. Boards of Canada
+5. Lil Wayne
+6. Santigold
 
 ### NEWSLETTERS + BLOGS
 

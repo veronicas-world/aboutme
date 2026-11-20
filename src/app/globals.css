@@ -46,15 +46,6 @@ a { color: inherit; text-decoration: none; }
 .hero-inline-link { border-bottom: 1px solid rgba(var(--ink-rgb), 0.4); transition: border-color 0.2s; }
 .hero-inline-link:hover { border-color: var(--ink); }
 
-/* home hero background sketches — desktop positions (moved up to fill the top);
-   mobile keeps the original two and hides the dining-table one */
-.home-sk-left { top: 5%; left: -6%; bottom: auto; }
-.home-sk-right { top: 15%; right: -3%; bottom: auto; }
-@media (max-width: 700px) {
-  .home-sk-left { top: auto; bottom: 3%; left: -9%; }
-  .home-sk-right { top: auto; bottom: 12%; right: -1%; }
-}
-
 .mono { font-family: var(--font-mono), ui-monospace, monospace; }
 .serif { font-family: var(--font-serif), Georgia, serif; }
 
@@ -102,49 +93,10 @@ a { color: inherit; text-decoration: none; }
 /* italics disabled site-wide per preference — keep this normal */
 .italic { font-style: normal; }
 
-/* ---- floating sketch ---- */
-.sketch {
-  position: absolute; pointer-events: none;
-  mix-blend-mode: multiply; user-select: none;
-  z-index: 1;
-}
-@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
-.sketch.float { animation: floaty 7s ease-in-out infinite; }
-
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
-
-/* faint floating sketches behind the page content */
-.bg-sketch {
-  position: absolute; z-index: -1;
-  pointer-events: none; user-select: none;
-  mix-blend-mode: multiply; opacity: 0.26;
-  max-width: 60vw; height: auto;
-}
-.bg-sketch.bg-float { animation: floaty 12s ease-in-out infinite; }
-/* "sketch itself out" — wipe the image in on load, then float */
-@keyframes sketch-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-.bg-sketch.bg-draw {
-  animation: sketch-in 1.8s ease-in-out both, floaty 12s ease-in-out 1.8s infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-  .bg-sketch.bg-float, .bg-sketch.bg-draw { animation: none !important; clip-path: none; }
-}
-@media (max-width: 700px) {
-  .bg-sketch { opacity: 0.18; max-width: 46vw; }
-  /* home sketches (the only static, non-floating ones) a bit lighter on mobile */
-  .bg-sketch:not(.bg-float) { opacity: 0.18 !important; }
-}
-
-/* faint sketches scattered in the page side margins */
-.side-sketch {
-  position: fixed; z-index: 0; pointer-events: none;
-  mix-blend-mode: multiply; user-select: none;
-  width: clamp(110px, 11vw, 165px); height: auto;
-}
-@media (max-width: 1320px) { .side-sketch { display: none; } }
 
 /* ---- reveal on scroll ---- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.9s ease, transform 0.9s ease; }
@@ -571,7 +523,7 @@ a { color: inherit; text-decoration: none; }
   image-rendering: pixelated;
 }
 
-/* The paper fades into the meadow; the center stays clear for the figure. */
+/* Fade the paper into the meadow. */
 .site-footer {
   --footer-shade-end: 59%;
   --footer-trim: 0px;
@@ -584,7 +536,7 @@ a { color: inherit; text-decoration: none; }
     linear-gradient(var(--bg) var(--footer-trim), rgba(var(--bg-rgb), 0) 28%),
     linear-gradient(180deg, transparent 35%, rgba(15, 27, 8, 0.44) 49% var(--footer-shade-end),
       transparent 86%),
-    url("/footer-meadow.webp") center bottom / cover no-repeat,
+    url("/footer-meadow-apple-i.webp") center bottom / cover no-repeat,
     linear-gradient(var(--bg) 34%, #3c511e 44%);
 }
 /* Trim the pale top edge on home without shifting the links relative to the artwork. */
@@ -626,6 +578,29 @@ a { color: inherit; text-decoration: none; }
 .site-footer a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
+}
+.site-footer-computer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.site-footer-computer-link rect {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  pointer-events: all;
+  cursor: pointer;
+}
+.site-footer-computer-link:is(:hover, :focus-visible) rect {
+  fill: rgb(255 254 247 / 0.10);
+  stroke: currentColor;
+}
+.site-footer .site-footer-computer-link:focus-visible {
+  outline: none;
 }
 @media (max-width: 640px) {
   .site-footer {

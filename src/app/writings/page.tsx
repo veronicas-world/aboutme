@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import WritingsList from "@/components/WritingsList";
-import LocalMaximaSketch from "@/components/LocalMaximaSketch";
-import BgSketch from "@/components/BgSketch";
 import { getAllPostMeta } from "@/lib/posts";
 import { localMaxima } from "@/content/site";
 
@@ -38,8 +36,6 @@ export default function WritingsPage({
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
-      <BgSketch name="interests" style={{ top: "12%", left: "-6%", width: 340 }} />
-      <BgSketch name="contact" style={{ bottom: "5%", right: "-6%", width: 360 }} />
       <header className="col tcenter" style={{ margin: "0 auto 56px" }}>
         <div
           className="mono"
@@ -64,11 +60,7 @@ export default function WritingsPage({
         >
           <span className="italic">{localMaxima.title}</span>
         </h1>
-        <p className="body-l indent-p" style={{ fontSize: 17, textAlign: "left" }}>
-          {localMaxima.intro[0]}
-        </p>
-        <LocalMaximaSketch />
-        {localMaxima.intro.slice(1).map((p, i) => (
+        {localMaxima.intro.map((p, i) => (
           <p key={i} className="body-l indent-p" style={{ fontSize: 17, textAlign: "left" }}>
             {renderIntroParagraph(p)}
           </p>

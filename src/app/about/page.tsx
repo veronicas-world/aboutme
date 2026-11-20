@@ -3,7 +3,6 @@ import path from "path";
 import type { Metadata } from "next";
 import Article from "@/components/Article";
 import MountainGallery from "@/components/MountainGallery";
-import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
   title: "About · Veronica Agudelo",
@@ -18,8 +17,6 @@ export default function AboutPage() {
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
-      <BgSketch name="about" style={{ top: "8%", right: "-5%", width: 340 }} />
-      <BgSketch name="trajectory" style={{ top: "52%", left: "-6%", width: 300 }} />
       <header className="col tcenter" style={{ margin: "0 auto 48px" }}>
         <div
           className="mono"

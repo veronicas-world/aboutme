@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
   title: "Projects · Veronica Agudelo",
@@ -30,7 +29,6 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
-      <BgSketch name="hero" style={{ top: "10%", right: "-7%", width: 480 }} />
       <header className="col tcenter" style={{ margin: "0 auto 56px" }}>
         <div
           className="mono"

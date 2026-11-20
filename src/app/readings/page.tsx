@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
 import Article from "@/components/Article";
-import BgSketch from "@/components/BgSketch";
 
 export const metadata: Metadata = {
   title: "Library · Veronica Agudelo",
@@ -18,8 +17,6 @@ export default function ReadingsPage() {
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
-      <BgSketch name="contact" style={{ top: "10%", right: "-6%", width: 380 }} />
-      <BgSketch name="trajectory" style={{ bottom: "6%", left: "-5%", width: 300 }} />
       <header className="col tcenter" style={{ margin: "0 auto 48px" }}>
         <div
           className="mono"

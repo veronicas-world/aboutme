@@ -16,6 +16,21 @@ export default function SiteFooter() {
           ))}
         </nav>
       </div>
+      {/* Match the meadow image's center-bottom cover crop at every width. */}
+      <svg
+        className="site-footer-computer"
+        viewBox="0 0 1751 898"
+        preserveAspectRatio="xMidYMax slice"
+      >
+        <a
+          className="site-footer-computer-link"
+          href="https://en.wikipedia.org/wiki/Apple_I"
+          aria-label="Read about the Apple I on Wikipedia"
+        >
+          <title>Apple I on Wikipedia</title>
+          <rect x="742" y="601" width="281" height="222" rx="10" />
+        </a>
+      </svg>
     </footer>
   );
 }
