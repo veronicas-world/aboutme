@@ -1,4 +1,4 @@
-*tldr: I feel incredibly lucky to be a young person interested in technology and believe we are living through the most consequential time in history. I am incredibly excited (though, of course, cautious) about how the world is changing, and feel no greater calling than to find a way to take part in shaping it. I want the future to be bright and abundant.*
+*tldr: I feel incredibly lucky to be a young person interested in technology and believe we are living through the most consequential time. I am incredibly excited (though, of course, cautious) about how the world is changing, and feel no greater calling than to find a way to take part in shaping it. I want the future to be bright and abundant.*
 
 I was born in New York City, grew up in Cali, Colombia, and attended most of middle and high school in Boston. I am now back in NYC studying Philosophy and AI at Columbia.
 
