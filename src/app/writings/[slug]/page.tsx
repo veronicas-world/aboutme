@@ -41,11 +41,11 @@ export default async function PostPage({
     redirect("/writings");
   }
 
-  const toc = extractToc(post.content);
+  const toc = post.hideToc ? null : extractToc(post.content);
 
   return (
     <main className="wrap" style={{ paddingTop: 46, paddingBottom: 48 }}>
-      <TableOfContents items={toc} variant="fixed" />
+      {toc && <TableOfContents items={toc} variant="fixed" />}
       <Link
         href="/writings"
         className="mono"
@@ -112,7 +112,7 @@ export default async function PostPage({
             {post.subtitle}
           </p>
         )}
-        <TableOfContents items={toc} variant="inline" />
+        {toc && <TableOfContents items={toc} variant="inline" />}
         <Article content={post.content} />
       </div>
     </main>

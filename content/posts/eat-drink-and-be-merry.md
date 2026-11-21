@@ -3,6 +3,7 @@ title: "Eat, drink, and be merry, for tomorrow we may die"
 date: "2026-11-21"
 category: "food"
 full: true
+hideToc: true
 cover: "/writings/eat-drink-and-be-merry/umeko-1.webp"
 ---
 
