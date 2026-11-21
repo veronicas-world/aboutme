@@ -526,6 +526,34 @@ a { color: inherit; text-decoration: none; }
   .article th, .article td { padding: 8px 10px; }
 }
 
+/* Center the portrait independently of the label. */
+.about-headshot {
+  position: relative;
+  width: fit-content;
+  margin: 24px auto 22px;
+}
+.about-headshot img {
+  display: block;
+  width: 170px;
+  height: auto;
+  border-radius: 3px;
+}
+.about-headshot figcaption {
+  position: absolute;
+  inset-inline-start: calc(100% + 11px);
+  top: 50%;
+  transform: translateY(-50%);
+  font: 13px ui-monospace, monospace;
+  white-space: nowrap;
+}
+.about-headshot + .article > p:first-child + p {
+  margin-top: 0.55em;
+  text-indent: 0;
+}
+@media (max-width: 680px) {
+  .about-headshot img { width: 144px; }
+}
+
 /* ---- mountain photo row (About page) ---- */
 .mtn-row { display: flex; align-items: flex-start; gap: 10px; margin: 20px auto 8px; width: min(88%, 640px); }
 .mtn-img { flex-grow: var(--ar); flex-basis: 0; min-width: 0; height: auto; display: block; border-radius: 3px; }

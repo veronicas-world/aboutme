@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Keep mobile downloads light and play only while the video is visible.
+// Keep mobile downloads light and keep playing when scrolled out of view.
 // Captions are baked in; sound stays opt-in.
 export default function HomeImage() {
   const ref = useRef<HTMLVideoElement>(null);
@@ -14,8 +14,7 @@ export default function HomeImage() {
     const v = ref.current;
     if (!ok || !v) return;
     let active = true;
-    let inView = false;
-    const canPlay = () => inView && !document.hidden;
+    const canPlay = () => !document.hidden;
     const resume = () => {
       if (!canPlay()) {
         v.pause();
@@ -37,19 +36,9 @@ export default function HomeImage() {
     v.addEventListener("pause", paused);
     window.addEventListener("pageshow", resume);
     document.addEventListener("visibilitychange", resume);
-    const observer = typeof IntersectionObserver === "undefined" ? null :
-      new IntersectionObserver(([entry]) => {
-        inView = entry.isIntersecting;
-        resume();
-      });
-    if (observer) observer.observe(v);
-    else {
-      inView = true;
-      resume();
-    }
+    resume();
     return () => {
       active = false;
-      observer?.disconnect();
       v.removeEventListener("playing", playing);
       v.removeEventListener("pause", paused);
       window.removeEventListener("pageshow", resume);

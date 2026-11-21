@@ -14,6 +14,7 @@ export default function AboutPage() {
     path.join(process.cwd(), "content", "about.md"),
     "utf8"
   );
+  const [summary, ...body] = md.split("\n\n");
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
@@ -73,7 +74,18 @@ export default function AboutPage() {
             The City Rises, 1910 · Umberto Boccioni
           </figcaption>
         </figure>
-        <Article content={md} />
+        <Article content={summary} />
+        <figure className="about-headshot">
+          <img
+            src="/veronica-headshot.webp"
+            alt="Veronica Agudelo on campus"
+            width={512}
+            height={435}
+            loading="lazy"
+          />
+          <figcaption>&lt; me!</figcaption>
+        </figure>
+        <Article content={body.join("\n\n")} />
         <MountainGallery />
         <div className="article" style={{ marginTop: 32 }}>
           <p style={{ textIndent: 0 }}>
