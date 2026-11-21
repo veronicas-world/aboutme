@@ -13,19 +13,17 @@ function Spark({ x, y, s = 13 }: { x: number; y: number; s?: number }) {
 }
 
 export default function LocalMaximaSketch() {
-  // CSS variables so the sketch follows the light/dark theme
+  // Use the site's ink colors.
   const ink = "var(--ink)";
   const sepia = "var(--sepia)";
   const faint = "var(--sepia-3)";
   const labelBase = {
     fontFamily: mono,
-    fontSize: 11,
-    letterSpacing: "0.12em",
     textTransform: "uppercase" as const,
   };
 
   return (
-    <figure style={{ margin: "30px auto 34px", maxWidth: 560 }}>
+    <figure className="local-maxima-graph">
       <svg
         viewBox="0 0 680 330"
         role="img"
@@ -42,15 +40,15 @@ export default function LocalMaximaSketch() {
 
         {/* leader lines */}
         <g style={{ stroke: faint }} strokeWidth="1" fill="none">
-          <path d="M122 56 L122 40" />
-          <path d="M238 250 L238 266" />
+          <path d="M125 54 L137 40" />
+          <path d="M238 250 L238 260" />
           <path d="M406 122 L406 108" />
           <path d="M526 198 L526 214" />
         </g>
 
         {/* the curve */}
         <path
-          d="M58 98 C 80 52 104 50 122 60 C 156 80 182 252 238 250 C 300 248 360 128 406 124 C 452 120 496 198 526 198 C 564 198 604 170 630 152"
+          d="M58 98 C 80 74 101 60 122 60 C 161 60 182 250 238 250 C 300 250 360 124 406 124 C 452 124 496 198 526 198 C 564 198 604 170 630 152"
           fill="none"
           style={{ stroke: ink }}
           strokeWidth="2.4"
@@ -65,7 +63,7 @@ export default function LocalMaximaSketch() {
         <Spark x={526} y={198} />
 
         {/* labels — global in ink, local in sepia */}
-        <text x={122} y={32} textAnchor="middle" style={{ ...labelBase, fontWeight: 500, fill: ink }}>
+        <text x={139} y={32} textAnchor="middle" style={{ ...labelBase, fontWeight: 500, fill: ink }}>
           Global maximum
         </text>
         <text x={238} y={282} textAnchor="middle" style={{ ...labelBase, fontWeight: 500, fill: ink }}>

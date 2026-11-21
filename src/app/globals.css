@@ -282,6 +282,21 @@ a { color: inherit; text-decoration: none; }
   .post-card { flex-direction: column; gap: 14px; }
 }
 
+/* ---- Local Maxima diagram ---- */
+.local-maxima-graph {
+  width: 100%;
+  max-width: 560px;
+  margin: 30px auto 34px;
+}
+.local-maxima-graph text {
+  font-size: 13px;
+  letter-spacing: 0.07em;
+}
+@media (max-width: 640px) {
+  .local-maxima-graph { margin-block: 20px 24px; }
+  .local-maxima-graph text { font-size: clamp(13px, calc(34px - 3vw), 25px); }
+}
+
 .pill {
   display: inline-flex; align-items: center; gap: 9px;
   border: 1px solid rgba(var(--ink-rgb), 0.2); border-radius: 100px;

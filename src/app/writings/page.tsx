@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Fragment } from "react";
+import LocalMaximaSketch from "@/components/LocalMaximaSketch";
 import WritingsList from "@/components/WritingsList";
 import { getAllPostMeta } from "@/lib/posts";
 import { localMaxima } from "@/content/site";
@@ -61,9 +63,12 @@ export default function WritingsPage({
           <span className="italic">{localMaxima.title}</span>
         </h1>
         {localMaxima.intro.map((p, i) => (
-          <p key={i} className="body-l indent-p" style={{ fontSize: 17, textAlign: "left" }}>
-            {renderIntroParagraph(p)}
-          </p>
+          <Fragment key={i}>
+            <p className="body-l indent-p" style={{ fontSize: 17, textAlign: "left" }}>
+              {renderIntroParagraph(p)}
+            </p>
+            {i === 0 && <LocalMaximaSketch />}
+          </Fragment>
         ))}
       </header>
 
