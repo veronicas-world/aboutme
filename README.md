@@ -43,37 +43,29 @@ You don't need to touch any component to change wording. In there you control:
 - the "Now" list, Trajectory/experience, education, certifications
 - the Shelf (books — currently placeholders), Curiosities (interest tags)
 - Contact links (your email is **not** published yet — add it when ready)
-- the "why Local Maxima" intro and the writing categories
+- the "why Local Maxima" intro
 - the Projects (Whel is seeded; the long writeup is a placeholder to expand)
 
-## Editing the writings (they link out to Substack)
+## Editing the writings
 
-The Writings page shows a **preview card** for each essay — thumbnail, date,
-excerpt — and clicking it opens the full piece on your Substack. Nothing is
-hosted on the site. Each card is driven by one Markdown file in `content/posts/`;
-only the frontmatter and the first image are used:
+The Writings page lists pieces newest first, with a date and optional thumbnail
+and subtitle. Each piece is a Markdown file in `content/posts/`:
 
 ```markdown
 ---
 title: "On Nontechnical Building"
 subtitle: "All men by nature desire to know. — Aristotle"   # optional
 date: "2026-03-29"
-category: "philosophy"        # emerging-tech | philosophy | projects | academic
-excerpt: "One or two sentences shown on the preview card."
-substackUrl: "https://veronicaagudelo.substack.com/p/..."   # where the card links
+full: true                     # optional; host the article on this site
+substackUrl: "https://veronicaagudelo.substack.com/p/..."   # for external articles
 cover: "https://...optional-image-url"                        # optional thumbnail
 ---
 ```
 
 - The **thumbnail** is the `cover:` URL if set, otherwise the first image in the
-  body. (The body text itself is no longer displayed anywhere.)
-- To **add a writing**: drop a new `.md` file in `content/posts/` with that
-  frontmatter and a valid `substackUrl`. It appears automatically, newest first.
-- To **add an academic piece**: set `category: "academic"` — the filter tab shows
-  up once at least one post uses it.
-- Categories and their labels live in `src/content/site.ts` (`categories`).
-- Old per-post URLs like `/writings/<slug>` now 307-redirect to the Substack post,
-  so any links you previously shared keep working.
+  body.
+- Set `full: true` to show the Markdown body at `/writings/<slug>`. Otherwise,
+  provide a `substackUrl`: the card links there and `/writings/<slug>` redirects there.
 
 ## Deploying to Vercel
 

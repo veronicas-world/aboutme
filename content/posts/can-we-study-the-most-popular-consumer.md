@@ -2,7 +2,6 @@
 title: "Can We Study the Most Popular Consumer Apps like Social Movements?"
 subtitle: "A working theory..."
 date: "2026-05-03"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/can-we-study-the-most-popular-consumer"
 full: true
 ---

@@ -2,7 +2,6 @@
 title: "SpaceX and the Defense-Tech Renaissance"
 subtitle: "Celebrating the phenomenally fun resurgence of defense innovation and, as always, the indomitable entrepreneurial spirit"
 date: "2025-12-05"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/is-this-the-start-of-a-defense-tech"
 full: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Rebuilding Whel"
 date: "2026-06-22"
-category: "projects"
 substackUrl: "https://veronicaagudelo.substack.com/p/rebuilding-whel"
 full: true
 ---

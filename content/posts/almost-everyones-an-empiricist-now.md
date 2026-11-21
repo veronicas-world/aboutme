@@ -2,7 +2,6 @@
 title: "(Almost) Everyone's an Empiricist Now"
 subtitle: "Mapping frontier AI neolabs by their theory of knowledge"
 date: "2026-07-16"
-category: "philosophy"
 full: true
 substackUrl: "https://veronicaagudelo.substack.com/p/almost-everyones-an-empiricist-now"
 cover: "https://substackcdn.com/image/fetch/$s_!x4n_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe46c62a6-ab52-42ab-8e06-ff3b8c3c3086_2400x1600.jpeg"

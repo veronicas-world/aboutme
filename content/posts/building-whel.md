@@ -2,7 +2,6 @@
 title: "Building Whel (Women's Health Evidence Lab)"
 subtitle: "Creating a drug‑repurposing research tool for endometriosis, PMDD, PCOS, etc, and learning how useful truths can be present in data before anyone knows to look for them"
 date: "2026-04-07"
-category: "projects"
 substackUrl: "https://veronicaagudelo.substack.com/p/my-first-project-womens-health-evidence"
 full: true
 ---

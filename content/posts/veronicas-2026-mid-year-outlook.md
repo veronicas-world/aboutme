@@ -1,7 +1,6 @@
 ---
 title: "Veronica's 2026 Mid-Year Outlook"
 date: "2026-07-22"
-category: "emerging-tech"
 full: true
 substackUrl: "https://veronicaagudelo.substack.com/p/veronicas-2026-mid-year-outlook"
 cover: "https://substack-post-media.s3.amazonaws.com/public/images/7058b10f-050b-4475-b805-982447ed8d2e_700x337.jpeg"

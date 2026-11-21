@@ -2,7 +2,6 @@
 title: "A Philosophy of Progress / the Early-Stage Question"
 subtitle: "Technological possibility is always an act of moral imagination. Why?"
 date: "2026-02-17"
-category: "philosophy"
 substackUrl: "https://veronicaagudelo.substack.com/p/my-why-venture-a-philosophy-of-progress"
 full: true
 cover: "https://substackcdn.com/image/fetch/$s_!XlT-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F308bd0d0-805e-41dc-9f94-e711315577d5_2456x3261.png"

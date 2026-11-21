@@ -1,7 +1,6 @@
 ---
 title: "Digital Darwinism in Ukraine's Drone Technology"
 date: "2025-11-05"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/the-startup-world-powering-ukraines"
 full: true
 ---

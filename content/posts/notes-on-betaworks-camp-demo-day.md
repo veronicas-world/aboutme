@@ -1,7 +1,6 @@
 ---
 title: "Notes on Agent Camp: Betaworks Demo Day Spring 2026"
 date: "2026-05-07"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/notes-on-betaworks-camp-demo-day"
 full: true
 ---

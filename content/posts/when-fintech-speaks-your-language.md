@@ -2,7 +2,6 @@
 title: "When Fintech Speaks Your Language"
 subtitle: "How linguistic and cultural inclusion is driving the adoption of digital finance platforms in Southeast Asia."
 date: "2025-10-22"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/when-fintech-speaks-your-language"
 full: true
 ---

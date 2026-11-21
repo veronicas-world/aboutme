@@ -2,7 +2,6 @@
 title: "The SaaSpocalypse & The Return of Hard Things"
 subtitle: "The SaaSpocalypse might actually be very good for everyone (including software)"
 date: "2026-04-02"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/the-saaspocalypse-and-the-return"
 full: true
 ---

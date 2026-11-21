@@ -1,7 +1,6 @@
 ---
 title: "An Update on Whel"
 date: "2026-06-07"
-category: "projects"
 substackUrl: "https://veronicaagudelo.substack.com/p/an-update-on-whel"
 full: true
 ---

@@ -2,7 +2,6 @@
 title: "On Nontechnical Building"
 subtitle: "Whole categories of problems can only be touched if people who've never thought of themselves as “technical” decide to build anyway, precisely because they carry different urgencies and ways of seeing"
 date: "2026-03-29"
-category: "philosophy"
 substackUrl: "https://veronicaagudelo.substack.com/p/on-nontechnical-building"
 full: true
 ---

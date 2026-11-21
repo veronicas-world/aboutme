@@ -1,7 +1,6 @@
 ---
 title: "A 250 Year Experiment"
 date: "2026-07-02"
-category: "philosophy"
 archived: true
 excerpt: "Pilgrims, the Industrial Revolution, and today's anxieties."
 substackUrl: "https://veronicaagudelo.substack.com/p/a-250-year-experiment"

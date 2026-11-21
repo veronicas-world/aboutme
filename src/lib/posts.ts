@@ -10,7 +10,6 @@ export type PostMeta = {
   title: string;
   subtitle?: string;
   date: string;
-  category: string;
   excerpt?: string;
   substackUrl?: string;
   cover?: string;
@@ -40,7 +39,6 @@ function readPost(file: string): Post {
     title: data.title ?? slug,
     subtitle: data.subtitle || undefined,
     date: data.date ?? "",
-    category: data.category ?? "uncategorized",
     excerpt: data.excerpt || undefined,
     substackUrl: data.substackUrl || undefined,
     cover: data.cover || firstImage(content),

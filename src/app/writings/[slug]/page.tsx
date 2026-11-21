@@ -4,14 +4,10 @@ import type { Metadata } from "next";
 import Article from "@/components/Article";
 import TableOfContents from "@/components/TableOfContents";
 import { getPost, formatDate, extractToc } from "@/lib/posts";
-import { categories } from "@/content/site";
 
 // Posts flagged `full: true` are hosted on-site; everything else links out to
 // Substack (any such per-post URL redirects there).
 export const dynamic = "force-dynamic";
-
-const labelFor = (id: string) =>
-  categories.find((c) => c.id === id)?.label ?? id;
 
 export async function generateMetadata({
   params,
@@ -72,7 +68,7 @@ export default async function PostPage({
             marginBottom: 16,
           }}
         >
-          {labelFor(post.category)} · {formatDate(post.date)}
+          {formatDate(post.date)}
         </div>
         <h1
           style={{

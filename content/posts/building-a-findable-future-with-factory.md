@@ -1,7 +1,6 @@
 ---
 title: "Building a Findable Future (with Factory!)"
 date: "2026-10-12"
-category: "projects"
 substackUrl: "https://veronicaagudelo.substack.com/p/building-a-findable-future-with-factory"
 full: true
 titleLinkText: "Factory"

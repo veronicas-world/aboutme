@@ -28,13 +28,8 @@ export const metadata: Metadata = {
   description: localMaxima.tagline,
 };
 
-export default function WritingsPage({
-  searchParams,
-}: {
-  searchParams: { category?: string };
-}) {
+export default function WritingsPage() {
   const posts = getAllPostMeta();
-  const initialCategory = searchParams?.category ?? "all";
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
@@ -73,7 +68,7 @@ export default function WritingsPage({
       </header>
 
       <div className="col">
-        <WritingsList posts={posts} initialCategory={initialCategory} />
+        <WritingsList posts={posts} />
       </div>
     </main>
   );

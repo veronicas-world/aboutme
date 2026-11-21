@@ -1,9 +1,5 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import type { PostMeta } from "@/lib/posts";
-import { categories } from "@/content/site";
 
 function fmt(iso: string) {
   if (!iso) return "";
@@ -13,103 +9,69 @@ function fmt(iso: string) {
     : d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 }
 
-const labelFor = (id: string) =>
-  categories.find((c) => c.id === id)?.label ?? id;
-
-export default function WritingsList({
-  posts,
-  initialCategory = "all",
-}: {
-  posts: PostMeta[];
-  initialCategory?: string;
-}) {
-  const valid = categories.some((c) => c.id === initialCategory)
-    ? initialCategory
-    : "all";
-  const [active, setActive] = useState(valid);
-
-  const present = new Set(posts.map((p) => p.category));
-  const visibleCats = categories.filter((c) => c.id === "all" || present.has(c.id));
-
-  const filtered =
-    active === "all" ? posts : posts.filter((p) => p.category === active);
-
+export default function WritingsList({ posts }: { posts: PostMeta[] }) {
   return (
-    <>
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 10, margin: "0 0 44px" }}>
-        {visibleCats.map((c) => (
-          <button
-            key={c.id}
-            className={`chip${active === c.id ? " active" : ""}`}
-            onClick={() => setActive(c.id)}
-          >
-            {c.label}
-          </button>
-        ))}
-      </div>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-        {filtered.map((p) => {
-          const inner = (
-            <>
-              {p.cover && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img className="post-card-thumb" src={p.cover} alt="" loading="lazy" />
-              )}
-              <div className="post-card-body">
-                <div
-                  className="mono"
+    <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+      {posts.map((p) => {
+        const inner = (
+          <>
+            {p.cover && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img className="post-card-thumb" src={p.cover} alt="" loading="lazy" />
+            )}
+            <div className="post-card-body">
+              <div
+                className="mono"
+                style={{
+                  fontSize: 10.5,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--sepia-3)",
+                  marginBottom: 9,
+                }}
+              >
+                {fmt(p.date)}
+              </div>
+              <div style={{ fontSize: 22, lineHeight: 1.25, marginBottom: 8 }}>
+                {p.title}
+              </div>
+              {p.subtitle && (
+                <p
                   style={{
-                    fontSize: 10.5,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--sepia-3)",
-                    marginBottom: 9,
+                    fontSize: 17,
+                    lineHeight: 1.5,
+                    color: "var(--ink-3)",
+                    margin: "0 0 12px",
                   }}
                 >
-                  {labelFor(p.category)} · {fmt(p.date)}
-                </div>
-                <div style={{ fontSize: 22, lineHeight: 1.25, marginBottom: 8 }}>
-                  {p.title}
-                </div>
-                {p.subtitle && (
-                  <p
-                    style={{
-                      fontSize: 17,
-                      lineHeight: 1.5,
-                      color: "var(--ink-3)",
-                      margin: "0 0 12px",
-                    }}
-                  >
-                    {p.subtitle}
-                  </p>
-                )}
-              </div>
-            </>
-          );
+                  {p.subtitle}
+                </p>
+              )}
+            </div>
+          </>
+        );
 
-          return p.full ? (
-            <Link key={p.slug} href={`/writings/${p.slug}`} className="post-card">
-              {inner}
-            </Link>
-          ) : (
-            <a
-              key={p.slug}
-              href={p.substackUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="post-card"
-            >
-              {inner}
-            </a>
-          );
-        })}
-        {filtered.length === 0 && (
-          <p style={{ color: "var(--sepia)", fontSize: 19 }}>
-            Nothing here yet — more soon.
-          </p>
-        )}
-      </div>
-    </>
+        return p.full ? (
+          <Link key={p.slug} href={`/writings/${p.slug}`} className="post-card">
+            {inner}
+          </Link>
+        ) : (
+          <a
+            key={p.slug}
+            href={p.substackUrl || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="post-card"
+          >
+            {inner}
+          </a>
+        );
+      })}
+      {posts.length === 0 && (
+        <p style={{ color: "var(--sepia)", fontSize: 19 }}>
+          Nothing here yet — more soon.
+        </p>
+      )}
+    </div>
   );
 }

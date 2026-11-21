@@ -1,7 +1,6 @@
 ---
 title: "Do LLMs have mental states?"
 date: "2026-11-06"
-category: "philosophy"
 full: true
 cover: "/writings/do-llms-have-mental-states.jpg"
 ---

@@ -237,17 +237,6 @@ export const localMaxima = {
   substackUrl: "https://veronicaagudelo.substack.com/",
 };
 
-// Category labels & order for the Writings page.
-export const categories: { id: string; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "emerging-tech", label: "Emerging & Disruptive Tech" },
-  { id: "philosophy", label: "Philosophy & Progress" },
-  { id: "interviews", label: "Interviews" },
-  { id: "projects", label: "Projects" },
-  { id: "academic", label: "Academic" },
-  { id: "food", label: "Food" },
-];
-
 // ---- PROJECTS -------------------------------------------------------------
 // EDIT — each project gets its own page at /projects/<slug>.
 // relatedPosts: slugs of essays (in /content/posts) to surface on the project page.
@@ -266,7 +255,7 @@ export const projects = [
       "EDIT — expand this with the story of why you started it, what it does today, and where it's going. The detailed essays are linked below.",
     ],
     links: [
-      { label: "Read the essays", href: "/writings?category=projects" },
+      { label: "Read the essays", href: "/writings" },
     ],
     relatedPosts: ["building-whel", "an-update-on-whel", "rebuilding-whel"],
   },

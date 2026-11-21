@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { categories, site } from "@/content/site";
+import { site } from "@/content/site";
 import { formatDate, getAllPostMeta, type PostMeta } from "@/lib/posts";
 import styles from "./design-preview.module.css";
 
@@ -20,15 +20,12 @@ const topics = [
 ];
 
 function NoteContent({ post }: { post: PostMeta }) {
-  const category =
-    categories.find((item) => item.id === post.category)?.label ?? post.category;
-
   return (
     <>
       <span className={styles.noteStar} aria-hidden="true" />
       <span className={styles.noteBody}>
         <span className={styles.noteMeta}>
-          {category} <span aria-hidden="true">·</span> {formatDate(post.date)}
+          {formatDate(post.date)}
         </span>
         <span className={styles.noteTitle}>{post.title}</span>
         {post.subtitle && (

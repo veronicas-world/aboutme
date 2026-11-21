@@ -2,7 +2,6 @@
 title: "Software-First Innovations for Under-Digitized Infrastructure"
 subtitle: "An Industry Report"
 date: "2025-11-18"
-category: "emerging-tech"
 substackUrl: "https://veronicaagudelo.substack.com/p/software-first-innovations-for-under"
 full: true
 ---
