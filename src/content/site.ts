@@ -245,6 +245,7 @@ export const categories: { id: string; label: string }[] = [
   { id: "interviews", label: "Interviews" },
   { id: "projects", label: "Projects" },
   { id: "academic", label: "Academic" },
+  { id: "food", label: "Food" },
 ];
 
 // ---- PROJECTS -------------------------------------------------------------

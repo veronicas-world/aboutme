@@ -508,6 +508,33 @@ a { color: inherit; text-decoration: none; }
 .post-building-a-findable-future-with-factory .article > p:first-child img {
   width: 320px;
 }
+/* Restaurant photos are equal-size tiles; links open their uncropped originals. */
+.post-eat-drink-and-be-merry .article p:has(> a > img) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-block: 1.35em;
+}
+.post-eat-drink-and-be-merry .article p > a:has(> img) {
+  display: block;
+  flex: 0 0 min(210px, calc((100% - 24px) / 3));
+  min-width: 0;
+  border: 0;
+}
+.post-eat-drink-and-be-merry .article p > a > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+}
+@media (max-width: 540px) {
+  .post-eat-drink-and-be-merry .article p > a:has(> img) {
+    flex-basis: min(160px, calc((100% - 12px) / 2));
+  }
+}
 .title-link {
   border-bottom: 1px solid rgba(var(--ink-rgb), 0.35);
   transition: border-color 0.2s;

@@ -91,7 +91,8 @@ export function extractToc(markdown: string): TocItem[] {
   for (const line of markdown.split("\n")) {
     const m = /^##\s+(.+?)\s*$/.exec(line);
     if (!m) continue;
-    const text = m[1].trim();
+    // Match Article's heading text when the whole heading is a Markdown link.
+    const text = m[1].trim().replace(/^\[([^\]]+)\]\(https?:\/\/[^\s)]+\)$/, "$1");
     items.push({ id: slugify(text), text });
   }
   return items;
