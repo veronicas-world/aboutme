@@ -27,7 +27,7 @@ export default function HomeOpening({ children }: { children: ReactNode }) {
     };
     const start = () => {
       if (skipped || flow || document.hidden) return;
-      // Explicit anchors (like the Home tree on the homepage itself) are jumps, not new visits.
+      // Explicit anchors, including Home tree navigation, are jumps, not new visits.
       if (!root || !copy || !layer || location.hash) {
         finish();
         return;

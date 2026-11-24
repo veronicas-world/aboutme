@@ -24,7 +24,7 @@ export default function Nav() {
     >
       <nav id="site-navigation" className="site-nav-inner" aria-label="Main" tabIndex={-1}>
         <Link
-          href={isHome ? "/#top" : "/"}
+          href="/#top"
           prefetch={false}
           className="site-nav-home"
           aria-current={isHome ? "page" : undefined}

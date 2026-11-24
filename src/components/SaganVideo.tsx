@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const COMPACT = "/home-hero-web.mp4";
-const FULL_SIZE = "/home-hero-hq.mp4";
+// Use new URLs so browsers don't replay a cached copy of the blurrier encodes.
+const COMPACT = "/home-hero-web.mp4?v=2";
+const FULL_SIZE = "/home-hero-hq.mp4?v=2";
 const POSTER = "/home-hero-poster-hq.jpg";
 const COMPACT_MEDIA = "(max-width: 767px), (pointer: coarse)";
 
