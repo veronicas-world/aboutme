@@ -2,17 +2,35 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const COMPACT = "/home-hero-web.mp4";
+const FULL_SIZE = "/home-hero-hq.mp4";
+const POSTER = "/home-hero-poster-hq.jpg";
+const COMPACT_MEDIA = "(max-width: 767px), (pointer: coarse)";
+
 // Keep mobile downloads light and keep playing when scrolled out of view.
 // Captions are baked in; sound stays opt-in.
 export default function SaganVideo() {
   const ref = useRef<HTMLVideoElement>(null);
-  const [ok, setOk] = useState(true);
+  const [sources, setSources] = useState<[string, string]>();
+  const [attempt, setAttempt] = useState(0);
   const [muted, setMuted] = useState(true);
   const [needsPlay, setNeedsPlay] = useState(false);
+  const src = sources?.[attempt];
 
   useEffect(() => {
     const v = ref.current;
-    if (!ok || !v) return;
+    if (v) {
+      v.defaultMuted = true;
+      v.muted = true;
+    }
+    // The poster is available immediately. Set the source once React can
+    // catch a media error and try the other file.
+    setSources(window.matchMedia(COMPACT_MEDIA).matches ? [COMPACT, FULL_SIZE] : [FULL_SIZE, COMPACT]);
+  }, []);
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!src || !v) return;
     let active = true;
     const canPlay = () => !document.hidden;
     const resume = () => {
@@ -22,7 +40,7 @@ export default function SaganVideo() {
       }
       if (!v.paused) return;
       void v.play().catch(() => {
-        if (active && canPlay() && v.paused) setNeedsPlay(true);
+        if (active && canPlay() && v.paused && !v.error) setNeedsPlay(true);
       });
     };
     const playing = () => {
@@ -30,8 +48,6 @@ export default function SaganVideo() {
       else setNeedsPlay(false);
     };
     const paused = () => setNeedsPlay(canPlay());
-    v.defaultMuted = true;
-    v.muted = true;
     v.addEventListener("playing", playing);
     v.addEventListener("pause", paused);
     window.addEventListener("pageshow", resume);
@@ -45,9 +61,18 @@ export default function SaganVideo() {
       document.removeEventListener("visibilitychange", resume);
       v.pause();
     };
-  }, [ok]);
+  }, [src]);
 
-  if (!ok) return null;
+  if (sources && !src) {
+    return (
+      <div className="sagan-video">
+        <img src={POSTER} alt="Carl Sagan in the video" width={960} height={744} />
+        <p className="sagan-video-fallback">
+          The video couldn&apos;t load. <a href={COMPACT}>Open the video directly</a>.
+        </p>
+      </div>
+    );
+  }
 
   const toggleSound = () => {
     const v = ref.current;
@@ -63,26 +88,17 @@ export default function SaganVideo() {
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         ref={ref}
-        poster="/home-hero-poster-hq.jpg"
+        src={src}
+        poster={POSTER}
         loop
         muted
         playsInline
         preload="metadata"
-        onError={() => setOk(false)}
-        style={{
-          display: "block",
-          width: "100%",
-          height: "auto",
-          borderRadius: 3,
+        onError={() => {
+          setNeedsPlay(false);
+          setAttempt(attempt + 1);
         }}
-      >
-        <source
-          src="/home-hero-web.mp4"
-          media="(max-width: 767px), (pointer: coarse)"
-          type="video/mp4"
-        />
-        <source src="/home-hero-hq.mp4" type="video/mp4" />
-      </video>
+      />
       {needsPlay && (
         <button
           type="button"

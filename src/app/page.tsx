@@ -43,11 +43,12 @@ export default function Home() {
           width={512}
           height={435}
         />
-        <figcaption>&lt; me!</figcaption>
       </figure>
-      {heroParas.map((para, i) => (
-        <p key={i}>{withLinks(para)}</p>
-      ))}
+      <div className="home-bio-copy">
+        {heroParas.map((para, i) => (
+          <p key={i}>{withLinks(para)}</p>
+        ))}
+      </div>
     </HomeOpening>
   );
 }

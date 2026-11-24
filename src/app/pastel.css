@@ -47,7 +47,7 @@
   min-height: 100svh;
 }
 .page:has(> .home-main) > .site-ending { margin-block-start: auto; }
-.home-main { width: 100%; max-width: none; }
+.home-main { width: 100%; max-width: none; scroll-margin-block-start: 100px; }
 .home-main:has(.home-intro:not([data-settled])) { position: relative; z-index: 1; }
 .home-intro {
   display: grid;
@@ -67,15 +67,30 @@
   width: min(100%, 480px);
   margin: 0 auto 40px;
 }
+.sagan-video :is(video, img) {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+.sagan-video-fallback {
+  margin: 10px 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+.sagan-video-fallback a { text-decoration: underline; }
 .home-bio {
   width: min(100%, 690px);
   min-width: 0;
   color: #111;
   font: clamp(19px, 1.7vw, 22px) / 1.6 "Times New Roman", Times, serif;
 }
+.home-bio-copy {
+  /* Give short bios enough scroll room to sit below the menu (about 80px with the gap). */
+  min-block-size: calc(100dvh - 80px - var(--wave-min-height));
+}
 .home-portrait {
-  position: relative;
-  width: min(100%, 402px);
+  width: min(100%, 282px);
   margin: 0 auto clamp(24px, 4vw, 44px);
 }
 .home-portrait img {
@@ -84,23 +99,8 @@
   height: auto;
   border-radius: 5px;
 }
-.home-portrait figcaption {
-  position: absolute;
-  inset-inline-start: calc(100% + 20px);
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--ink);
-  font: clamp(15px, 2.5vw, 22px) / 1.2 var(--font-mono);
-  white-space: nowrap;
-}
 @media (max-width: 660px) {
-  .home-portrait {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 14px;
-  }
-  .home-portrait figcaption { position: static; transform: none; }
+  .home-portrait { width: min(100%, 56vw, 223px); }
 }
 .home-bio p { margin: 0; }
 .home-bio p + p { margin-top: 1em; }

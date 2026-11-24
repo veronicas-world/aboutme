@@ -76,7 +76,12 @@ html, body { background: #ffffff; }
 /* ---- bottom of every page: the moving wave landscape ---- */
 /* Every page fills the window. The waves sit just under the content and take up
    a little of any spare room, so there's never a big gap above them. */
-.page { display: flex; flex-direction: column; min-height: 100svh; }
+.page {
+  --wave-min-height: clamp(96px, 11vw, 150px);
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
 .page > .site-ending {
   flex: 1 0 auto;
   display: flex;
@@ -96,7 +101,7 @@ html, body { background: #ffffff; }
 .wave-band {
   position: relative;
   flex: 1 0 auto;
-  min-height: clamp(96px, 11vw, 150px);
+  min-height: var(--wave-min-height);
   max-height: clamp(130px, 15vw, 200px);
 }
 .wave-band canvas {
@@ -105,7 +110,47 @@ html, body { background: #ffffff; }
   width: 100%;
   height: 100%;
   display: block;
+  pointer-events: none;
+}
+.wave-home-link {
+  position: absolute;
+  inset-block-start: 55%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  align-items: center;
+  width: clamp(200px, 27vw, 264px);
+  min-height: 44px;
+  border-radius: 6px;
+  color: #225556;
+}
+.wave-home-link svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+.wave-home-link text {
+  fill: currentColor;
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+  font: 550 24px var(--font-name);
+}
+.wave-home-underline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1px;
+  stroke-dasharray: 4 4;
+  stroke-linecap: round;
+  opacity: 0.6;
+}
+.wave-home-link:is(:hover, :focus-visible) { color: var(--accent); }
+.wave-home-link:is(:hover, :focus-visible) .wave-home-underline {
+  stroke-dasharray: none;
+  opacity: 1;
 }
 @media (max-width: 730px) {
-  .wave-band { min-height: 84px; max-height: 120px; }
+  .page { --wave-min-height: 84px; }
+  .wave-band { max-height: 120px; }
 }
