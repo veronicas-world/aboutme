@@ -19,45 +19,14 @@ export default function AboutPage() {
 
   return (
     <main className="wrap" style={{ paddingTop: 70, paddingBottom: 30, position: "relative" }}>
-      <header className="col tcenter" style={{ margin: "0 auto 48px" }}>
-        <div
-          className="mono"
-          style={{
-            fontSize: 12,
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            color: "var(--sepia)",
-            marginBottom: 22,
-          }}
-        >
-          About
-        </div>
-        <h1
-          style={{
-            fontWeight: 300,
-            fontSize: "clamp(32px,4.5vw,52px)",
-            lineHeight: 0.98,
-            letterSpacing: "-0.02em",
-            margin: 0,
-          }}
-        >
-          Where will you be at the world&apos;s end?
-        </h1>
+      <header className="col tcenter about-heading">
+        <div className="about-heading-label">About</div>
+        <h1>Where will you be at the world&apos;s end?</h1>
       </header>
 
       <div className="col about">
         <SaganVideo />
         <Article content={summary} />
-        <figure className="about-headshot">
-          <img
-            src="/veronica-headshot.webp"
-            alt="Veronica Agudelo on campus"
-            width={512}
-            height={435}
-            loading="lazy"
-          />
-          <figcaption>&lt; me!</figcaption>
-        </figure>
         <Article content={body.join("\n\n")} />
         <MountainGallery />
         <div className="article" style={{ marginTop: 32 }}>

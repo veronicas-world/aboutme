@@ -73,6 +73,35 @@
   color: #111;
   font: clamp(19px, 1.7vw, 22px) / 1.6 "Times New Roman", Times, serif;
 }
+.home-portrait {
+  position: relative;
+  width: min(100%, 402px);
+  margin: 0 auto clamp(24px, 4vw, 44px);
+}
+.home-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.home-portrait figcaption {
+  position: absolute;
+  inset-inline-start: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink);
+  font: clamp(15px, 2.5vw, 22px) / 1.2 var(--font-mono);
+  white-space: nowrap;
+}
+@media (max-width: 660px) {
+  .home-portrait {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+  }
+  .home-portrait figcaption { position: static; transform: none; }
+}
 .home-bio p { margin: 0; }
 .home-bio p + p { margin-top: 1em; }
 .home-bio .hero-inline-link { border-bottom: 0; }
@@ -118,6 +147,31 @@
   pointer-events: none;
 }
 .wrap > header.tcenter > .mono { color: var(--accent); }
+.wrap > header.about-heading {
+  max-width: 940px;
+  margin: 0 auto 48px;
+  padding-block-end: 36px;
+}
+.wrap > header.about-heading::after {
+  height: 30px;
+  background-size: 132px 44px;
+  mask-image: linear-gradient(to right, black, transparent 82%);
+}
+.about-heading-label {
+  margin-block-end: clamp(24px, 4.3vw, 40px);
+  color: var(--sepia);
+  font: clamp(14px, 2.3vw, 22px) / 1.2 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.page .about-heading h1 {
+  margin: 0;
+  font-size: clamp(32px, 6.3vw, 58px);
+  font-weight: 300;
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+  text-wrap: wrap;
+}
 .page .local-maxima-graph {
   border: 1px solid var(--line);
   background: linear-gradient(150deg, #fff8fd 0%, #fffefe 58%, #f0f9fb 100%);

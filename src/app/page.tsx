@@ -36,6 +36,15 @@ export default function Home() {
 
   return (
     <HomeOpening>
+      <figure className="home-portrait">
+        <img
+          src="/veronica-headshot.webp"
+          alt="Veronica Agudelo on campus"
+          width={512}
+          height={435}
+        />
+        <figcaption>&lt; me!</figcaption>
+      </figure>
       {heroParas.map((para, i) => (
         <p key={i}>{withLinks(para)}</p>
       ))}
