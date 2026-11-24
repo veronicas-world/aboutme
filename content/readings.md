@@ -43,6 +43,8 @@ As for albums/songs/artists I am enjoying currently:
 5. [Dwarkesh Podcast](https://www.dwarkesh.com/)
 6. [Asimov Press](https://press.asimov.com/)
 7. [Cosmos Institute's Blog](https://blog.cosmos-institute.org/)
+8. [Citrini Research](https://www.citriniresearch.com/)
+   - My favorite pieces are “Robotics Tipping Point: A Citrini Field Trip” and “Citrini Therapeutics.”
 
 ### PROJECTS
 
