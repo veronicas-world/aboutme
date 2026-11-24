@@ -38,12 +38,10 @@ export default function Home() {
     <HomeOpening>
       <figure className="home-portrait">
         <img
-          src="/veronica-portrait-576.webp"
-          srcSet="/veronica-portrait-320.webp 320w, /veronica-portrait-576.webp 576w, /veronica-portrait-864.webp 864w"
-          sizes="(max-width: 398px) 56vw, (max-width: 660px) 223px, 282px"
+          src="/veronica-headshot.webp"
           alt="Veronica Agudelo on campus"
-          width={576}
-          height={576}
+          width={512}
+          height={435}
           decoding="async"
         />
       </figure>
