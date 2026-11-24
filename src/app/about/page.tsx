@@ -3,6 +3,7 @@ import path from "path";
 import type { Metadata } from "next";
 import Article from "@/components/Article";
 import MountainGallery from "@/components/MountainGallery";
+import SaganVideo from "@/components/SaganVideo";
 
 export const metadata: Metadata = {
   title: "About · Veronica Agudelo",
@@ -45,35 +46,7 @@ export default function AboutPage() {
       </header>
 
       <div className="col about">
-        <figure style={{ width: "min(88%, 540px)", margin: "0 auto 36px" }}>
-          <a
-            href="https://en.wikipedia.org/wiki/The_City_Rises"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Read about The City Rises on Wikipedia (opens in a new tab)"
-            style={{ display: "block" }}
-          >
-            <img
-              src="/the-city-rises.jpg"
-              alt="Workers and horses amid a city under construction in Umberto Boccioni's The City Rises."
-              width={1024}
-              height={680}
-              loading="eager"
-              style={{ display: "block", width: "100%", height: "auto", borderRadius: 3 }}
-            />
-          </a>
-          <figcaption
-            style={{
-              marginTop: 12,
-              fontSize: 13,
-              lineHeight: 1.5,
-              color: "var(--sepia)",
-              textAlign: "center",
-            }}
-          >
-            The City Rises, 1910 · Umberto Boccioni
-          </figcaption>
-        </figure>
+        <SaganVideo />
         <Article content={summary} />
         <figure className="about-headshot">
           <img
@@ -140,6 +113,36 @@ export default function AboutPage() {
             .
           </p>
         </section>
+
+        <figure style={{ width: "min(88%, 540px)", margin: "56px auto 0" }}>
+          <a
+            href="https://en.wikipedia.org/wiki/The_City_Rises"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read about The City Rises on Wikipedia (opens in a new tab)"
+            style={{ display: "block" }}
+          >
+            <img
+              src="/the-city-rises.jpg"
+              alt="Workers and horses amid a city under construction in Umberto Boccioni's The City Rises."
+              width={1024}
+              height={680}
+              loading="lazy"
+              style={{ display: "block", width: "100%", height: "auto", borderRadius: 3 }}
+            />
+          </a>
+          <figcaption
+            style={{
+              marginTop: 12,
+              fontSize: 13,
+              lineHeight: 1.5,
+              color: "var(--sepia)",
+              textAlign: "center",
+            }}
+          >
+            The City Rises, 1910 · Umberto Boccioni
+          </figcaption>
+        </figure>
       </div>
     </main>
   );

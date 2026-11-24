@@ -1,4 +1,3 @@
-import HomeImage from "@/components/HomeImage";
 import { site } from "@/content/site";
 
 // Turns [text](url) in a bio paragraph into an external link.
@@ -51,7 +50,6 @@ export default function Home() {
     >
       <h1 className="sr-only">Introduction</h1>
       <div className="col" style={{ width: "100%" }}>
-        <HomeImage />
         <div>
           <p style={heroParaStyle}>{withLinks(heroParas[0])}</p>
           {heroParas.slice(1).map((para, i) => (

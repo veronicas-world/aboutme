@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 // Keep mobile downloads light and keep playing when scrolled out of view.
 // Captions are baked in; sound stays opt-in.
-export default function HomeImage() {
+export default function SaganVideo() {
   const ref = useRef<HTMLVideoElement>(null);
   const [ok, setOk] = useState(true);
   const [muted, setMuted] = useState(true);
@@ -59,14 +59,7 @@ export default function HomeImage() {
   };
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        maxWidth: 380,
-        margin: "0 auto 34px",
-      }}
-    >
+    <div className="sagan-video">
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         ref={ref}
