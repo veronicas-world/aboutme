@@ -38,10 +38,13 @@ export default function Home() {
     <HomeOpening>
       <figure className="home-portrait">
         <img
-          src="/veronica-headshot.webp"
+          src="/veronica-portrait-576.webp"
+          srcSet="/veronica-portrait-320.webp 320w, /veronica-portrait-576.webp 576w, /veronica-portrait-864.webp 864w"
+          sizes="(max-width: 398px) 56vw, (max-width: 660px) 223px, 282px"
           alt="Veronica Agudelo on campus"
-          width={512}
-          height={435}
+          width={576}
+          height={576}
+          decoding="async"
         />
       </figure>
       <div className="home-bio-copy">

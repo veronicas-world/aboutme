@@ -48,7 +48,7 @@
 }
 .page:has(> .home-main) > .site-ending { margin-block-start: auto; }
 .home-main { width: 100%; max-width: none; scroll-margin-block-start: 100px; }
-.home-main:has(.home-intro:not([data-settled])) { position: relative; z-index: 1; }
+.home-main:has(.home-intro[data-playing]) { position: relative; z-index: 1; }
 .home-intro {
   display: grid;
   place-items: center;
@@ -105,23 +105,18 @@
 .home-bio p { margin: 0; }
 .home-bio p + p { margin-top: 1em; }
 .home-bio .hero-inline-link { border-bottom: 0; }
-.home-intro[data-settled] .hero-inline-link,
+.home-intro:not([data-playing]) .hero-inline-link,
 .home-bio .hero-inline-link:is(:hover, :focus-visible) {
   text-decoration: underline;
   text-decoration-color: var(--pink);
   text-underline-offset: .16em;
 }
 @media (prefers-reduced-motion: no-preference) {
-  /* The opening draws the words itself; if its script never runs, the text still appears. */
-  .home-intro:not([data-settled]) .home-bio,
-  .page:has(.home-intro:not([data-settled])) > .site-ending {
+  /* Hide the footer only while the canvas is actually playing. */
+  .page:has(.home-intro[data-playing]) > .site-ending {
     opacity: 0;
-    animation: intro-failsafe 1ms 9s forwards;
   }
   .page:has(.home-intro[data-settled]) > .site-ending { animation: footer-enter .5s ease-out; }
-}
-@keyframes intro-failsafe {
-  to { opacity: 1; }
 }
 @keyframes footer-enter {
   from { opacity: 0; }

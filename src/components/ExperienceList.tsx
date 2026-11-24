@@ -49,6 +49,8 @@ export default function ExperienceList({ items }: { items: XP[] }) {
                 <img
                   className={e.logoWide ? "wide" : "tall"}
                   src={e.logo}
+                  loading="lazy"
+                  decoding="async"
                   alt=""
                   aria-hidden="true"
                 />

@@ -19,13 +19,32 @@ export default function SaganVideo() {
 
   useEffect(() => {
     const v = ref.current;
-    if (v) {
-      v.defaultMuted = true;
-      v.muted = true;
-    }
-    // The poster is available immediately. Set the source once React can
-    // catch a media error and try the other file.
-    setSources(window.matchMedia(COMPACT_MEDIA).matches ? [COMPACT, FULL_SIZE] : [FULL_SIZE, COMPACT]);
+    if (!v) return;
+    v.defaultMuted = true;
+    v.muted = true;
+    // Let the page and poster paint before starting the autoplay download.
+    let frame = 0;
+    const load = () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener("load", schedule);
+      setSources(window.matchMedia(COMPACT_MEDIA).matches ? [COMPACT, FULL_SIZE] : [FULL_SIZE, COMPACT]);
+    };
+    const schedule = () => {
+      frame = requestAnimationFrame(() => { frame = requestAnimationFrame(load); });
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      observer.disconnect();
+      if (document.readyState === "complete") schedule();
+      else window.addEventListener("load", schedule, { once: true });
+    });
+    observer.observe(v);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("load", schedule);
+      cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {
@@ -78,6 +97,7 @@ export default function SaganVideo() {
     const v = ref.current;
     if (!v) return;
     const next = !v.muted;
+    if (!sources) setSources(window.matchMedia(COMPACT_MEDIA).matches ? [COMPACT, FULL_SIZE] : [FULL_SIZE, COMPACT]);
     v.muted = next;
     if (!next) v.play().catch(() => {});
     setMuted(next);
@@ -90,6 +110,8 @@ export default function SaganVideo() {
         ref={ref}
         src={src}
         poster={POSTER}
+        width={960}
+        height={744}
         loop
         muted
         playsInline

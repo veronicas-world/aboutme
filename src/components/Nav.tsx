@@ -24,7 +24,8 @@ export default function Nav() {
     >
       <nav id="site-navigation" className="site-nav-inner" aria-label="Main" tabIndex={-1}>
         <Link
-          href="/#top"
+          href={isHome ? "/#top" : "/"}
+          prefetch={false}
           className="site-nav-home"
           aria-current={isHome ? "page" : undefined}
           onClick={() => setOpen(false)}

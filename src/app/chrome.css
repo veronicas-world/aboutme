@@ -105,19 +105,14 @@ html, body { background: #ffffff; }
 
 /* On the home page the menu and your name wait for the opening, then fade in with the waves. */
 @media (prefers-reduced-motion: no-preference) {
-  .page:has(.home-intro:not([data-settled])) > .site-nav,
-  .home-main:has(.home-intro:not([data-settled])) > .home-name {
+  .page:has(.home-intro[data-playing]) > .site-nav,
+  .home-main:has(.home-intro[data-playing]) > .home-name {
     opacity: 0;
     visibility: hidden;
-    animation: chrome-failsafe 1ms 9s forwards;
   }
   .page:has(.home-intro[data-settled]) > .site-nav,
   .home-main:has(.home-intro[data-settled]) > .home-name { animation: footer-enter 0.5s ease-out; }
 }
-@keyframes chrome-failsafe {
-  to { opacity: 1; visibility: visible; }
-}
-
 /* ---- bottom of every page: the moving wave landscape ---- */
 /* Every page fills the window. The waves sit just under the content and take up
    a little of any spare room, so there's never a big gap above them. */

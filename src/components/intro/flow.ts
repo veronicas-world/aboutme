@@ -199,8 +199,8 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
   const VMIN = Math.min(W, H);
   const K = clamp(W / 1440, 0.7, 1.4); // paint scale
   const KT = clamp(VMIN / 900, 0.62, 1.25); // text scale
-  const DPR = Math.min(window.devicePixelRatio || 1, 2);
-  const S = W > 1600 ? 0.55 : 0.66; // mosh layer resolution
+  const DPR = Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(4_000_000 / (W * H)));
+  const S = Math.min(W > 1600 ? 0.55 : 0.66, Math.sqrt(550_000 / (W * H)));
   const SW = Math.max(2, Math.round(W * S));
   const SH = Math.max(2, Math.round(H * S));
   const OD = Math.min(DPR, 1.5);
@@ -229,13 +229,14 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
 
   /* --- layers: color (WebGL) under the given canvas, which draws the words --- */
   let glc = document.createElement("canvas");
-  glc.className = canvas.className;
-  glc.setAttribute("aria-hidden", "true");
-  canvas.parentNode.insertBefore(glc, canvas);
   const inj = document.createElement("canvas");
   inj.width = SW;
   inj.height = SH;
-  const ix = inj.getContext("2d")!;
+  const ix = inj.getContext("2d");
+  if (!ix) return null;
+  glc.className = `${canvas.className} intro-color`;
+  glc.setAttribute("aria-hidden", "true");
+  canvas.parentNode.insertBefore(glc, canvas);
 
   let gl: WebGLRenderingContext | null = null;
   let pc: CanvasRenderingContext2D | null = null;
@@ -249,7 +250,7 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
   const U: Record<string, WebGLUniformLocation | null> = {};
 
   const initGL = () => {
-    const g = glc.getContext("webgl", { alpha: false, antialias: false, depth: false, stencil: false, premultipliedAlpha: false, powerPreference: "high-performance" }) as WebGLRenderingContext | null;
+    const g = glc.getContext("webgl", { alpha: false, antialias: false, depth: false, stencil: false, premultipliedAlpha: false, failIfMajorPerformanceCaveat: true });
     if (!g) return false;
     const compile = (src: string, type: number) => {
       const s = g.createShader(type)!;
@@ -309,8 +310,8 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
       return false;
     }
   };
-  if (!initGL()) {
-    // No WebGL: a plain 2D smear does the same job, less finely.
+  const use2D = () => {
+    gl = null;
     const fresh = document.createElement("canvas");
     fresh.className = glc.className;
     fresh.setAttribute("aria-hidden", "true");
@@ -323,7 +324,9 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
       pc.fillStyle = bgCss;
       pc.fillRect(0, 0, SW, SH);
     }
-  }
+  };
+  if (initGL()) glc.addEventListener("webglcontextlost", use2D, { once: true });
+  else use2D();
 
   /* --- flow field (mirrors the shader; CSS px, y down) --- */
   let vcx = 0.5,
@@ -899,12 +902,12 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
     }
     // Bio words on their way to the page, then sitting exactly on it.
     const handover = 1 - Math.pow(clamp((ms - (TOTAL - HANDOVER)) / HANDOVER, 0, 1), 2);
-    tx.font = bioFont;
     tx.fillStyle = ink;
     for (const l of landers) {
       const k = (t - l.leave) / (LAND_FLIGHT / 1000);
       if (k < 0) continue;
       const [x, y, sc] = landerPose(l, k);
+      if (tx.font !== l.font) tx.font = l.font;
       tx.globalAlpha = k >= 1 ? handover : 1;
       tx.setTransform(DPR * sc, 0, 0, DPR * sc, DPR * x, DPR * y);
       tx.fillText(l.s, 0, 0);
@@ -913,8 +916,8 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
   };
 
   // Start mid-flow, like the reference: a few frames of color, a wall of words.
-  for (let i = 0; i < 90; i++) {
-    const dt = 1 / 60;
+  for (let i = 0; i < 24; i++) {
+    const dt = 1 / 30;
     step(dt);
     mosh(dt);
     t += dt * 0.15;
@@ -930,11 +933,34 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
 
   let alive = true;
   let lastNow = 0;
-  let frames = 0;
+  let raf = 0;
+  let targetsChanged = false;
+  const invalidateTargets = () => { targetsChanged = true; };
+  const updateTargets = () => {
+    const bounds = canvas.getBoundingClientRect();
+    spans[0].append(probe);
+    const baseline = probe.getBoundingClientRect().top - spans[0].getBoundingClientRect().top;
+    probe.remove();
+    const targetStyle = getComputedStyle(bio);
+    const font = `${targetStyle.fontStyle} ${targetStyle.fontWeight} ${targetStyle.fontSize} ${family}`;
+    spans.forEach((span, i) => {
+      const rect = span.getBoundingClientRect();
+      landers[i].slotX = (rect.left - bounds.left) * W / bounds.width;
+      landers[i].slotY = (rect.top + baseline - bounds.top) * H / bounds.height;
+      landers[i].font = font;
+    });
+    targetsChanged = false;
+  };
+  window.addEventListener("resize", invalidateTargets);
+  window.addEventListener("scroll", invalidateTargets, { passive: true });
   const cleanup = () => {
     if (!alive) return;
     alive = false;
-    window.clearTimeout(watchdog);
+    cancelAnimationFrame(raf);
+    document.removeEventListener("visibilitychange", visibility);
+    window.removeEventListener("resize", invalidateTargets);
+    window.removeEventListener("scroll", invalidateTargets);
+    glc.removeEventListener("webglcontextlost", use2D);
     gl?.getExtension("WEBGL_lose_context")?.loseContext();
     glc.remove();
   };
@@ -945,32 +971,34 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
       cleanup();
       return;
     }
-    const dt = clamp((now - lastNow) / 1000, 0, 0.05);
+    const dt = lastNow ? clamp((now - lastNow) / 1000, 0, 0.05) : 0;
     lastNow = now;
-    frames++;
     t += dt;
     if (t * 1000 >= TOTAL) {
       clock.finish();
       return;
     }
-    clock.currentTime = t * 1000;
-    if (dt > 0) {
-      step(dt);
-      mosh(dt);
+    try {
+      clock.currentTime = t * 1000;
+      if (targetsChanged && t * 1000 >= LAND_START - 250) updateTargets();
+      if (dt > 0) {
+        step(dt);
+        mosh(dt);
+      }
+      crisp();
+    } catch {
+      // Keep the page usable if a drawing context fails mid-animation.
+      clock.finish();
+      return;
     }
-    crisp();
-    requestAnimationFrame(tick);
+    raf = requestAnimationFrame(tick);
   };
-  requestAnimationFrame((now) => {
-    lastNow = now;
-    tick(now);
-  });
-  // If frames never come while the page is visible, show the page anyway.
-  const guard = () => {
-    if (!alive) return;
-    if (document.visibilityState === "visible" && frames < 2) clock.finish();
-    else watchdog = window.setTimeout(guard, 3000);
+  const visibility = () => {
+    cancelAnimationFrame(raf);
+    lastNow = 0;
+    if (alive && !document.hidden) raf = requestAnimationFrame(tick);
   };
-  let watchdog = window.setTimeout(guard, 3000);
+  document.addEventListener("visibilitychange", visibility);
+  visibility();
   return clock;
 }

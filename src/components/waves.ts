@@ -180,9 +180,11 @@ export function startWaveBand(canvas: HTMLCanvasElement): () => void {
   };
   const resize = () => {
     const box = canvas.getBoundingClientRect();
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    if (box.width === W && box.height === H && pixelRatio === dpr) return;
     W = box.width;
     H = box.height;
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dpr = pixelRatio;
     canvas.width = Math.max(1, Math.round(W * dpr));
     canvas.height = Math.max(1, Math.round(H * dpr));
     draw(still ? 0 : (performance.now() - start) / 1000);
