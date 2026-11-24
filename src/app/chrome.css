@@ -115,7 +115,7 @@ html, body { background: #ffffff; }
   to { visibility: visible; }
 }
 
-/* The menu and name fade in with the waves once the opening has played. */
+/* The menu and name fade in once the opening has played. */
 @media (prefers-reduced-motion: no-preference) {
   .page:has(.home-intro[data-playing]) > .site-nav,
   .home-main:has(.home-intro[data-playing]) > .home-name {
@@ -125,11 +125,11 @@ html, body { background: #ffffff; }
   .page:has(.home-intro[data-settled]) > .site-nav,
   .home-main:has(.home-intro[data-settled]) > .home-name { animation: footer-enter 0.5s ease-out; }
 }
-/* ---- bottom of every page: the moving wave landscape ---- */
-/* Every page fills the window. The waves sit just under the content and take up
+/* ---- bottom of every page: the pixel-cloud landscape ---- */
+/* Every page fills the window. The clouds sit just under the content and take up
    a little of any spare room, so there's never a big gap above them. */
 .page {
-  --wave-min-height: clamp(96px, 11vw, 150px);
+  --cloud-band-height: clamp(130px, 15vw, 200px);
   display: flex;
   flex-direction: column;
   min-height: 100svh;
@@ -150,21 +150,33 @@ html, body { background: #ffffff; }
   background: none;
   padding: 0;
 }
-.wave-band {
+.cloud-band {
+  --cloud-travel: 26px;
+  --cloud-sky: 26.6667%;
   position: relative;
-  flex: 1 0 auto;
-  min-height: var(--wave-min-height);
-  max-height: clamp(130px, 15vw, 200px);
-}
-.wave-band canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+  flex: none;
+  height: var(--cloud-band-height);
+  image-rendering: pixelated;
   pointer-events: none;
 }
+.cloud-band::before,
+.cloud-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Overscan the original art so neither edge comes into view as it drifts. */
+  background: url("/retro/cloud-band.png") center / max(1125px, calc(100% + 2 * var(--cloud-travel))) 100% no-repeat;
+}
+/* Keep the sparse sky still and move only the clouds beneath it. */
+.cloud-band::before { clip-path: inset(0 0 calc(100% - var(--cloud-sky)) 0); }
+.cloud-band::after { clip-path: inset(var(--cloud-sky) 0 0); }
+@media (prefers-reduced-motion: no-preference) {
+  .cloud-band::after { animation: cloud-drift 4.32s steps(16, end) infinite alternate; }
+}
+@keyframes cloud-drift {
+  from { background-position-x: calc(50% - var(--cloud-travel)); }
+  to { background-position-x: calc(50% + var(--cloud-travel)); }
+}
 @media (max-width: 730px) {
-  .page { --wave-min-height: 84px; }
-  .wave-band { max-height: 120px; }
+  .page { --cloud-band-height: clamp(96px, 30vw, 120px); }
 }

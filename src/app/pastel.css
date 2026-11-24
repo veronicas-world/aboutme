@@ -87,7 +87,7 @@
 }
 .home-bio-copy {
   /* Give short bios enough scroll room to sit below the menu (about 80px with the gap). */
-  min-block-size: calc(100dvh - 80px - var(--wave-min-height));
+  min-block-size: calc(100dvh - 80px - var(--cloud-band-height));
 }
 .home-portrait {
   width: min(100%, 282px);
