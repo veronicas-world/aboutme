@@ -85,12 +85,13 @@
   color: #111;
   font: clamp(19px, 1.7vw, 22px) / 1.6 "Times New Roman", Times, serif;
 }
-@media (width > 820px) {
-  .home-bio { width: min(100%, 860px); }
-}
 .home-bio-copy {
   /* Give short bios enough scroll room to sit below the menu (about 80px with the gap). */
   min-block-size: calc(100dvh - 80px - var(--cloud-band-height));
+}
+@media (width > 820px) {
+  .home-bio { width: min(100%, 860px); }
+  .home-bio-copy { min-block-size: 0; }
 }
 .home-portrait {
   width: min(100%, 282px);
