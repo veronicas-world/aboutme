@@ -103,7 +103,19 @@ html, body { background: #ffffff; }
   .home-intro { padding-block: 28px 14px; }
 }
 
-/* On the home page the menu and your name wait for the opening, then fade in with the waves. */
+/* Hide the server-rendered page while a fresh opening is waiting for its script. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  html:not(:has(:target)) .page:has(.home-intro:not([data-playing], [data-settled])) > :is(.site-nav, .site-ending),
+  html:not(:has(:target)) .home-main:has(.home-intro:not([data-playing], [data-settled])) > :is(.home-name, .home-intro) {
+    visibility: hidden;
+    animation: home-startup-fallback 0s 4s forwards;
+  }
+}
+@keyframes home-startup-fallback {
+  to { visibility: visible; }
+}
+
+/* The menu and name fade in with the waves once the opening has played. */
 @media (prefers-reduced-motion: no-preference) {
   .page:has(.home-intro[data-playing]) > .site-nav,
   .home-main:has(.home-intro[data-playing]) > .home-name {

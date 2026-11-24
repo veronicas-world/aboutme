@@ -930,6 +930,7 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
   // or a hidden tab never skips the opening: it plays from the top whenever it is seen.
   const clock = bio.animate([{ opacity: 0 }, { opacity: 0, offset: 1 - HANDOVER / TOTAL }, { opacity: 1 }], { duration: TOTAL, fill: "both", id: "intro-flow" });
   clock.pause();
+  clock.currentTime = 0;
 
   let alive = true;
   let lastNow = 0;

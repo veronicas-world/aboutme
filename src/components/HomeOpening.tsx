@@ -32,6 +32,11 @@ export default function HomeOpening({ children }: { children: ReactNode }) {
         finish();
         return;
       }
+      // Once the startup fallback has shown the page, don't cover it with a late intro.
+      if (!motion.matches && getComputedStyle(root).visibility !== "hidden") {
+        finish();
+        return;
+      }
       const navHeight = root.closest(".page")?.querySelector(".site-nav")?.getBoundingClientRect().height ?? 0;
       // Scroll before measuring, even when a reload restores a nonzero scroll position.
       window.scrollTo({ top: copy.getBoundingClientRect().top + window.scrollY - navHeight - 20, behavior: "instant" });
