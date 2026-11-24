@@ -498,6 +498,24 @@ a { color: inherit; text-decoration: none; }
 .post-building-a-findable-future-with-factory .article > p:first-child img {
   width: 320px;
 }
+.post-american-frontier-urban-heartland .article > p:has(> img + em) {
+  max-width: 580px;
+  margin: 1.5em auto;
+  text-align: center;
+  text-indent: 0;
+}
+.post-american-frontier-urban-heartland .article > p > img:has(+ em) {
+  margin: 0 auto 0.55em;
+}
+.post-american-frontier-urban-heartland .article > p > img + em {
+  display: block;
+  font-size: 0.86em;
+  line-height: 1.45;
+}
+.post-american-frontier-urban-heartland .article a:has(> img) {
+  display: block;
+  border: 0;
+}
 /* Restaurant photos are equal-size tiles; links open their uncropped originals. */
 .post-eat-drink-and-be-merry .article p:has(> a > img) {
   --photo-gap: 12px;
