@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import "./pastel.css";
+import "./chrome.css";
 import Nav from "@/components/Nav";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -36,10 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <a className="skip-to-navigation" href="#site-navigation">Skip to navigation</a>
         <div className="page">
           <Nav />
           {children}
-          <SiteFooter />
+          <div className="site-ending">
+            <SiteFooter />
+          </div>
         </div>
         <Analytics />
       </body>
