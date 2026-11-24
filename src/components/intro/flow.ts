@@ -13,6 +13,7 @@
  * handover. finish() skips to the page, cancel() stops everything.
  */
 
+const PLAYBACK_SPEED = 1.25;
 const MAIN = 4100; // ms of storm before the landing
 const LAND_START = 3600; // first bio word leaves for the page
 const LAND_SPAN = 1050; // last word leaves this much later (reading order)
@@ -972,7 +973,8 @@ export function startIntroFlow(root: HTMLElement, canvas: HTMLCanvasElement): An
       cleanup();
       return;
     }
-    const dt = lastNow ? clamp((now - lastNow) / 1000, 0, 0.05) : 0;
+    // Run the simulation and bio handoff on the same faster timeline.
+    const dt = lastNow ? clamp((now - lastNow) / 1000, 0, 0.05) * PLAYBACK_SPEED : 0;
     lastNow = now;
     t += dt;
     if (t * 1000 >= TOTAL) {
