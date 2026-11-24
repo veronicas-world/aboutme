@@ -15,7 +15,7 @@ export default function HomeOpening({ children }: { children: ReactNode }) {
   useEffect(() => {
     const root = intro.current;
     const copy = root?.querySelector(".home-bio-copy");
-    // Respect explicit anchors (including the footer's home link) and restored scroll.
+    // Respect explicit anchors (including the Home link) and restored scroll.
     const startAtBio = !window.location.hash && (window.scrollY < 1 || window.scrollY === positionedAt.current);
     if (startAtBio && copy) {
       const navHeight = root?.closest(".page")?.querySelector(".site-nav")?.getBoundingClientRect().height ?? 0;

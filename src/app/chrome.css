@@ -15,22 +15,35 @@ html, body { background: #ffffff; }
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--line-soft);
 }
-.site-nav-inner { justify-content: center; padding-block: 20px; }
-@media (min-width: 821px) { .site-nav-links { gap: 36px; } }
-.site-nav-links {
+.site-nav-inner {
+  --nav-gap: 36px;
+  justify-content: center;
+  gap: var(--nav-gap);
+  padding-block: 8px;
   font: 17px/1.2 var(--font-name);
-  letter-spacing: 0;
-  text-transform: none;
   color: #1d1d1f;
 }
-.site-nav-links a { text-decoration: none; transition: color 0.2s; }
+.site-nav-links { gap: var(--nav-gap); font-size: inherit; }
+.site-nav-inner a { text-decoration: none; transition: color 0.2s; }
 .site-nav-links a:is(:hover, .active) {
   text-decoration: underline;
   text-decoration-color: var(--pink);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
-.site-nav-links a:hover { color: var(--accent); }
+.site-nav-inner a:hover { color: var(--accent); }
+.site-nav-home {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 44px;
+  block-size: 44px;
+  flex: 0 0 44px;
+}
+.home-tree {
+  display: block;
+  inline-size: 42px;
+  overflow: visible;
+}
 .site-nav-toggle {
   font: 17px var(--font-name);
   letter-spacing: 0;
@@ -38,9 +51,41 @@ html, body { background: #ffffff; }
   color: #111;
 }
 @media (max-width: 820px) {
-  .site-nav-inner { padding-block: 8px; }
-  .site-nav-links { background: #ffffff; border-bottom-color: var(--line-soft); text-align: center; }
+  .site-nav-inner { justify-content: space-between; padding-block: 8px; }
+  .site-nav-links { gap: 0; background: #ffffff; border-bottom-color: var(--line-soft); text-align: center; }
   .site-nav-links a { border-top-color: var(--line-soft); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page:not(:has(.home-intro:not([data-settled]))) .home-tree-trunk {
+    animation: tree-grow 0.65s ease-out 0.1s both;
+  }
+  .page:not(:has(.home-intro:not([data-settled]))) .home-tree-limbs path {
+    animation: tree-grow 0.62s ease-out 0.4s both;
+  }
+  .page:not(:has(.home-intro:not([data-settled]))) .home-tree-twigs {
+    animation: tree-bud 0.4s ease-out 0.76s both;
+  }
+  .page:not(:has(.home-intro:not([data-settled]))) .home-tree-sway {
+    transform-origin: 28px 50px;
+    animation: tree-wind 4.8s ease-in-out 1.16s infinite;
+  }
+}
+@keyframes tree-grow {
+  from { stroke-dasharray: 1 1; stroke-dashoffset: 1; opacity: 0; }
+  12% { opacity: 1; }
+  to { stroke-dasharray: 1 1; stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes tree-bud {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes tree-wind {
+  /* Cross upright at the same speed on both sides of the loop. */
+  0% { transform: skewX(0); animation-timing-function: ease-out; }
+  25% { transform: skewX(-5deg); }
+  75% { transform: skewX(5deg); animation-timing-function: ease-in; }
+  100% { transform: skewX(0); }
 }
 
 /* ---- home page: your name centered at the top, then the bio ---- */
@@ -111,44 +156,6 @@ html, body { background: #ffffff; }
   height: 100%;
   display: block;
   pointer-events: none;
-}
-.wave-home-link {
-  position: absolute;
-  inset-block-start: 55%;
-  inset-inline-start: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  align-items: center;
-  width: clamp(200px, 27vw, 264px);
-  min-height: 44px;
-  border-radius: 6px;
-  color: #225556;
-}
-.wave-home-link svg {
-  display: block;
-  width: 100%;
-  overflow: visible;
-}
-.wave-home-link text {
-  fill: currentColor;
-  stroke: #fff;
-  stroke-width: 3px;
-  stroke-linejoin: round;
-  paint-order: stroke fill;
-  font: 550 24px var(--font-name);
-}
-.wave-home-underline {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1px;
-  stroke-dasharray: 4 4;
-  stroke-linecap: round;
-  opacity: 0.6;
-}
-.wave-home-link:is(:hover, :focus-visible) { color: var(--accent); }
-.wave-home-link:is(:hover, :focus-visible) .wave-home-underline {
-  stroke-dasharray: none;
-  opacity: 1;
 }
 @media (max-width: 730px) {
   .page { --wave-min-height: 84px; }
