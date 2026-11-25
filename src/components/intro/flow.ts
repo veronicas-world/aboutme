@@ -13,7 +13,7 @@
  * handover. finish() skips to the page, cancel() stops everything.
  */
 
-const PLAYBACK_SPEED = 1.25;
+const PLAYBACK_SPEED = 1.5;
 const MAIN = 4100; // ms of storm before the landing
 const LAND_START = 3600; // first bio word leaves for the page
 const LAND_SPAN = 1050; // last word leaves this much later (reading order)

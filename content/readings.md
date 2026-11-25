@@ -6,6 +6,7 @@
 4. [Beating China isn't Enough](https://substack.com/home/post/p-193027374)
 5. [Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace)
 6. [Founder Profiles](https://www.founderprofiles.ai/) by Nova
+7. [Colossus Profiles](https://colossus.com/mag/#all-articles)
 
 ### BOOKS
 
@@ -36,7 +37,7 @@ As for albums/songs/artists I am enjoying currently:
 
 ### NEWSLETTERS + BLOGS
 
-1. [Not Boring](https://www.notboring.co/) by Packy McCormick
+1. [Not Boring](https://www.notboring.co/)
 2. a16z's [Charts of the Week](https://www.a16z.news/t/charts)
 3. [Michelle Volz's Substack](https://substack.com/@michellevolz1)
 4. [SemiAnalysis](https://semianalysis.com/)
@@ -45,6 +46,7 @@ As for albums/songs/artists I am enjoying currently:
 7. [Cosmos Institute's Blog](https://blog.cosmos-institute.org/)
 8. [Citrini Research](https://www.citriniresearch.com/)
    - My favorite pieces are “Robotics Tipping Point: A Citrini Field Trip” and “Citrini Therapeutics.”
+9. [Feed Me](https://www.readfeedme.com/)
 
 ### PROJECTS
 
